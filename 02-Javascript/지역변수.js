@@ -14,5 +14,5 @@ console.log(number_2);
 let number_3 = 1;
 console.log(number_3);
 
-let number_3 = 2;
-console.log(number_3);
+/* let number_3 = 2;
+console.log(number_3);*/
