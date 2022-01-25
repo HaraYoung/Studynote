@@ -7,10 +7,10 @@
 이스케이프 문자를 활용하여 출력=%d
 */
 
-const year = 2022;
+//const year = 2022;
 
-age = year - 28;
-console.log("나는 %d세 입니다.", age);
+//let age = year - 1995 +1;
+//console.log("나는 %d세 입니다.", age);
 
 /*문제2 
 
@@ -20,7 +20,46 @@ console.log("나는 %d세 입니다.", age);
 (나이-1)
 
 이스케이프 문자를 활용해 출력
+
+const age =28;
+let year = 2022 - (age -1);
+
+console.log("나는 %d년도에 태어났습니다.", year);
 */
 
+/*문제3
+
+10개씩 담을수 있다.
+10개 미만은 바구니 추가사용
+=>120개 =12개바구니
+121~130개 =13개
+
+사과의 수를 의미하는 변수 정의
+10+1=바구니갯수
+*/
+const numOfApples = 123;
+//10으로 나눈 나머지를 소수점값으로 환산
+const extra = (numOfApples % 10)
+console.log(extra);
+// 10 ;
+let basketCount =extra > 0 ?(numOfApples /10)-extra +1 :(numOfApples/10)- extra;
+//Slet basktCont = 
+
+/*let apples = 10.0;
+let ba = numOfApples / apples ;
+
+const type1 = ba > 12.3 ? 12 : 13
+console.log(type1);
+*/
+//문제4
+
+/*let num1 =123;
+let num2 =456;
+
+num1= 100;
+num2= 400;
+console.log(num1);
+console.log(num2);
+*/
 
 
