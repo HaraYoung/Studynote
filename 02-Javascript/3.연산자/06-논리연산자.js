@@ -34,7 +34,7 @@ console.groupEnd();
 console.group("복합사용");
 //and가 항상 or 보다 우선
 console.log(true && true || true);
-console.log(true && true || false); //and가 true이니까.
+console.log(true && true || false); //t&t->t+ || f => t or f = t
 console.log(false && false || true);
 console.log(false && true || true);
 
@@ -42,4 +42,27 @@ console.log(true || true && true);
 console.log(true || true && false);
 console.log(false || false && true);
 console.log(false || true && true);
+console.groupEnd();
+
+//not
+console.group("not");
+let success = true;
+let fail = !success;
+console.log(fail);
+
+let k =1;
+console.log(!k);
+//1은 true니까 부정되어서 false
+
+let l = 0;
+console.log(!l);
+//0은 false
+
+let str1 = "Hello";
+console.log(!str1);
+//내용이 있는 문장 true - 부정되어서 false
+
+let str2 ="";
+console.log(!str2);
+//빈 문자열은 false - 부정되어서 true
 console.groupEnd();
