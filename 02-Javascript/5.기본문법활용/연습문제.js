@@ -63,7 +63,7 @@ for (let i=0;i<4; i++){
 }
 */
 //문제5 
-/*
+
 for (let i=0; i<4; i++){
     let str ="";
     for(let j=0; j<4; j++){
@@ -74,7 +74,7 @@ for (let i=0; i<4; i++){
     }
 console.log(str);
 }
-*/
+
 //문제 6
 /*
 for (let i =0;i <7; i++){
@@ -129,6 +129,7 @@ x=j+1;
 
 - */
 //문제7
+/*
 const number =1;
 //const number =2 ;
 let start =number == 2 ?2:3;
@@ -137,3 +138,4 @@ for(let i= start; i<10; i+=2){
         console.log("%d x %d =%d", i , j, i*j);
     }
 }
+*/
