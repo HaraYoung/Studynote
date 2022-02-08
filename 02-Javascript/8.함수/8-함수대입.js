@@ -1,0 +1,12 @@
+//함수를 변수에 대힙
+
+//일반적인 함수의 사용과 호출
+function sayHello(msg){
+    console.log("sayHello("+ msg+ ")");
+}
+sayHello("안녕하세요 자바스크립트!");
+
+//다른 변수에 대입 가능
+const say =sayHello;
+say("Hello Javascript");
+//함수가 대입된 변수는 그 자체가 함수의 역할을 함
