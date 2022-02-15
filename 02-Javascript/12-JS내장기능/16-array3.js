@@ -7,8 +7,6 @@ for (let i=0;i<arr.length; i++){
     if(i ==3){
         console.log("반복 중단!");
         break;
-        //break쓰면 문법 에러.for와 while문 안에서만 사용 가능
-
     }
     console.log("%d번째 원소=> %d", i, arr[i]);
 }
@@ -59,7 +57,7 @@ arr.forEach((v,i) =>{
     }
 });
 console.log(d2);
-//for문보다 처리속도가 빠름.?
+//for문보다 처리속도가 빠름
 
 //map 함수에 전달된 콜백이 리턴하는 값들을 하나의 배열로 묶어서 hello에 저장
 const hello =arr.map((v, i) => v+ 1);   
@@ -76,9 +74,5 @@ const hello= arr.map((v, i)=> {
 });
 */
 
-
-
 //원본배열을 가공해 새로운 배열을 만들때?map
 
-//filter는 배열, 맞는값을 저장. 모든원소를 탐색하기 전까지 종료x
-//i는 배열 인덱스값? arr은 배열자체가 계속 들어오는것

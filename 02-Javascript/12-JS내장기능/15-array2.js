@@ -55,8 +55,18 @@ const found= arr3.find(function(v){     //v를 원하는 조건에 충족하는�
 console.log(found);
 
 
-//filter는 배열, 맞는값을 저장. 모든원소를 탐색하기 전까지 종료x
-//i는 배열 인덱스값? arr은 배열자체가 계속 들어오는것
+//filter는 맞는값을 저장. 모든원소를 탐색하기 전까지 종료x
+const arr4= [5, 12, 8, 131, 44];
+const results= arr4.filter(function (v, i ,arr){
+    console.log("v= %d, i= %d, arr= %s", v, i, arr);
+    if (v% 2== 0){
+        return true;
+    }else{
+        return false;
+    }
+});
+console.log(results);
+
 
 //배열 정렬
 /*
@@ -65,7 +75,7 @@ console.log(found);
 sort 함수도 정렬조건을 콜백함수로 처리*/
 const arr5= [2,1,15];
 arr5.sort(function(a,b){
-    //정렬을 위해 비교되는 원소값들이 파라미터로 전달
+    //정렬을 위해 비교되는 원소값들을 파라미터로 전달
     console.log("a=%s, b=%s", a, b);
     if(a> b){       //리턴값이 양수인 경우: a가 b보다 크다
         return 1;
