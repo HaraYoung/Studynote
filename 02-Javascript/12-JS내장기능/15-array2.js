@@ -12,7 +12,7 @@ arr.indexOf(item,from)
 arr.lastIndexOf(item,form)
 arr.indexOf(item,from)메서드와 동일한 기능
 검색을 끝에서부터 시작
-두번째 파라미터(from)이 없으면 처음부터 탐색
+두번째 파라미터(from)가 없으면 처음부터 탐색
 */
 let arr1= [1, 0, false];
 console.log(arr1.indexOf(0));

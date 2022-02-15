@@ -16,6 +16,12 @@ let b= Number('123');       //b=== 123 =>true
 console.log(b);
 console.log(typeof b);
 console.log(b=== 123);
+
+let c= Number('123.45');
+console.log(c);
+console.log(typeof c);
+console.log(c=== 123.45);
+
 //parseFloat 는 123.0으로 변환
 
 
