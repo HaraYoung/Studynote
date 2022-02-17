@@ -1,25 +1,26 @@
 //문제1
 const email = "qkrtpdud9899@gmail.com";
 p= email.indexOf("@");
-id
+id= email.substring(0, p);
+domain= email.substring (p+ 1);
+console.log(id);
+console.log(domain);
 
-const arr= email.split("@");
-console.log(arr);
 
 //문제2
 ssn = '020517-3******';
 let date1= new Date();
 const now_year= date1.getFullYear();
-const yy= parseInt(0,2);
-const mm= parseInt(2,4);
-const dd= parseInt(4,6);
-const gen= parseInt(7,8);
+let yy= parseInt(ssn.substring(0,2));
+let mm= parseInt(ssn.substring(2,4));
+let dd= parseInt(ssn.substring(4,6));
+let gen= parseInt(ssn.substring(7,8));
 
-yy=(gen>2) ? yy+2000 : yy+1900;
+yy= (gen>2) ? yy +2000 : yy +1900;
 const age= now_year- yy+ 1;
 const sex= (gen% 2) ? "남자" : "여자";
 
-console.log(yy+ "년 "+ mm+ "월 "+ dd+ "일에 태어난 ")
+console.log(yy+ "년 "+ mm+ "월 "+ dd+ "일에 태어난 "+ sex+ "입니다.");
 
 
 
@@ -27,23 +28,21 @@ console.log(yy+ "년 "+ mm+ "월 "+ dd+ "일에 태어난 ")
 //문제3
 
 str = "수업시간에 배운것은 수업시간에 다 이해하고 넘어가야지 수업시간에 놓치면 따라오기 힘들다."
+
+let word= "수업시간";
+let flen= word.length;
+let find= true;
+let count= 0;
+while(find){
+    let p= str.indexOf(word);
+    find= p> -1;
+    if(find){
+        count++;
+        str= str.substring(p+ flen);
+    }
+}
+console.log(count);
 /*
-const string1= str.indexOf("수업시간");
-console.log("'수업시간'이 처음 나타나는 위치: "+ string1);
-const string2= str.indexOf("수업시간",string1+ 1);
-console.log("'수업시간'이 두번째로 나타나는 위치: "+string2);
-*/
-let a=0;
-string1= str.indexOf("수업시간");
-
-for(let i=0;i<str.length; i++){
-    string1= str.indexOf("수업시간",string1+ 1);
-    a++;
-}console.log(a);
-
-let string3= str.split("에");
-console.log(string3);
-
 var text = 'aaabbbaaabababaaaabaa';
 var count = 0;
 var searchChar = 'a'; // 찾으려는 문자
@@ -55,7 +54,7 @@ while (pos !== -1) {
 }
 
 console.log(count); // 로그에 14를 출력합니다.
-
+*/
 
 //문제4
 
@@ -78,6 +77,10 @@ for( let i =0; i<6; i++){
 console.log(lotto);
 
 //문제5
+
+function random(n1, n2){
+    return parseInt(Math.random()* (n2- n1+ 1))+ n1;
+}
 
 const balls = new Array(45);
 /*balls.forEach((v, i)=> {    //forEach는 원소가 있어야 동작...
