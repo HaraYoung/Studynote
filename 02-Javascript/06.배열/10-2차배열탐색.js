@@ -14,7 +14,7 @@ console.log(myArr[1].length);
 for (let i=0; i <myArr.length; i++){
     console.group(i + "번째 행 -----");
     console.log(myArr[i]);
-    //안쪾은 i번째 행에 대한 열을 담당
+    //안쪽은 i번째 행에 대한 열을 담당
     for (let j=0; j<myArr[1].length; j++){
         console.log(myArr[i][j]);
     }
