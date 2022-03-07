@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" 
+      content="width=device-width,initial-scale=1,
+      minimum-scale=1,maximum-scale=1,user-scalable=no" />
+      <title> MY WEB PAGE</title>
+
+      <!--스타일 시트-->
+      <style type="text/css">
+          h1{color:#0000ff;}
+
+        /*태그 셀렉터*/
+          h2 {
+              color: chocolate;
+          }
+
+          /* 클래스 셀렉터 - html태그의 class속성과 연결됨*/
+          .myclass{
+              color: brown;
+          }
+          
+          /*아이디 셀렉터 - html태그의 id속성과 연결됨 */
+          #myid{
+              color: orangered;
+          }
+
+          /*조합형- 두 조건이 충족하는 경우만 적용 */
+          h2.myclass{
+              color: #008000;
+          }
+
+
+      </style>
+    </head>
+
+    <body>
+         <div>
+             <h1> CSS 선택자(selector)를 알아봅시다. </h1>
+             <p> 선택자(selector)란? - CSS가 적용될 대상을 지정하는 방법. </p>
+
+             <h2> 태그 선택자(selector) </h2>
+
+             <h2 class="myclass"> 클래스 선택자(selector) </h2>
+             <p class="myclass"> 서로 다른 여러개의 요소에 적용할 수 있다. </p>
+
+             <h2 id="myid"> 아이디 선택자(selector) </h2>
+             <p id="myid"> 태그+ 아이디, 태그+ 클래스 형식으로 조합이 가능. </p>
+         </div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div{
+            color: red;
+        }
+        div >h1#title{
+            color:olive
+        }
+        div#container div.box{
+            color:orange
+        }
+        div#container .item{
+            color: gray;
+        }
+        #container #active{
+            color: blue;
+        }
+        div#container > ul > li{
+            color: rgb(119, 119, 22);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="title"> 구체성 단위 </h1>
+        구체성 단위를 알아봅시다.
+        <div class="box"> CSS의 표현기법에 따라서 점수가 부여 됩니다.</div>
+   
+        <ul>
+            <li class="itme" id="active"> id: 100 점</li>
+            <li class="itme"> class: 10 점 </li>
+            <li> tag: 1 점</li>
+        </ul>
+    </div>
+</body>
+</html>

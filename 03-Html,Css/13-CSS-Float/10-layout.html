@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            height: 100%;
+        }
+        #container{
+            /*전체박스: 전체 레이아웃의 폭, 정렬을 제어하기 위한 박스*/
+            width: 800px;
+            margin: auto;
+        }
+        #header{    /*폭=부모값,높이=고정*/
+            background-color: brown;
+            width: auto;
+            height: 100px;
+        }
+        #content{   /*폭=부모값,높이=가변*/
+            background-color: chocolate;
+            width: auto;
+            min-height: 300px;  /*페이지의 최소높이가 브라우저의 높이를 가득 채우도록 처리*/
+            /*for IE*/
+            height: auto !important;
+            height: 300px;
+        }
+        #footer{    /*폭=부모값,높이=고정*/
+            background-color: burlywood;
+            width: auto;
+            height: 80px;
+        }
+        #body{  /*content> body*/
+            width: 640px;
+            background-color: beige;
+            float: left;
+            min-height: 300px;
+        }
+        #sidebar{   /*content> sidebar*/
+            width: 160px;
+            background-color: bisque;
+            float: left;
+            min-height: 300px;
+        }
+        .clear:after{
+            /*float속성 해체*/
+            content: '';
+            display: block;
+            clear: both;
+            float: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header"> 상단 영역 </div>
+        <div id="content" class="clear">
+            <div id="body"> 본문 영역 </div>
+            <div id="sidebar"> 사이드 바 </div>
+        </div>
+        <div id="footer"> 하단 영역 </div>
+    </div>
+</body>
+</html>

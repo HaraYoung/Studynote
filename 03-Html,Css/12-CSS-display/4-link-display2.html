@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        
+        .link{
+            font: 16px '굴림';
+            padding: 10 15px;    /*상하 여백:0, 좌우여백:15px*/
+            color: black;
+            text-decoration: none;  /*링크의 밑줄제거*/
+            width: auto;
+            height: auto;
+            border-bottom: 1px dotted #cccccc; /*아래 테두리 설정*/ 
+
+        }
+        .link:first-child{      /*여러개의 요소 중 첫번째 요소*/
+            border-top:1px dotted #cccccc;
+        }
+        .link:hover{
+            background-color: yellow;
+        }
+        
+        .link span{     /*링크 안의 span태그를 block-level요소로 변경하고 말줄임처리 추가*/
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;   /*말줄임 효과 사용시, for FireFox*/
+        }
+        .link .subject{     /*제목부분 강조*/
+            font-weight: bold;
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+        .link .desc{
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="link"> 
+        <span class="subject"> HTML</span>
+        <span class="desc"> 웹 페이지를 제작하기 위한 뼈대를 구성하는 언어 </span>
+    </a>
+
+    <a href="#" class="link">
+        <span class="subject"> CSS </span>    
+        <span class="desc"> HTML로 구성된 뼈대에 옷을 입히는 언어</span>
+    </a>
+    <a href="#" class="link">
+        <span class="subject"> JavaScript </span>    
+        <span class="desc"> 동적인 기능을 추가하는 언어 </span>
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #222;
+    font-size: 14px;
+    font-family: '굴림';
+}
+a{
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+#gallery{
+    width: 640px;
+    margin: auto;
+}
+#gallery li{
+    width: 25%;
+    float:left;
+}
+#gallery li a{
+    display: block;
+    width: auto;
+    padding: 10px;
+}
+#gallery li a span{
+    display: block;
+    width: auto;
+}
+#gallery .thumb img{
+    width: 100%;
+    object-fit: cover;
+    height: 160px;
+}
+#gallery .text{
+    width: 95%;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+#gallery li a:hover{
+    background-color: #eee;
+}
