@@ -1,0 +1,78 @@
+*{
+    font-family: '돋움';
+    font-weight: 800;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    padding:80px;
+    text-align: center;
+    background-color: chocolate;
+    color: beige;
+}
+.header h1{
+    font-size: 40px;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: burlywood;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+}
+.navbar a{
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding: 15px 20px;
+    text-align: center;
+    color: brown;
+}
+.navbar a.right{
+    float: right;
+}
+.navbar a:hover{
+    background-color: beige;
+    color: rgb(114, 62, 24);
+}
+.navbar a.active{
+    background-color: brown;
+    color: antiquewhite;
+}
+.row{
+    background-color: rgb(243, 238, 232);
+}
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+.side{
+    float: left;
+    width: 30%;
+}
+.main{
+    float: left;
+    width: 70%;
+    background-color: rgb(253, 238, 217);
+}
+.container{
+    padding: 20px;
+}
+.container:last-child{
+    border-left: 1px solid chocolate;
+}
+.fakeimg{
+    background-color: gray;
+    width: auto;
+    padding: 20px;
+}
+.footer{
+    padding:20px;
+    text-align: center;
+    background-color: chocolate;
+}

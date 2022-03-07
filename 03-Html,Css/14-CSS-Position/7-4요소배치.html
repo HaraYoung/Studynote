@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./7-4요소배치.css" />
+    <style>
+        /*모두 가운데에서 출발,간격 조절
+        모든 요소를 부모의 중앙으로 모은후, margin으로 간격조절*/
+        .container {
+            width: 1000px;
+            background-color: #eee;
+            margin: auto;
+            position: relative;
+            height: 150px;
+        }
+
+        .logo {
+            width: 300px;
+            height: 100px;
+            background-color: #ff6600;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -50px;
+        }
+
+        .side1 {
+            width: 80px;
+            height: 80px;
+            background-color: #ff00ff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -240px;
+            margin-top: -40px;
+        
+        }
+
+        .side2 {
+            width: 80px;
+            height: 80px;
+            background-color: #00ff00;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: 160px;
+            margin-top: -40px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">logo</div>
+        <div class="side1">side1</div>
+        <div class="side2">side2</div>
+    </div>
+</body>
+</html>

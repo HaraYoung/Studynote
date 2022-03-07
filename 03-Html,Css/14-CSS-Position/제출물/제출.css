@@ -1,0 +1,133 @@
+*{
+    font-family: '돋움';
+    font-weight: 800;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    padding:80px;
+    text-align: center;
+    background-color: chocolate;
+    color: beige;
+}
+.header h1{
+    font-size: 40px;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: burlywood;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+}
+.navbar a{
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding: 15px 20px;
+    text-align: center;
+    color: brown;
+}
+.navbar a.right{
+    float: right;
+}
+.navbar a:hover{
+    background-color: beige;
+    color: rgb(114, 62, 24);
+}
+.navbar a.active{
+    background-color: brown;
+    color: antiquewhite;
+}
+.row{
+    background-color: rgb(243, 238, 232);
+}
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+.side{
+    float: left;
+    width: 30%;
+}
+.main{
+    float: left;
+    width: 70%;
+    background-color: rgb(253, 238, 217);
+}
+.container{
+    padding: 20px;
+}
+.container:last-child{
+    border-left: 1px solid chocolate;
+}
+.fakeimg{
+    background-color: gray;
+    width: auto;
+    padding: 20px;
+}
+.footer{
+    padding:20px;
+    text-align: center;
+    background-color: chocolate;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+ul, ol{
+    list-style: none;
+}
+.gallery li{
+    border-bottom: 1px solid gray;
+}
+.gallery li a{
+    display: block;
+    width: auto;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+.gallery li a .thumb{
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+.gallery .thumb img{
+    width: 100%;
+    height: 100%;
+}
+.gallery .text{
+    display: block;
+    width: auto;
+    position: absolute;
+    left: 180px;
+    top:27px;
+}
+.gallery .text span{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gallery .text .title{
+    font-weight: bold;
+}
+.gallery .text .desc{
+    font-size: 0.8em;
+    line-height: 150%;
+}
+.gallery a:hover{
+    background-color: rgb(211, 148, 103);
+}
