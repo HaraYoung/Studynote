@@ -8,18 +8,17 @@
     <style>
         .parent{
             background-color: royalblue;
-            border: 10px solid navy;
             width: 500px;
             height: 300px;
+            text-align: center;
+            /*문장 정렬만 관여, 자식요소에게도 상속*/
+            color: white;
         }
         .child{
             background-color: blue;
-            width: 500px;
-            height: 300px;
-            /*부모의 크기를 벗어남
-            벗어난영역은 주변요소를 침범함*/
-            padding: 10px 20px;
-            border: 5px solid white;
+            width: 300px;
+            height: 100px;
+            margin-left: 100px;/*박스 위치를 설정*/
         }
     </style>
 </head>
@@ -27,6 +26,5 @@
     <div class="parent">
         <div class="child"> HTML &amp; CSS </div>
     </div>
-    Hello World
 </body>
 </html>

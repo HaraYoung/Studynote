@@ -5,8 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /*박스 기본크기 특성
+        넓이= 부모를 가득 채움
+        높이=자신이 포함하고 있는 내용만큼만 차지*/
+        #box1{
+            background-color: red;
+        }
+        #box2{
+            background-color: green;
+        }
+        #box3{
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="box1"> 빨간 박스 </div>
+    <div id="box2"> <!--포함하고 있는 내용x=> 높이값x--> </div>
+    <div id="box3"> 파란 박스 </div>
 </body>
 </html>

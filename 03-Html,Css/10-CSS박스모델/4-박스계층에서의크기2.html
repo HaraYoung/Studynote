@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: royalblue;
+            border: 10px solid navy;
+            width: 500px;
+            height: 300px;
+        }
+        .child{
+            background-color: blue;
+            /*백분율 값은 부모요소의 width,height를 기준*/
+            width: 100%;
+            height: 100%;
+            /*부모크기에 여백과 테두리의 크기를 더함=>부모보다 커짐*/
+            padding: 10px 20px;
+            border: 5px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"> HTML &amp; CSS </div>
+    </div>
+    Hello World
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #subtitle{
+            width: auto;
+            /*배경이미지에 맞춘 높이 값*/
+            height: 160px;
+            background: url(img/info_bg.png) repeat-x;
+        }
+        #subtitle h2{
+            width: 288px;
+            height: 108px;
+            margin: auto;
+            background: url(img/center.jpg) no-repeat;
+            text-indent: -10000px;
+            /*스크린 리더가 읽을수 있고 일반유저들은 그래픽적인 디자인을 볼수있다*/
+            overflow: hidden;   /*파이어폭스웹 대응*/
+        }
+    </style>
+</head>
+<body>
+    <div id="subtitle">
+        <h2> 차세대 웹표준을 위한 진화의 시작! 지금 도전하십시오.
+             무한한 가능성이 당신을 기다립니다.</h2>
+    </div>
+</body>
+</html>
