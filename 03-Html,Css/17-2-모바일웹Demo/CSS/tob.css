@@ -1,0 +1,34 @@
+/*분양 안내, 조감도 페이지 공통- 탭영역*/
+#tab ul{
+    width: auto;
+    height: 40px;
+    padding: 0 20px;
+    background: url(../img/bg_tab.gif) repeat-x;
+}
+#tab ul li{
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    color: black;
+    float: left;
+}
+div#tab ul::after{
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+div#tab ul li a{
+    display: block;
+    width: auto;
+    height: 23px;
+    padding-top: 17px;
+    color: #fff;
+}
+div#tab >ul >li.active{
+    background: url(../img/bg_tab_left.gif) left 10px no-repeat;
+}
+div#tab >ul >li.active >a{
+    background: url(../img/bg_tab_right.gif) right 10px no-repeat;
+    color: black;
+}
