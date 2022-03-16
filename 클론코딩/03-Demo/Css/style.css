@@ -1,0 +1,168 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: inherit;
+}
+ul,li{
+    list-style: none;
+}
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Karma', serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.nav-item{
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    font-size: 24px;
+    color: black; 
+    top: 0;
+}
+.left{
+    float: left;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+.nav-item a{
+    padding: 0 10px;
+}
+.right{
+    float: right;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+.nav-center{
+    text-align: center;
+    margin-top: 15px;
+}
+nav::after{
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+.nav-item a:hover{
+    background-color: gainsboro;
+}
+.big-box{
+    width: 80%;
+    margin: auto;
+}
+.main-box{
+    width: 23%;
+    float: left;
+    text-align: center;
+    padding: 20px 10px;
+    height: auto;
+}
+.main-box h3{
+    font-weight: 500;
+    font-size: 25px;
+}
+.main-box img{
+    width: 100%;
+}
+.main-box p{
+    font-size: 15px;
+}
+.float-end{
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+.page{
+    text-align: center;
+    margin: 20px 0;
+}
+.page a{
+    padding: 5px 10px;
+    text-align: center;
+}
+.page .page-1{
+    background-color: black;
+    color:white;
+}
+.page a:hover{
+    background-color: black;
+    color: white;
+}
+.page .page-1:hover{
+    background-color: gainsboro;
+    color: black;
+}
+.main-2{
+    text-align: center;
+    padding: 30px 0;
+}
+.main-2 h3{
+    padding: 20px 0;
+    font-size: 25px;
+    font-weight: 400;
+}
+.main-2 h4{
+    font-weight: bold;
+    font-size: 20px;
+}
+.main-2 i{
+    font-size: 16px;
+    margin-top:-5px;
+}
+.footer{
+    float: left;
+    width: 35%;
+    height: 181px;
+    margin-right: 10px;
+}
+.footer a{
+    text-decoration: underline;
+}
+.blog{
+    float: left;
+    width: 30%;
+    margin-right: 10px;
+}
+.blog ul{
+    padding: 0;
+}
+.blog li{
+    max-width: 367px;
+    padding: 16px;
+}
+.blog li img{
+    width:15%;
+    float: left;
+    margin-right: 16px;
+    vertical-align: top;
+}
+.blog li p{
+    display: inline;
+}
+.blog li:hover{
+    background-color: gainsboro;
+}
+footer .popular{
+    width: 30%;
+   float: left;
+}
+footer span{
+    background-color: gray;
+   color: white;
+   padding: 3px 5px;
+   margin: 10px 3px;
+   font-size: 12px;
+}
+.popular div{
+   float: left;
+   margin: 5px 0;
+}
+.popular .first-text{
+    background-color: black;
+    font-size: 15px;
+}
