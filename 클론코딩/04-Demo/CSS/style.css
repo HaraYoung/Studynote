@@ -1,0 +1,206 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Karma', serif;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(230, 181, 189);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.nav-item{
+    background-color: white;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.8;
+    z-index: 10;
+}
+.nav-item div{
+    float: left;
+    margin: 15px 15px;
+    width: 23%;
+}
+.nav-item div a{
+    text-align: center;
+    padding: 10px 150px;
+    width: 100%;
+}
+nav::after{
+    float: none;
+    content: '';
+    display: block;
+    clear: both;
+}
+.nav-item:hover{
+    opacity: 1;
+}
+.nav-item div a:hover{
+    background-color: gainsboro;
+}
+.nav-item .last-item:hover{
+    background-color: black;
+    color: white;
+}
+#main{
+    background-image: url(../img/wedding_couple.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+#main .main-item{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.main-item h1{
+    margin: 10px 0;
+    font-size: 64px;
+}
+.main-item h1, .main-item h2{
+    font-weight: 400;
+}
+#content1{
+    text-align: center;
+}
+#content1 h1{
+    color: gray;
+    padding: 50px 0;
+}
+.box{
+    width: 100%;
+}
+.box img{
+    margin-bottom: 40px;
+}
+#content1 p{
+    width: 60%;
+    word-spacing: 5px;
+    line-height: 1.5;
+    font-size: 15px;
+    margin: auto;
+    text-align: start;
+}
+.content-button{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.content-button a{
+    background-color: black;
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+}
+.content-button a:hover{
+    background-color: rgb(167, 167, 167);
+    color: black;
+}
+#content2{
+    background-image: url(../img/flowers.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#content2 .text-box{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    color: white;
+    text-align: center;
+}
+.text-box h1{
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+.text-box h3{
+    font-size: 30px;
+    font-weight: 400;
+}
+#content3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+#content3 h1{
+    color: grey;
+    padding: 30px 0;
+}
+#content3 img{
+    margin-bottom: 64px;
+}
+.text-box2{
+    width: 80%;
+    margin: auto;
+}
+.when-box,.where-box{
+    height: 160px;
+    float: left;
+    width: 50%;
+    margin-bottom:50px;
+    line-height: 1.5;
+}
+.text-box2 h2{
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.text-box2::after{
+    float: none;
+    content: '';
+    display: block;
+    clear: both;
+}
+#footer{
+    background-color: pink;
+    padding: 64px 16px;
+    text-align: center;
+}
+.rsvp h1, .rsvp p{
+    letter-spacing: 5px;
+    display: block;
+    font-weight: 400;
+}
+.rsvp div{
+    margin: 50px 0;
+}
+.rsvp div a{
+    background-color: rgb(241, 146, 143);
+    padding: 20px 50px;
+    color: white;
+    border-radius: 5px;
+}
+.rsvp div a:hover{
+    background-color: gainsboro;
+    color: black;
+}
+.footer-bar{
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 100px;
+    padding: 16px 0;
+}
+.footer-bar p{
+    padding-top: 20px;
+}
+.footer-bar a{
+    padding: 10px 0;
+    color: white;
+    text-decoration: underline;
+}
+.footer-bar a:hover{
+    color: green;
+}

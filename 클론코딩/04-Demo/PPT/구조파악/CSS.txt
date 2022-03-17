@@ -1,0 +1,93 @@
+*공통 부분
+body,html- 여백제거, width,height:100%
+		전체 font설정
+*box-sizing*::  박스의 크기를 어떤 것을 기준으로 계산할지를 정하는 속성
+content-box : 콘텐트 영역을 기준으로 크기를 정합니다.
+border-box : 테두리를 기준으로 크기를 정합니다.
+initial : 기본값으로 설정합니다.
+inherit : 부모 요소의 속성값을 상속받습니다.
+
+a- 밑줄 제거, 색상 black 고정
+
+*메인 영역
+<img>- background: url로 넣기
+#main- position: relative
+밑의 div태그
+- position: absolute
+-top,left: 50%
+-글자 가운데 정렬
+
+*nav바
+div
+-불투명도 0.8정도
+-width: 100%
+-배경색 흰색
+-hover시 배경 불투명한 흰색
+div-a 
+- hover시 배경색 gray
+-padding으로 영역 확장
+-display:block을 주고 margin 5px정도 적용
+-RSVP만 hover시 배경 블랙, 색상 흰색
+
+*본문1
+큰 div- margin:auto로 가운데 정렬, 적용되지 않는다면 width80%주기
+h1,i -색상 회색
+img- width: %로 조절
+div-a
+-hover시 배경 회색, 색상 블랙
+-padding으로 영역 확장
+-text-align: center로 가운데 정렬
+
+*본문2
+img- background: url로 넣기
+큰 div영역에 position: relative
+밑의 div영역에 
+- position: absolute
+-top,left: 50%
+h1,h3- 색상 흰색
+
+*본문3
+큰 div
+- margin:auto로 가운데 정렬, 적용되지 않는다면 width80%주기
+-after로 float 마감처리
+h1- 색상 회색
+img- 사이즈 조절
+img밑의 div- float: left
+p -색상 진회색
+
+* 하단
+div-div
+- margin:auto로 가운데 정렬, 적용되지 않는다면 text-align:center나 width80%주기
+-letterspacing 주기
+div-a
+-padding으로 영역 확장
+-배경색 진핑크, 색상 화이트
+-hover시 배경 회색, 색상 블랙
+
+*하단 바
+p
+-width100%
+-배경색 블랙, 색상 화이트
+-padding으로 상하 영역 지정
+p-a
+-색상 화이트로 바꾸기
+-밑줄 넣기
+-hover시 색상 초록
+
+
+
+
+본문1 영역의 <p><i>태그- 가운데로 이동하지 않는다.
+text-align이 부모요소에 적용되어서 가운데로 정렬했지만
+좌우의 여백이없음
+margin으로 여백을 일일이 맞추기엔 브라우저 창의 크기가 변했을때 여백에 변화가 생길것같아 
+하지않고 부모 요소에 width100%준후에 p태그에 width60%를주고 margin: auto를 줌
+
+본문3 영역에서 text부분에 float: left를 주었지만
+저번처럼 전체영역을 80%로 잡은게 아닌 text-align center로 주었기에 
+브라우저 왼쪽면에 착 붙어서 움직일 생각을 하지않는다...
+조금만 생각해보면 되는걸 다른곳으로 엉뚱하게 눈을 돌려 flex-box를 써볼생각을 해서 시간을 버리고..
+부모의 width를 80%씩 줄이고 text영역을 각 50%로 줄이면 대충 여백이 맞고 
+여기서 margin: auto를 주면 가운데로 정렬한다.
+margin: auto에 대한 개념이 계속 안개낀것처럼 흐릿하게 잡힌 느낌이 계속 있었는데
+오늘의 헛짓으로 조금은 그 안개가 걷혔다..
