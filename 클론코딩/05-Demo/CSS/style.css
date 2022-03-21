@@ -14,6 +14,23 @@ a{
 ul,li{
     list-style: none;
 }
+h4{
+    font-size: 20px;
+}
+.color-green{
+    color: #009688;
+}
+.back-black{
+    background-color: black;
+    color: white;
+}
+.color-white{
+    color:white;
+}
+i{
+    margin-right: 10px;
+}
+/*side bar 영역*/
 .side-bar{
     background-color: white;
     position: fixed;
@@ -22,7 +39,6 @@ ul,li{
     height: 100%;
     width: 300px;
 }
-
 .side-bar .side-margin{
     margin: 20px 15px;
 }
@@ -35,16 +51,27 @@ ul,li{
 }
 .side-bar .item-gray{
     color: grey;
-    margin: 15px 0;
 }
 .side-bar a p{
-    padding: 8px 16px;
+   padding: 6px 0;
 }
-.color-green{
-    color: #009688;
+.side-margin a:hover{
+    background-color: gainsboro;
 }
+.side-bar .icon-area{
+    margin-top:25px;
+}
+.side-bar .icon-area i{
+    margin: 0;
+    padding-right: 3px;
+}
+.icon-area i:hover{
+    opacity: 0.6;
+}
+/*side-bar 제외 영역*/
 .width{
-    margin-left: 320px;
+    padding-left: 320px;
+    padding-right: 20px;
 }
 /*main영역*/
 main h1{
@@ -73,12 +100,12 @@ main .filter{
     border-bottom: 5px solid gray;
     margin: 10px 0;
 }
+/*main card 영역*/
 .card-area .card-item{
     background-color: white;
-    width: 28%;
-    padding: 0 16px;
+    width: 32.5%;
     float: left;
-    margin: 0 8px;
+    margin-bottom: 15px;
 }
 .card-area::after{
     content: '';
@@ -86,9 +113,250 @@ main .filter{
     float: none;
     clear: both;
 }
+.second-item{
+    margin: 0 10px;
+}
 .card-item img{
     width: 100%;
 }
+.card-item img:hover{
+    opacity: 0.6;
+}
 .card-item b, .card-item p{
-    padding: 15px 0;
+    padding: 10px 10px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+.page-area{
+    text-align: center;
+    margin: 40px 0;
+}
+.page-area a{
+    padding: 10px 16px;
+}
+.page-area a:hover{
+    background-color: black;
+    color: white;
+}
+.page-area .back-black:hover{
+    background-color: grey;
+    color: black;
+}
+/*본문 1 영역*/
+.part-1 img{
+    width: 48%;
+    padding: 16px 8px;
+}
+.part-1 p{
+    line-height: 1.5;
+}
+/*게이지 바*/
+.back-gray{
+    background-color: gray;
+    height: 38px;
+}
+.percent-text{
+    text-align: center;
+    margin: 6px 0;
+}
+.back-gain{
+    background-color: gainsboro;
+    height: 38px;
+}
+.gauge-bar{
+    float: left;
+    margin: 10px 0;
+}
+.gauge-area p::before{
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+.down-area{
+    margin-top: 100px;
+}
+.down-area a{
+    padding: 12px 24px;
+    background-color: grey;
+    color: white;
+}
+.down-area a:hover{
+    background-color: gainsboro;
+    color: black;
+}
+/*본문 2 영역*/
+.card-charge{
+    float: left;
+    width: 31%;
+    border: 1px solid rgb(179, 178, 178);
+    text-align: center;
+    margin: 0 8px;
+    background-color: white;
+    opacity: 0.6;
+}
+.card-charge:hover{
+    opacity: 1;
+}
+.part-2 h4{
+    font-weight: 400;
+    padding-top: 30px;
+}
+.part-2::after{
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+.first-list{
+    font-size: 24px;
+    padding: 32px 16px;
+}
+.back-green{
+    background-color: #009688;
+}
+.card-charge p{
+    padding: 16px;
+    border-bottom: 1px solid rgb(179, 178, 178);
+}
+.card-charge p:last-child{
+    padding: 13px;
+    border-bottom: none;
+}
+.card-charge h2{
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+.sign-area{
+    background-color: gainsboro;
+    padding: 30px 16px;
+    border-top: 1px solid rgb(179, 178, 178);
+}
+.sign-area a{
+    padding: 12px 24px;
+}
+/*하단 영역*/
+.footer-1{
+    background-color: gray;
+    padding-bottom: 30px;
+}
+.footer-1 h4{
+    padding: 20px 0;
+}
+.footer-1 .contact-box{
+    background-color: rgb(87, 87, 87);
+    float: left;
+    width: 33%;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+.contact-box:nth-child(3){
+    background-color: #009688;
+}
+.input-area::before{
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+.input-area input{
+    width: 98%;
+    padding: 8px;
+    margin-bottom: 16px 0;
+}
+.hr{
+    margin: 20px 0;
+    border-bottom: 1px solid gainsboro;
+}
+.input-area p:first-child{
+    padding-top: 20px;
+}
+.send-meg{
+    margin: 20px 0;
+}
+.send-meg a{
+    padding: 10px 16px;
+}
+/*하단 영역 2*/
+footer{
+    background-color: rgb(87, 87, 87);
+    padding-top: 20px;
+    padding-bottom: 32px;
+    min-height: 295px;
+}
+footer div{
+    float: left;
+    width: 32%;
+}
+footer div::after{
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+footer h3{
+    font-size: 24px;
+    margin: 10px 0;
+}
+footer p a{
+    color: white;
+    text-decoration: underline;
+}
+footer ul{
+    padding: 0;
+}
+footer ul li{
+    max-width: 367px;
+    padding: 10px 0;
+}
+footer ul li:hover{
+    background-color: gainsboro;
+}
+footer ul li:first-child{
+    border-bottom: 1px solid gainsboro;
+    padding: 10px 0;
+}
+footer li img{
+    width: 20%;
+    float: left;
+    vertical-align: top;
+    margin: 0 15px;
+}
+footer ul li::after{
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+.font-20{
+    font-size: 20px;
+}
+footer li p{
+    margin: 10px 0;
+}
+.tags span{
+    display: inline-block;
+    background-color: gray;
+    color: black;
+    padding: 3px 8px;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+.tags .first-tag{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+}
+.footer-bar{
+   padding: 24px 0;
+   text-align: center;
+}
+.footer-bar p{
+    margin-left: 100px;
+}
+.footer-bar a{
+    color: white;
+    text-decoration: underline;
 }
