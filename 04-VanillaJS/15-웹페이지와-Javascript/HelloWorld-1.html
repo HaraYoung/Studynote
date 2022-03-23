@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--1. JS코드는 <script>태그 안에서 작성됨
+    2.Html안에서 실행되는 JS는 document라는 내장객체를 갖음
+    document객체가 갖는 메서드 중에서 getElementById(id값)는
+    Html태그의 id값에 의해서(ById) Html요소 (Element)를 가져옴(get) -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('Hello World!');
+        const foo= document.getElementById('foo');
+        //h1태그에 대한 Html Element 객체 반환 받기
+
+        foo.innerHTML='Hello World';
+        /*Html Element 객체는 innerHTML이라는 속성값을 갖음
+        이 값은 시작태그와 끝태그 사이의 내용을 의미함*/
+   </script>
+   <!--위 코드는 한줄씩 차례대로 해석하는 웹브라우저 특성상
+    14라인을 브라우저가 해석하는 시점에서 #foo요소를 발견하지 못함
+    => null리턴, 17라인에서 null에대한 접근 에러가 발생함-->
+</head>
+<body>
+    <h1 id="foo"></h1>
+</body>
+</html>

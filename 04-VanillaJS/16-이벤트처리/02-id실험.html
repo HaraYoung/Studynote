@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hello{
+            color: blueviolet;
+        }
+        /*CSS는 중복 ID에 대해 문제없이 처리함*/
+    </style>
+</head>
+<body>
+    <h1 id="hello">Hello World</h1>
+    <h1 id="hello">Hello World</h1>
+    <h1 id="hello">Hello World</h1>
+
+    <script>
+        document.querySelector("#hello").innerHTML="헬로 월드"
+        //document.querySelector("hello").innerHTML="헬로 월드"
+        /*JS는 중복 ID가 있을 경우 처리불가.
+        가장 첫번째 항목만을 처리함-nth:child사용 가능*/
+    </script>
+</body>
+</html>
