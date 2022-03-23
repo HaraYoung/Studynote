@@ -8,7 +8,23 @@
 </head>
 <body>
     <!--년,월,일,시,분,초-계속 갱신-->
-    <!--Date객체..?-->
-    <h1></h1>
+    <!--Date..?-->
+    <h1 id="#time"></h1>
+    <script>
+        setInterval(()=>{
+             let date1= new Date();
+        const yy= date1.getFullYear();
+        const mm= date1.getMonth();
+        const dd= date1.getDate();
+        const hh= date1.getHours();
+        const mi= date1.getMinutes();
+        const ss= date1.getSeconds();
+        
+        document.getElementById('time').innerHTML=`${yy}`
+        },1000)
+       
+        console.log(yy+mm+dd+hh+mi+ss);
+
+    </script>
 </body>
 </html>

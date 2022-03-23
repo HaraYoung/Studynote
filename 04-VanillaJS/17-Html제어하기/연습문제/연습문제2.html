@@ -5,8 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .none{
+            padding: 3px 5px;
+            border: 3px solid gray;
+            color: blue;
+            background-color: gainsboro;
+        }
+        .click{
+            padding: 3px 5px;
+            border: 3px solid gray;
+            color: red;
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
-    <!--click이벤트-->
+    <!--click이벤트 -토글처리-->
+    <input type="button" id="btn"  class="none" value="푸쉬 알람 수신">
+    <!--
+        <button class="none" id="#btn">푸쉬 알람 수신</button>
+    -->
+    
+    <script>
+            document.querySelector('#btn').addEventListener('click', (e)=>{
+            const box= document.getElementById('btn');
+            box.classList.add('click');
+            box.classList.remove('none');
+
+       });
+    </script>
 </body>
 </html>
