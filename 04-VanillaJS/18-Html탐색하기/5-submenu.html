@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*기본 속성 초기화*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        /*float 처리*/
+        .pull-left{
+            float:left;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            float: none;
+            clear: both;
+        }
+        /*메뉴에 포함된 모든 링크에 대한 크기,
+        배경 지정 및 글자 꾸미기*/
+        .menu a{
+            display: block;
+            width: 179px;
+            height: 48px;
+            background: url('./img/btn.png');
+            line-height: 48px;
+            text-align: center;
+            font-weight: bold;
+            color: #cfdfb5;
+            text-decoration: none;
+        }
+        /*마우스 올라간 링크에 대한 배경 이미지 변경*/
+        .menu a:hover{
+            background: url('./img/btn_over.png');
+        }
+        /*서브메뉴가 펼쳐져도 다른 요소들 위에 떠있어야함,
+            =>position처리*/
+            .sub{
+                position: absolute;
+                z-index: 1000;
+                max-height: 0;
+                overflow: hidden;
+                transition:max-height 180ms ease-out;
+            }
+            /*서브 메뉴의 기준점을 부모 요소로 지정하기 위한 처리*/
+            .menu-item{
+                position: relative;
+            }
+    </style>
+</head>
+<body>
+    <ul class="menu clearfix">
+        <li class="menu-item pull-left"></li>
+        <a href="#">Frontent</a>
+        <ul class="sub">
+            <li><a href="#">Html+CSS</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">jQuery</a></li>
+        </ul>
+        <li class="menu-item pull-left"></li>
+        <a href="#">Backend</a>
+        <ul class="sub">
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">JSP</a></li>
+            <li><a href="#">Node.js</a></li>
+        </ul>
+        <li class="menu-item pull-left"></li>
+        <a href="#">Mobile</a>
+        <ul class="sub">
+            <li><a href="#">iOS</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="#">Hybrid</a></li>
+        </ul>
+    </ul>
+</body>
+</html>
