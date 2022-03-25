@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        li{
+            padding: 5px 10px;
+            cursor: pointer;
+            border-bottom: 1px dotted brown;
+        }
+        li:first-child{
+            border-top: 1px dotted brown;
+        }
+        .burlywood{
+            background-color: burlywood;
+        }
+        .chocolate{
+            background-color: chocolate;
+        }
+        .coral{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="comment">
+    <button type="button" id="appendChild">appendChild</button>
+    <button type="button" id="insertBefore1">insertBefore1</button>
+    <button type="button" id="insertBefore2">insertBefore2</button>
+    <hr/>
+    <!--동적으로 JS가 생성한 Html요소가 추가될 위치-->
+    <ul id="list"></ul>
+
+    <script>
+        const list= document.querySelector('#list');
+        //동적으로 JS가 생성한 Html요소가 추가될 객체
+
+        const comment= document.querySelector('#comment');
+        //사용자가 입력할 input태그
+
+        //동적으로 li태그 Element객체를 생성해 리턴하는 함수
+        const getItem= (clsName)=> {
+            const li= document.createElement('li');
+            //JS에서 li태그를 코딩시킴
+
+            li.classList.add('item', clsName);
+            //CSS클래스 추가시 add()함수에게 갯수제한 없이 콤마로 구분하여 여러개 지정가능
+
+            li.innerHTML= comment.value;
+            //사용자가 입력한 내용을 li태그에 표시함
+
+            //li에 클릭 이벤트 적용
+            li.addEventListener('click', (e)=> {
+                e.currentTarget.remove();
+                //클릭된 자기 스스로를 제거
+            });
+            return li;
+        };
+        //자식 요소 추가 버튼 클릭 이벤트
+        document.querySelector('#appendChild').addEventListener('click', (e)=> {
+            //li태그를 반환받음
+            const li =getItem('burlywood');
+            
+            /*ul태그에 JS가 코딩한 li를 자식요소로 추가함
+            => 기존항목을 유지하고 맨뒤에 추가*/
+            list.appendChild(li);
+        });
+        document.querySelector('#insertBefore1').addEventListener('click', (e)=> {
+            /*부모노드.insetBefore(삽입할 노트, 기준점 노드);
+            -기준점이 null일 경우 appendChild와 동일하게 동작*/
+            list.insertBefore(getItem('chocolate'), null);
+        });
+
+        document.querySelector('#insertBefore2').addEventListener('click', (e)=> {
+            list.insertBefore(getItem('coral'), document.querySelector('li:first-child'));
+        });
+    </script>
+</body>
+</html>

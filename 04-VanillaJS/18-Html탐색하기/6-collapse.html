@@ -5,8 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .collapsible-title{
+            background-color: chocolate;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            font-weight: normal;
+            margin: 0;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        .active,
+        .collapsible-title:hover{
+            background-color: brown;
+        }
+        .content{
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: burlywood;
+            width: 100%;
+
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="collapse">
+        <h1 class="collapsible-title">Open collapsible</h1>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nemo ut sed modi ipsam adipisci alias dolorum, qui iusto,
+                eum nobis libero cumque, necessitatibus repellendus vel nesciunt laborum. Rerum, quasi soluta?</p>
+        </div>
+    </div>
+    <div class="collapse">
+        <h1 class="collapsible-title">Open collapsible</h1>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nemo ut sed modi ipsam adipisci alias dolorum, qui iusto,
+                eum nobis libero cumque, necessitatibus repellendus vel nesciunt laborum. Rerum, quasi soluta?</p>
+        </div>
+    </div>
+    <div class="collapse">
+        <h1 class="collapsible-title">Open collapsible</h1>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nemo ut sed modi ipsam adipisci alias dolorum, qui iusto,
+                eum nobis libero cumque, necessitatibus repellendus vel nesciunt laborum. Rerum, quasi soluta?</p>
+        </div>
+    </div>
+    <div class="collapse">
+        <h1 class="collapsible-title">Open collapsible</h1>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nemo ut sed modi ipsam adipisci alias dolorum, qui iusto,
+                eum nobis libero cumque, necessitatibus repellendus vel nesciunt laborum. Rerum, quasi soluta?</p>
+        </div>
+    </div>
+    <div class="collapse">
+        <h1 class="collapsible-title">Open collapsible</h1>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nemo ut sed modi ipsam adipisci alias dolorum, qui iusto,
+                eum nobis libero cumque, necessitatibus repellendus vel nesciunt laborum. Rerum, quasi soluta?</p>
+        </div>
+    </div>
+    <div class="collapse">
+        <h1 class="collapsible-title">Open collapsible</h1>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nemo ut sed modi ipsam adipisci alias dolorum, qui iusto,
+                eum nobis libero cumque, necessitatibus repellendus vel nesciunt laborum. Rerum, quasi soluta?</p>
+        </div>
+    </div>
+
+    <script>
+
+        document.querySelectorAll('.collapsible-title').forEach((v, i)=> {
+            v.addEventListener('click', (e)=>{
+                const current= e.currentTarget;
+                //클릭된 자기 자신
+
+                current.classList.toggle('active');
+                //스스로에게 active클래스에 대한 적용 여부 변경
+
+                const parent= current.closest('.collapse');
+                 //클릭된 자신의 상위 요소인 <div class="collapse">
+
+                const content= parent.querySelector('.content');
+                 //제어할 대상을 탐색
+
+                 //content에 maxHeight속성이 있다면 (혹은 0이 아니라면)
+                if(content.style.maxHeight){
+                    content.style.maxHeight= null;
+                }else{
+                    content.style.maxHeight= content.scrollHeight+ 'px';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
