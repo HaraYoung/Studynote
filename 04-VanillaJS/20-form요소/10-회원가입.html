@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-horizontal{
+            border: 5px solid gray;
+            width: 500px;
+            margin: auto;
+            padding: 0 10px;
+        }
+        .form-group::after{
+            content: '';
+            display: block;
+            clear: both;
+            float: none;
+        }
+        .form-group{
+            padding: 10px 0;
+            border-bottom: 1px dotted #eee;
+        }
+        .form-group:last-child{
+            border-bottom: 0;
+        }
+        .col-me-10{
+            width: 80%;
+            padding: 5px 0;
+            font-size: 14px;
+            border: 1px solid #eee;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .identify{
+            font-size: 14px;
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <!--가입 폼 시작-->
+    <form name="join_form" class="form-horizontal" id="join_form">
+        <div class="form-group">
+            <label for="user_id" class="col-md-2">아이디<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <input type="text" name="user_id" id="user_id" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="user_pw" class="col-md-2">비밀번호<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <input type="password" name="user_pw" id="user_pw" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="user_pw" class="col-md-2">비밀번호 확인<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <input type="password" name="user_pw_re" id="user_pw_re" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="user_name" class="col-md-2">이름<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <input type="text" name="user_name" id="user_name" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-md-2">이메일<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <input type="email" name="email" id="email" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tel" class="col-md-2">연락처<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <input type="tel" name="tel" id="tel" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tel" class="col-md-2">성별<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <label><input type="radio" name="gender" id="gender1" value="M"/>남자</label>
+                <label><input type="radio" name="gender" id="gender2" value="F"/>여자</label>
+           </div>
+        </div>
+        <div class="form-group">
+            <label for="tel" class="col-md-2">수강 과목<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <label><input type="checkbox" name="subject" id="subject1" value="html"/>HTML</label>
+                <label><input type="checkbox" name="subject" id="subject2" value="css"/>CSS</label>
+                <label><input type="checkbox" name="subject" id="subject3" value="js"/>JAVASCRIPT</label>
+                <label><input type="checkbox" name="subject" id="subject4" value="jquery"/>jQuery</label>
+                <label><input type="checkbox" name="subject" id="subject7" value="php"/>PHP</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="text-center">
+                <button type="submit">가입하기</button>
+                <button type="reset">다시 작성</button>
+            </div>
+    </form>
+
+</body>
+</html>
