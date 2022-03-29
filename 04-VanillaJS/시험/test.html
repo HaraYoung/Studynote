@@ -1,0 +1,26 @@
+
+<html>
+    <head>
+        <script>
+            
+            // onchange에서 호출하는 함수. 
+            function testChange(){
+                if(document.getElementById('sit').value ==0){
+                 alert('테스트');
+                }
+              
+            }
+            
+        </script>
+    </head>
+    <body>
+        <select id="sit" onchange="testChange()">
+            <option value="">직업선택</option>
+            <option value="학생">학생</option>
+            <option value="회사원">회사원</option>
+            <option value="기타">기타</option>
+        </select>
+    </body>
+</html>
+ 
+ 

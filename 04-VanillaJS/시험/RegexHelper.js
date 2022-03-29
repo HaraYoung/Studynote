@@ -4,8 +4,8 @@
 @description: 정규표현식 검사 수행
 */
 
-/*for node.js*/
-const BadRequestException= require('./BadRequestException'); 
+/*for node.js
+=> const BadRequestException= require('./BadRequestException'); */
 
 class RegexHelper {
   //constructor(){}
@@ -198,5 +198,5 @@ class RegexHelper {
     return true; //성공했음을 리턴
   }
 }
-/*for node.js*/
-module.exports= new RegexHelper(); 
+/*for node.js
+module.exports= new RegexHelper(); */

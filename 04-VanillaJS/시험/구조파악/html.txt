@@ -1,0 +1,35 @@
+Html-초기 구도
+
+header
+div>img
+
+main
+아이디~이름영역까지,본인 확인 이메일
+form>div>labe
+	>div>input
+
+생년월일
+	div>lable
+	    >div>input
+	    >div>select>option
+	    >div>input
+성별
+	div>lable
+	    >div>select>option
+
+휴대전화
+	div>lable
+	    >div>select>option
+	    >div>input
+                >div>a>span
+	    >div>input
+가입하기
+	div>button>span
+
+footer
+div>ul>li>a
+        >li>a>b
+        >li>a
+        >li>a
+     (div)>img>a
+     >address>a>b

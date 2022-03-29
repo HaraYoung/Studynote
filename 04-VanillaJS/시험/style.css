@@ -1,0 +1,180 @@
+/*
+@filename: style.css
+@author: 박세영 (qkrtpdud9899@gmail.com)
+@description: index.html의 스타일 설정
+*/
+
+/*공통 영역*/
+html,body{
+    background-color: #f5f6f7 ;
+    width: 100%;
+    height: 100%;
+    font-family: Dotum,'돋움',Helvetica,sans-serif;
+    font-size: 12px;
+    margin: auto;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul,li{
+    list-style: none;
+}
+
+#header,#main,#footer{
+    margin: auto;
+    width: 40%;
+    max-width: 768px;
+    min-width: 460px;
+}
+/*head 영역*/
+#header{
+    padding: 60px 0 54px;
+}
+#header img{
+    width: 40%;
+    margin-left: 200px;
+}
+
+/*main 영역*/
+#main .form-item{
+    padding: 15px 0;
+}
+#main .form-item:first-child{
+    padding-top: 0;
+}
+#main .form-item:last-child{
+    text-align: center;
+}
+#main label{
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+input{
+    border: solid 1px #a7a7a7;
+    width: 100%;
+    height: 51px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+input:focus{
+    outline: 1px solid #00a149;
+    /*https://velog.io/@ssumniee/ 참고*/
+}
+.relative{
+    position: relative;
+}
+/*아이디 입력란 안의 텍스트영역*/
+.id-in{
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #8e8e8e;
+}
+/*비밀번호 입력란 안의 아이콘 영역1*/
+.icon1{
+    position: absolute;
+    background-image: url(./m_icon_pw_step.png);
+    top: 50%;
+    right: 13px;
+    width: 24px;
+    height: 24px;
+    margin-top: -15px;
+    background-repeat: no-repeat;
+    background-size: 125px 75px;
+    cursor: pointer;
+}
+/*비밀번호 입력란 안의 아이콘 영역2*/
+.icon2{
+    position: absolute;
+    background-image: url(./m_icon_pw_step.png);
+    top: 50%;
+    right: 13px;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    background-repeat: no-repeat;
+    background-size: 125px 75px;
+    cursor: pointer;
+    background-position: -27px 0
+}
+.float-left{
+    float: left;
+    margin-right: 15px;
+}
+.form-item::after, .float-none::after{
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+/*월 선택영역*/
+#user_mm{
+    width: 181px;
+    height: 55px;
+    margin-left: 15px;
+}
+/*일 입력란 영역*/
+.th-ma-r{
+    margin-right: 0;
+}
+#gender,#nation{
+    width: 102%;
+    height: 51px;
+    padding-left: 10px;
+}
+/*이메일 옆*/
+.email-item{
+    font-size: 12px;
+    font-weight: 400;
+    color: #8e8e8e;
+}
+#main .tel-width{
+    width: 70%;
+    margin: 10px 0;
+}
+/*버튼 공통*/
+.button-item{
+    background-color: #03c75a;;
+    color: white;
+    border: 1px solid #00a149;
+}
+.button1{
+    display: inline-block;
+    padding:15px;
+    width: 100%;
+    margin-left: 20px;
+    text-align: center;
+}
+.button2{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.float-none{
+    margin-left: 50px;
+}
+#footer{
+    padding-bottom: 20px;
+}
+#footer .ma-le{
+    margin-left: 130px;
+}
+#footer address{
+    display: inline;
+    font: 9px Verdana;
+    padding-left: 5px;
+}
+#footer ul li a:hover, #footer address a:hover{
+    color: #438a01;
+    text-decoration: underline;
+}
+
