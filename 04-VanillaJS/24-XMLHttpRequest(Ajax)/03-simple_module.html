@@ -13,22 +13,19 @@
     </style>
 </head>
 <body>
-    <h1>Simple Promise Module</h1>
+    <h1>Simple Module</h1>
     <a href="#" id="btn">load hello.json</a>
     <div id="console"></div>
 
-    <script src="./ajaxPromiseHelper.js"></script>
+    <script src="./backend/ajaxHelper.js"></script>
     <script>
-        document.querySelector('#btn').addEventListener('click',e =>{
+        document.querySelector('#btn').addEventListener('click', e=>{
             e.preventDefault();
-            ajaxPromiseHelper('./hello.json').then(json=> {
+            ajaxHelper('./backend/hello.json', 'GET', (json)=> {
                 const h1= document.createElement('h1');
                 h1.classList.add('text-success');
                 h1.innerHTML= json.msg;
                 document.querySelector('#console').appendChild(h1);
-            }).catch(e=> {
-                console.error(e);
-                alert(e.msg);
             });
         });
     </script>

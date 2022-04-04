@@ -14,7 +14,7 @@
   </head>
   <body>
     <h1>Simple Get</h1>
-    <a href="./hello.html">move to hello.html</a>
+    <a href="./backend/hello.html">move to hello.html</a>
     <a href="#" id="btn">load hello.html</a>
     <div id="console"></div>
     <script>
@@ -22,7 +22,7 @@
         e.preventDefault();
         const xhr = new XMLHttpRequest(); //ajax기능을 수행하는 통신 객체
         const method = "GET"; //백엔드 페이지에 접속하는 방식-GET,POST,PUT,DELETE
-        const url = "./hello.html"; //요청(접속)할 대상 페이지 주소- 이 파일의 소스코드를 읽어옴
+        const url = "./backend/hello.html"; //요청(접속)할 대상 페이지 주소- 이 파일의 소스코드를 읽어옴
 
         /*xhr객체의 상태가 변화할 때마다 호출되는 이벤트
           -총 4번 호출됨: 준비완료, 접속시도, 통신중, 통신완료*
