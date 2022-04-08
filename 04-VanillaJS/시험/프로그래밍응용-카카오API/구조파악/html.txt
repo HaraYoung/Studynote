@@ -1,0 +1,28 @@
+<div>-로딩바
+<div #header>
+	<h1>-제목
+	<form#search>
+		<fieldset>
+			<slecet#sort>-문서정렬방식
+				<option>-정확도순
+				<option>-발간일순
+			<slecet#size>-보여질 문서 수
+				<option>-10건
+				<option>-20건
+				<option>-30건
+				<option>-40건
+				<option>-50건
+			<input-type=search #query placeholder>
+			<button type=submit>
+
+<ul#list>
+	<li>
+		<a target=_blank>
+			<img>-이미지가 없을경우 대체이미지 설정
+			<h3>-글제목
+			<p>-본문
+			<span> -작가
+			<span>- 출판사
+			<span> -정가
+			<span>- 판매가
+<script>-axios,main.js참조

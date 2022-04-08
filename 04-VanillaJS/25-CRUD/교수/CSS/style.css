@@ -1,0 +1,101 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: black;
+}
+.container{
+    width: 640px;
+    margin: auto;
+    padding: 20px 0;
+}
+.container header h1{
+    color: teal;
+}
+.container footer address{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+}
+.container section{
+    margin-bottom: 20px;
+}
+.table{
+    width: 100%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.table th, .table td{
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+.table td a{
+    margin: 0 5px;
+}
+.table th:first-child, .table td:first-child{
+    border-left: none;
+}
+.form-group{
+    margin: 10px 0;
+    padding: 20px 0;
+}
+.text-danger{
+    color: red;
+}
+.text-center{
+    text-align: center;
+}
+.form-group::after{
+    display: block;
+    content: '';
+    float: none;
+    clear: both;
+}
+.form-group label{
+    float: left;
+    width: 100px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+}
+.container dt{
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.container dt::before{
+    content: '*';
+    padding-right:5px ;
+}
+.container dd{
+    font-weight: normal;
+    margin-bottom: 30px;
+    border-left: 5px solid d5d5d5;
+    padding-left: 15px;
+    font-size: 14px;
+}
+.text-danger{
+    color: red;
+}
+.text-center button, .container .btn-a{
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor:pointer;
+    text-decoration: none;
+}
+.container .btn-a:last-child{
+    background-color: rgb(253, 58, 58);
+}
+.text-center button:hover{
+    background-color: rgb(15, 39, 39);
+}
+.btn-delete{
+    color: red;
+}

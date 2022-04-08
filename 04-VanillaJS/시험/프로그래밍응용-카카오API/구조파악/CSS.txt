@@ -1,0 +1,95 @@
+로딩바
+      #loading {
+        width: 100px;
+        height: 100px;
+        background-image: url(./loading.gif);
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -50px;
+        margin-top: -50px;
+        z-index: 99999;
+        display: none;
+      }
+      #loading.active {
+        display: block;
+      }
+
+검색폼 고정
+      #header{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 10000;
+          padding: 0 10px 5px 10px;
+          box-sizing: border-box;
+      }
+
+ul태그
+      #list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+검색결과 구분선
+      #list li{
+          border-bottom: 1px solid darkgray;
+      }
+      #list li:first-child{
+        border-bottom: 1px solid darkgray;
+      }
+
+검색결과 a태그
+      #list a{
+          display: block;
+          width: auto;
+          min-height: 120px;
+          padding: 10px;
+          position: relative;
+          color: black;
+          text-decoration: none;
+      }
+
+검색결과 img태그
+      #list a img{
+          display: block;
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+          position: absolute;
+          left: 10px;
+          top: 10px;
+      }
+
+검색결과 h2태그
+     #list a h2{
+          font-size: 18px;
+          margin-top: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /*라인수*/
+          -webkit-box-orient: vertical;
+          word-wrap: break-word;
+      }
+
+검색결과 p태그
+      #list a p{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /*라인수*/
+          -webkit-box-orient: vertical;
+          word-wrap: break-word;
+      }
+
+검색결과 span태그
+      #list span::after{
+          content: '|';
+          margin: 0 7px;
+      }
