@@ -36,7 +36,7 @@
                         <th class="text-center">급여</th>
                         <th class="text-center">입사일</th>
                         <th class="text-center">보직 수당</th>
-                        <th class="text-center">부서 번호(학과 번호)</th>
+                        <th class="text-center">부서 번호<br>(학과 번호)</th>
                         <th class="text-center">수정/삭제</th>
                     </tr>
                 </thead>
@@ -100,7 +100,7 @@
 
                     //입사일- 날짜처리
                     const td6=document.createElement('td');
-                    td6.innerHTML= new Date(v.hiredate).toLocaleString();
+                    td6.innerHTML= new Date(v.hiredate).toLocaleDateString();
                     tr.appendChild(td6);
 
                     //보직 수당

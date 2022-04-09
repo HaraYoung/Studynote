@@ -126,6 +126,16 @@
       "hiredate": "1990-10-17T15:00:00.000Z",
       "comm": 17,
       "deptno": 202
+    },
+    {
+      "name": "이아이",
+      "userid": "dldkdl",
+      "position": "외부교수",
+      "sal": "150",
+      "hiredate": "22.04.20.",
+      "comm": "10",
+      "deptno": "101",
+      "id": 9909
     }
   ],
   "student": [
