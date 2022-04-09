@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>학과 관리 : My School</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
     <div class="container">
         <!--header-->
-        <div data-include="inc/header.html"></div>
+        <div data-include="../inc/header.html"></div>
         <section>
             <form name="form" id="department-form">
                 <!--수정할 대상에 대한 일련번호값을 포함해야하므로 hidden필드로 처리-->
@@ -35,10 +35,10 @@
             </form>
         </section>
         <!--footer-->
-        <div data-include="inc/footer.html"></div>
+        <div data-include="../inc/footer.html"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./include.js"></script>
+    <script src="../JS/include.js"></script>
     <script>
         (async()=> {
             //GET파라미터 받기 

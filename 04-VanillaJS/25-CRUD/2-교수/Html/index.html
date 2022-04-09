@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학과 관리 : My School</title>
+    <title>r교수 관리 : My School</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
         <div data-include="inc/header.html"></div>
         <section>
             <p>
-                <a href="add.html">새 학과 추가</a>
+                <a href="add.html">새 교수 추가</a>
             </p>
             <table class="table">
                 <colgroup>
@@ -24,10 +24,14 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th class="text-center">학과 번호</th>
-                        <th class="text-center">학과 이름</th>
-                        <th class="text-center">학과 위치</th>
-                        <th class="text-center">-</th>
+                        <th class="text-center">교수 번호</th>
+                        <th class="text-center">교수 이름</th>
+                        <th class="text-center">아이디</th>
+                        <th class="text-center">직급</th>
+                        <th class="text-center">급여</th>
+                        <th class="text-center">입사일</th>
+                        <th class="text-center">보직 수당</th>
+                        <th class="text-center">부서 번호(학과 번호)</th>
                     </tr>
                 </thead>
                 <tbody id="listBody"></tbody>
@@ -45,7 +49,7 @@
             
             //ajax요청
             try{
-                json= await axios.get('http://localhost:3000/department');
+                json= await axios.get('http://localhost:3000/professor');
             } catch(e){
                 console.error(e);
                 alert('요청을 처리하는데 실패했습니다.');
@@ -72,18 +76,36 @@
                     <대체로 id라는 이름의 변수는 그 대상을 식별하기 위한 고유한 값을 의미 (=일련번호)>*/
                     const a1=document.createElement('a');
                     a1.setAttribute('href', `view.html?id=${v.id}`);
-                    a1.innerHTML= v.dname;
+                    a1.innerHTML= v.name;
                     td2.appendChild(a1);
 
 
                     //학과 위치를 포함하는 세번째 칸을 tr에 추가
                     const td3= document.createElement('td');
-                    td3.innerHTML= v.loc;
+                    td3.innerHTML= v.userid;
                     tr.appendChild(td3)
 
                     //네번째 칸을 tr에 추가
                     const td4=document.createElement('td');
+                    td4.innerHTML= v.position;
                     tr.appendChild(td4);
+
+                    const td5=document.createElement('td');
+                    td5.innerHTML= v.sal;
+                    tr.appendChild(td5);
+
+                    //날짜처리
+                    const td6=document.createElement('td');
+                    td6.innerHTML= v.hiredate;
+                    tr.appendChild(td6);
+
+                    const td7=document.createElement('td');
+                    td7.innerHTML= v.comm;
+                    tr.appendChild(td7);
+                    
+                    const td8=document.createElement('td');
+                    td8.innerHTML= v.deptno;
+                    tr.appendChild(td8);
 
                     //어떤 항목을 수정할것인지를 GET파라미터로 담은 링크를 네번째 칸에 추가
                     const a2= document.createElement('a');
@@ -114,7 +136,7 @@
                         }
                         let json= null;
                         try{
-                            json= axios.delete(`http://localhost:3000/department/${id}`);
+                            json= axios.delete(`http://localhost:3000/professor/${id}`);
                         }catch{
                             console.error(e);
                             alert('요청을 처리하는데 실패했습니다');
