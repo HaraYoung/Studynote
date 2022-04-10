@@ -75,7 +75,7 @@
                 document.querySelector('.userid').innerHTML= data.userid;
                 document.querySelector('.position').innerHTML= data.position;
                 document.querySelector('.sal').innerHTML= data.sal;
-                document.querySelector('.hiredate').innerHTML= new Date(data.hiredate).toLocaleDateString();
+                document.querySelector('.hiredate').innerHTML= new Date(data.hiredate).toISOString().slice(0, 10);
                 document.querySelector('.comm').innerHTML= data.comm;
                 document.querySelector('.deptno').innerHTML= data.deptno;
 

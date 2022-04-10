@@ -48,14 +48,14 @@
   ],
   "professor": [
     {
-      "id": 9901,
       "name": "김도훈",
       "userid": "capool",
       "position": "교수",
-      "sal": 500,
-      "hiredate": "1982-06-11T15:00:00.000Z",
-      "comm": 20,
-      "deptno": 101
+      "sal": "500",
+      "hiredate": "2022-03-31",
+      "comm": "20",
+      "deptno": "101",
+      "id": 9901
     },
     {
       "id": 9902,
@@ -132,26 +132,23 @@
       "userid": "dldkdl",
       "position": "외부교수",
       "sal": "150",
-      "hiredate": "22.04.20.",
+      "hiredate": "2022-04-05",
       "comm": "10",
       "deptno": "101",
       "id": 9909
+    },
+    {
+      "name": "박세영",
+      "userid": "dldkdl",
+      "position": "외부교수",
+      "sal": "111",
+      "hiredate": "2022-04-06",
+      "comm": "100",
+      "deptno": "203",
+      "id": 9910
     }
   ],
   "student": [
-    {
-      "id": 10101,
-      "name": "전인하",
-      "userid": "jun123",
-      "grade": 4,
-      "idnum": "7907021369824",
-      "birthdate": "1979-07-01T15:00:00.000Z",
-      "tel": "051)781-2158",
-      "height": 176,
-      "weight": 72,
-      "deptno": 101,
-      "profno": 9903
-    },
     {
       "id": 10102,
       "name": "박미경",
@@ -346,6 +343,13 @@
       "weight": 62,
       "deptno": 201,
       "profno": null
+    },
+    {
+      "name": "박이이",
+      "userid": "ㅁㅁㅁㅁ",
+      "grade": "1",
+      "idnum": "0100000000",
+      "id": 20105
     }
   ]
 }

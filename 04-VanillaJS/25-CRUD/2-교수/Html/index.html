@@ -100,7 +100,7 @@
 
                     //입사일- 날짜처리
                     const td6=document.createElement('td');
-                    td6.innerHTML= new Date(v.hiredate).toLocaleDateString();
+                    td6.innerHTML= new Date(v.hiredate).toISOString().slice(0, 10);
                     tr.appendChild(td6);
 
                     //보직 수당
