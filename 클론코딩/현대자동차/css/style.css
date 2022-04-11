@@ -1,0 +1,150 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    font-family: 'HyundaiKRRegular','HyundaiKRTextRegular','HyundaiRegular','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+    width: 100%;
+    height: auto;
+}
+ul{
+    list-style: none;
+}
+
+.header .nav{
+    background-color: #f6f3f2;
+    padding: 25px 0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.nav>a, .nav>.nav-span{
+    color: #666;
+    font-weight: bolder;
+    font-size: 16px;
+    padding:0 30px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.nav .icon-area img{
+    height: 17px;
+    margin-right: 15px;
+}
+.btn{
+    background-color: #f6f3f2;
+}
+.header>a, .header span, .hidden>a:hover{
+    color: #002c5f;
+}
+.header .hidden{
+    width: 100%;
+    padding: 15px 0;
+    background-color: #f6f3f2;
+    display: inline-block;
+    text-align: center;
+    border-bottom: 2px solid #e4dcd3;
+    border-top: 2px solid #e4dcd3;
+    display: none;
+}
+.header .hidden a{
+    color: #666;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 24px 0;
+    text-shadow: 0 1px 1px #666;
+    margin-right: 70px;
+}
+/*추후 수정
+.hidden>#trans>a{
+    transition:  0.4s ;
+}
+.hidden>#trans>a :hover{
+    transform: rotate(180deg);
+}
+*/
+.header .last-header {
+    text-align: center;
+    padding: 35px 0;
+    margin: 10px 0;
+}
+.header .last-header a{
+    color: #7e7e7e;
+    text-decoration: none;
+    font-size: 14px;
+}
+.last-header a::after{
+    content: '|';
+    margin:0 15px;
+}
+.header .last-header a:hover{
+    color: #00aad2;
+}
+.main{
+    width: 60%;
+    margin: auto;
+}
+.main-part{
+    padding-bottom: 30px;
+}
+.main-part .first-img{
+    margin-right: 20px;
+}
+.main-part>p{
+    color: #002c5f;
+    font-size: 15px;
+    font-weight: bolder;
+    text-shadow: 0 1px 1px #002c5f;
+    margin-bottom: 2px;
+}
+.main-part>span{
+    display: block;
+    font-size: 44px;
+    font-weight:bolder
+}
+.second-img{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+.second-img p {
+    font-size: 12px;
+    padding :10px;
+}
+.second-img span{
+    font-size: 20px;
+    padding :20px 5px;
+}
+.second-item{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bolder;
+}
+.main-part2{
+    padding: 20px 10px;
+}
+.main-part2 .left{
+    float: left;
+}
+
+.main-part2 a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.main-part2 a p{
+    color: #002c5f;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.main-part2 a span{
+    font-size: 18px;
+    font-weight: bolder;
+    color: black;
+}
+.main-part2::after{
+    float: none;
+    clear: both;
+    content: '';
+    display: block;
+}

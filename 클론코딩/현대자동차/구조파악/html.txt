@@ -1,0 +1,23 @@
+* nav
+div>div>img+a*5+(a>img)*3+(select>option)*2
+    >div>a*6+(a>img) ::숨겨놓은 태그
+    >search아이콘 클릭시 나타나는 박스 ::숨겨놓은 태그
+    >div>a*8
+
+
+*main
+div>div>p+span+(a>img)+(a>img>p+span)
+    >(div>a>(img+p+span)*3)*4
+
+*country
+div>div>img+(div>h2+p+a)
+
+*social
+div>p+span>
+    >ul>(li>a>img+div>span+img or span)*6
+
+*footer
+div>img>ul>div
+	  >(li>div+(a*4))*3
+	  >(li>div+div>p+(a*3)
+		      >p+a)	

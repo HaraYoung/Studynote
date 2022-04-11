@@ -1,0 +1,5 @@
+회사소개 hover시 나타나는 div 나타내기 설정
+-hover시 display: bloack
+-X마크 클릭시,다른 a태그 hover시 display:none
+
+소셜 이미지 hover시 숨겨놓은 div 나타내기 설정
