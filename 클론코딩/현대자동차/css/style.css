@@ -8,7 +8,6 @@ body,html{
 ul{
     list-style: none;
 }
-
 .header .nav{
     background-color: #f6f3f2;
     padding: 25px 0;
@@ -16,7 +15,7 @@ ul{
     display: inline-block;
     text-align: center;
 }
-.nav>a, .nav>.nav-span{
+.header>.nav>a, .nav>.nav-span{
     color: #666;
     font-weight: bolder;
     font-size: 16px;
@@ -31,14 +30,14 @@ ul{
 .btn{
     background-color: #f6f3f2;
 }
-.header>a, .header span, .hidden>a:hover{
+.header>.nav>:hover,
+.nav>.nav-span:hover{
     color: #002c5f;
 }
 .header .hidden{
     width: 100%;
     padding: 15px 0;
     background-color: #f6f3f2;
-    display: inline-block;
     text-align: center;
     border-bottom: 2px solid #e4dcd3;
     border-top: 2px solid #e4dcd3;
@@ -53,14 +52,14 @@ ul{
     text-shadow: 0 1px 1px #666;
     margin-right: 70px;
 }
-/*추후 수정
-.hidden>#trans>a{
-    transition:  0.4s ;
+.hidden a:hover{
+    color: #002c5f;
 }
-.hidden>#trans>a :hover{
-    transform: rotate(180deg);
+/*동작 x*/
+#trans:hover{
+    transition: all ease 0.4s;
+    transform: rotate(90deg);
 }
-*/
 .header .last-header {
     text-align: center;
     padding: 35px 0;
@@ -78,24 +77,23 @@ ul{
 .header .last-header a:hover{
     color: #00aad2;
 }
-.main{
-    width: 60%;
-    margin: auto;
-}
+/*main -1*/
 .main-part{
     padding-bottom: 30px;
+    width: 60%;
+    margin: auto;
 }
 .main-part .first-img{
     margin-right: 20px;
 }
-.main-part>p{
+.main-part>p, .social .social-title p{
     color: #002c5f;
     font-size: 15px;
     font-weight: bolder;
     text-shadow: 0 1px 1px #002c5f;
     margin-bottom: 2px;
 }
-.main-part>span{
+.main-part>span, .social .social-title span{
     display: block;
     font-size: 44px;
     font-weight:bolder
@@ -120,19 +118,24 @@ ul{
     left: 0;
     font-weight: bolder;
 }
+/*main -2*/
 .main-part2{
     padding: 20px 10px;
+    width: 70%;
+    margin: auto;
 }
-.main-part2 .left{
-    float: left;
-}
-
 .main-part2 a{
     text-decoration: none;
     color: black;
-    display: block;
+    width: 25%;
+    float: left;
+    margin: 10px 0;
 }
-.main-part2 a p{
+/*main-1과 여백 맞추기*/
+.main-part2 a:first-child{
+    margin-left: 90px;
+}
+.main-part2 a p, .social div p{
     color: #002c5f;
     font-size: 12px;
     font-weight: bolder;
@@ -142,9 +145,196 @@ ul{
     font-weight: bolder;
     color: black;
 }
+/*이미지 간격 맞추기*/
+.main-part2 .s-area{
+    width: 256px;
+}
+.main-part2 .s-second{
+    margin-right: -60px;
+}
+.main-part2 .m-area{
+    margin-right: -40px;
+}
+.main-part2 .l-area{
+    margin-right: 65px;
+}
 .main-part2::after{
     float: none;
     clear: both;
     content: '';
     display: block;
+}
+/*country*/
+.country{
+    background-color: #002c5f;
+    color: white;
+    width: 100%;
+    height: 595px;
+}
+.country>div{
+        width: 60%;
+        margin: auto;
+}
+.country div img{
+    margin-left: 50px;
+    margin-top: 150px;
+}
+.left{
+    float: left;
+}
+.country::after{
+    float: none;
+    clear: both;
+    content: '';
+    display: block;
+}
+.country .cou-text{
+    display: inline-block;
+    width: 270px;
+    margin-top: 200px;
+    margin-left: 30px;
+}
+.cou-text h2{
+    font-weight: bold;
+    line-height: 1.5;
+
+}
+.cou-text p{
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 15px;
+}
+.cou-text a{
+    background-color: #666;
+    text-decoration: none;
+    color: white;
+    padding: 8px 30px;
+    font-size: 14px;
+}
+.cou-text a:hover{
+    color: white;
+}
+/*social*/
+.social{
+    width: 65%;
+    margin:auto;
+    padding-bottom: 70px;
+}
+.social-title{
+    margin-left: 40px;
+    margin-top: 70px;
+}
+.social-title span{
+    font-size: 32px;
+}
+ul::after{
+    float: none;
+    clear: both;
+    content: '';
+    display: block;
+}
+ul .left{
+    width: 30%;
+    margin-right: 30px;
+}
+ul .left .soc-img{
+    position: relative;
+    padding: 10px;
+    z-index: 0;
+    display: inline-block;
+}
+ul .left .soc-img:hover .hover-span{
+        display: block;
+}
+ul .left a{
+    text-decoration: none;
+    color: white;
+}
+ul .left .hover-span{
+    background-color: #002c5f;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 10;
+    width: 296px;
+    height: 296px;
+    display: none;
+    transition: 0.4s
+}
+ul .hover-span span{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 180px;
+    z-index: 100;
+}
+ul .hover-span .insta-icon{
+    background-image: url(../img/instagram.png) ;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    height: 25px;
+    position: absolute;
+    z-index: 1000;
+    top: 80%;
+    left: 12%;
+}
+/*footer*/
+footer{
+    background-color: black;
+    overflow: hidden;
+}
+.footer-area{
+   width: 60%;
+   margin: auto;
+   padding: 50px 0;
+}
+.footer-area img{
+    margin-bottom: 30px;
+}
+.footer-area ul .left{
+    width: 25%;
+    margin-left: -30px ;
+}
+footer ul::after{
+    float: none;
+    clear: both;
+    content: '';
+    display: block;
+}
+.footer-item .left div{
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 10px 0;
+}
+.footer-item .left a{
+    font-size: 14px;
+    color: #cfc8c2;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.footer-item .left a:hover{
+    color: white;
+}
+footer .footer-icon{
+    margin-bottom: -40px;
+}
+footer .footer-icon p{
+    font-size: 14px;
+    font-weight: normal;
+    color: #cfc8c2;
+}
+.footer-icon a img{
+    width: 21px;
+    margin-right: 10px;
+    margin-top: -5px;
+    opacity: 0.8;
+}
+.footer-icon a img:hover{
+    opacity: 1;
+}
+footer .address{
+    width: 60%;
+    color: #cfc8c2;
+    font-size: 14px;
 }
