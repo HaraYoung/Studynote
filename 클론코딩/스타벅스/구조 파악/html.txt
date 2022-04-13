@@ -1,0 +1,59 @@
+* nav
+div>img
+    +div>(a*4)+(a>(input+)img)
+    +div>a*6
+
+* nav-hidden
+div>div>ul>li*6>a+a
+    >a+span
+(menu탭- (a>img)+span)
+
+* main
+div>div>a
+   >div*3
+   >div>a+a
+
+* rewards
+div>div>span+a+(a>img)
+    >div>a>img
+    >div>img
+          >div>h2+p+a+a
+          >div>p+a
+
+* promotion-hidden-라이브러리 활용 or 직접 구현
+div>div-JS로 동적 생성
+    >div>div>a>img
+    >div>img+a
+    >div>div>a>>img
+    >div-JS로 동적생성
+    >div>(a>img)+4
+
+* bean
+div>div>img
+   >div>img+a
+   >(div>img)*2
+
+* indosnesia-wast-java
+div>div>img
+
+*pick
+div>(div>img)*2
+    >div>a
+    >div>img
+
+* magazine
+div>div>img+a
+    >div>img
+
+* store
+div>(div>img)*4
+    >div>img+img+a
+
+*footer
+div>div>ul>(li>a+a)*5
+         >div>img
+    >div>img*6
+    >div>>div>a*8
+          >div>a*3
+          >p*2=> ul>li, p 변경
+
