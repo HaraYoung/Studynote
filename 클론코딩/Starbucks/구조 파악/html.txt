@@ -5,20 +5,20 @@ div>img
 
 * nav-hidden
 div>div>ul>li*6>a+a
-    >a+span
+    div>a+span
 (menu탭- (a>img)+span)
 
 * main
 div>div>a
-   >div*3
+   >div>img*4
    >div>a+a
 
 * rewards
 div>div>span+a+(a>img)
-    >div>a>img
+    >div>a+(a>img)
     >div>img
-          >div>h2+p+a+a
-          >div>p+a
+          >div>h2+(p>b)*2+a+a
+          >div>(p>b)+p+a
 
 * promotion-hidden-라이브러리 활용 or 직접 구현
 div>div-JS로 동적 생성
@@ -29,21 +29,21 @@ div>div-JS로 동적 생성
     >div>(a>img)+4
 
 * bean
-div>div>img
+div>(div>img)*3
    >div>img+a
-   >(div>img)*2
 
 * indosnesia-wast-java
-div>div>img
+div>(div>img)*3
+   >div>img
+   >div>a
 
 *pick
-div>(div>img)*2
+div>(div>img)*3
     >div>a
-    >div>img
 
 * magazine
 div>div>img+a
-    >div>img
+    >(div>img)*2
 
 * store
 div>(div>img)*4
