@@ -20,8 +20,10 @@ li-float:left, 크기 %지정
 버튼- 색상:#d73a7a, 테두리:2px solid #d73a7a,hover시 배경색:d73a7a,색상: 흰색,밑줄생성
 이미지- position으로 위치 잡아주기
 배경-url으로 참조,확장
-고정 이미지- 크기:140*96,fixed로 고정, 위치 잡아주기
 애니메이션: 차례로 나타나기-타이틀->콜드브루->블랜디드->그린티->버튼
+
+* fixed
+고정 이미지- 크기:140*96,fixed로 고정, 위치 잡아주기
 
 * rewards
 배경색:#1e3932,색상:#fff
@@ -65,7 +67,7 @@ li-float:left, 크기 %지정
 ul-float해제
 li- float:left
 div>img- focus
-a*8- 첫번째 태그 색상:r: #00b050,폰트 굵게
+a*8- 첫번째 태그 색상: #00b050,폰트 굵게
 a*3- 색상:#fff, 배경색:transparent, 테두리:2px solid #fff
 li, p- 색상:#999
 li -float:left

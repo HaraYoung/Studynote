@@ -13,6 +13,9 @@ div>div>a
    >div>img*4
    >div>a+a
 
+*fixed
+div>(div>img)*2
+
 * rewards
 div>div>span+a+(a>img)
     >div>a+(a>img)
