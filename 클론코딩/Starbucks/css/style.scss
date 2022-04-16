@@ -12,277 +12,598 @@ $text-und: underline;
 
 //자주 사용할 구문 함수 정의
 @mixin bodyDefault {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}    
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 @mixin listNone {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}    
-@mixin float ($x) {
-    float: $x;
-}    
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@mixin float($x) {
+  float: $x;
+}
 @mixin floatNone {
-        float: none;
-        content: '';
-        clear: both;
-        display: block;
-} 
+  float: none;
+  content: "";
+  clear: both;
+  display: block;
+}
 @mixin relative {
-    position: relative;
+  position: relative;
 }
-@mixin absolute($x, $y){
-    position: absolute;
-    top: $y;
-    left: $x;
+@mixin absolute($x, $y) {
+  position: absolute;
+  left: $x;
+  top: $y;
 }
+
 @mixin animation {
-    transition: all 1s;
+  transition: all 1s;
 }
-@mixin btn ($a){
-    width: 100px;
-    padding: 10px 12px;
-    cursor: pointer;
-    text-align: center;
-    border: 2px solid $a;
-    border-radius: 5px;
-    background: $bc-trans;
-    color: $a;
-    @content
+//버튼
+@mixin btn($a) {
+  font-size: 14px;
+  width: 100px;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid $a;
+  border-radius: 5px;
+  background: $bc-trans;
+  color: $a;
+  @content;
 }
-@mixin hoverBtn ($a, $b){
-    a{color: $a;}
-    &:hover{
-            a{color: $b;};
-            background-color: $a;
-            text-decoration: $text-und;
-            @include animation();
-            }
+//버튼 마우스오버
+@mixin hoverBtn($a, $b) {
+  color: $a;
+
+  &:hover {
+    color: $b;
+    background-color: $a;
+    text-decoration: $text-und;
+    @include animation();
+  }
 }
-body,html{
-    @include bodyDefault()
+body,
+html {
+  @include bodyDefault();
 }
-ul{
-    @include listNone()
+ul {
+  @include listNone();
 }
-a{
-    text-decoration: none;
-    &:hover{
-        text-decoration: $text-und;
-    }
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: $text-und;
+  }
 }
-nav{
-    position: fixed;
-    top:0;
-    z-index: 9999;
-    width: 100%;
-    height: auto;
-    background-color: #f6f5ef;
-}
-.nav{
-    width: 80%;
+//네비바
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #f6f5ef;
+  .nav {
     height: 120px;
     @include relative();
-    .logo{
-        @include float(left);
-        @include absolute(25%, 20%)
+    .logo {
+      @include float(left);
+      @include absolute(15%, 20%);
     }
-    .nav-top{
-        &::before{
-            @include floatNone();
+    //상단 메뉴
+    .nav-top {
+      &::before {
+        @include floatNone();
+      }
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 10px;
+      width: 80%;
+      a {
+        font-size: 13px;
+        padding: 5px;
+        color: #555;
+        &:last-child::after,
+        &:nth-child(4)::after {
+          content: "";
         }
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        margin-top: 10px;
-        a{
-            font-size: 13px;
-            padding: 5px;
-            color: #555;
-            &:last-child::after, &:nth-child(4)::after{
-              content: '';
-            }
-            &::after{
-                content: '|';
-                padding: 8px;
-            }
+        &::after {
+          content: "|";
+          padding: 8px;
         }
-        a img{
-            background-color: $white;
-            padding: 5px;
-            border: 1px solid gainsboro;
-            border-radius: 5px;
-            width: 20px;
-        }
+      }
+      a img {
+        background-color: $white;
+        padding: 5px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+        width: 20px;
+      }
     }
-    .nav-main{
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 15px;
-        a{
-            font-size: 15px;
-            color: #555;
-            margin: 0 20px;
-            padding: 10px 10px 30px 10px;
-            &:hover{
-                color: $green;
-                background-color: $bc-black;
-            }
+    //메뉴
+    .nav-main {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 15px;
+      width: 80%;
+      a {
+        font-size: 15px;
+        color: #555;
+        margin: 0 20px;
+        padding: 10px 10px 30px 10px;
+        &:hover {
+          color: $green;
+          background-color: $bc-black;
         }
+      }
     }
-    @at-root .nav-hidden{
+    //히든 메뉴
+    @at-root .nav-hidden {
+      display: flex;
+      flex-direction: column;
+      background-color: $bc-black;
+      width: 100%;
+      height: auto;
+      @include relative();
+      > ul {
+        width: 1200px;
+      }
+      li {
+        width: 225px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        background-color: $bc-black;
-        width: 100%;
-        height: auto;
-        @include relative();
-        >ul{
-            width: 1200px;
-        }
-        li{
-            width: 225px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            flex-wrap: wrap;
-            @include float(left);
-
-            &:after{
-                @include floatNone();
-            }
-            a{
-                flex-direction: column;
-                color: $gray;
-                margin: 5px 0;
-                font-size: 12px;
-                &:first-child{
-                    color: $white;
-                    font-size: 14px;
-                }
-            }
-        }
-        @at-root .hidden-text{
-            height: auto;
-            background-image: url(../img/nav/nav-hidden-backgroundimg.jpg);
-            background-size: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            >a{
-                color: $gray;
-                font-weight: bolder;
-                font-size: 12px;
-
-            }
-            >span{
-                color: $green;
-                font-size: 12px;
-            }
-        }
-        display: none;
-    }
-}
-.fixed{
-    @include relative();
-    div{
-        position: fixed;
-        z-index: 99999;
-        top: 16%;
-        left: 82%;
-        &:last-child{
-            top: 26%;
-        }
-    }
-}
-.main{
-    background: url(../img/main/main-backgroundimg.jpg) no-repeat;
-    margin-top: 120px;
-    background-size: cover;
-    height: 646px;
-    background-position: 63% bottom;
-    @include relative();
-    .main-title{
-        @include absolute(20%, 8%);
-        z-index: 1;
-    }
-    .punch{
-        @include absolute(28%, 35%);
-        z-index: 1;
-    }
-    .mint{
-        @include absolute(39%, 13%);
-        z-index: 1;
-    }
-    .tea{
-        @include absolute(66%, 20%);
-        z-index: 1;
-    }
-    .main-btn{
-        @include btn ($pink);
-        @include hoverBtn($pink, $white);
-        @include absolute(25%, 43%)
-
-    }
-}
-.rewards{
-    background-color: #1e3932;
-    .ttl-line{
-        background-color: $black;
+        justify-content: center;
+        flex-wrap: wrap;
         @include float(left);
-        width: 50%;
-        padding: 15px 0;
-        text-align: center;
-        >span{
-            color: $white;
-            font-weight: bolder;
+
+        &:after {
+          @include floatNone();
         }
-        >a{
+        a {
+          flex-direction: column;
+          color: $gray;
+          margin: 5px 0;
+          font-size: 12px;
+          &:first-child {
             color: $white;
             font-size: 14px;
-            padding: 0 10px;
-            >img{
-                width: 36px;
-                @include float(right);
-                &:after{@include floatNone();}
-                margin-right: 20px;
-            }
+          }
         }
+      }
+      @at-root .hidden-text {
+        height: auto;
+        background-image: url(../img/nav/nav-hidden-backgroundimg.jpg);
+        background-size: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        > a {
+          color: $gray;
+          font-weight: bolder;
+          font-size: 12px;
+        }
+        > span {
+          color: $green;
+          font-size: 12px;
+        }
+      }
+      display: none;
     }
-    .pro-line{
-        background-color: #f6f5ef;
-        text-align: center;
-        &:after{
-            @include floatNone();
-        }
-        a{
-            padding: 10 20px;
-        }
-        .pro-btn{
-            margin-left: 15px;
-            margin-top: 15px;
-        }
+  }
+}
+//우측 고정 배너
+.fixed {
+  @include relative();
+  div {
+    position: fixed;
+    z-index: 99999;
+    top: 16%;
+    left: 82%;
+    &:last-child {
+      top: 26%;
     }
-    .rew-item{
+  }
+}
+//메인
+.main {
+  background: url(../img/main/main-backgroundimg.jpg) no-repeat;
+  margin-top: 120px;
+  background-size: cover;
+  width: 100%;
+  height: 646px;
+  background-position: 63% bottom;
+  @include relative();
+  .main-title {
+    @include absolute(20%, 8%);
+    z-index: 1;
+  }
+  .punch {
+    @include absolute(28%, 35%);
+    z-index: 1;
+  }
+  .mint {
+    @include absolute(39%, 13%);
+    z-index: 1;
+  }
+  .tea {
+    @include absolute(66%, 20%);
+    z-index: 1;
+  }
+  .main-btn {
+    a {
+      @include btn($pink);
+      @include hoverBtn($pink, $white);
+    }
+    @include absolute(25%, 43%);
+  }
+}
+//리워드
+.rewards {
+  background-color: #1e3932;
+  @include relative();
+  z-index: 1;
+  //공지사항
+  .ttl-line {
+    background-color: $black;
+    @include float(left);
+    width: 50%;
+    padding: 15px 0;
+    text-align: center;
+    > span {
+      color: $white;
+      font-weight: bolder;
+    }
+    > a {
+      color: $white;
+      font-size: 14px;
+      padding: 0 10px;
+      > img {
+        width: 36px;
+        @include float(right);
+        &:after {
+          @include floatNone();
+        }
+        margin-right: 20px;
+      }
+    }
+  }
+  //프로모션
+  .pro-line {
+    background-color: #f6f5ef;
+    text-align: center;
+    &:after {
+      @include floatNone();
+    }
+    a {
+      padding: 10 20px;
+    }
+    .pro-btn {
+      margin-left: 15px;
+      margin-top: 15px;
+    }
+  }
+  //리워드 메인
+  .rew-item {
+    color: $white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-left: 30px;
+    > img {
+      width: 172px;
+      height: 152px;
+    }
+    .rew-text {
+      margin-left: 40px;
+      padding-bottom: 10px;
+      @include float(left);
+      h2 > span {
+        font-weight: 400;
+      }
+      p > b {
+        font-weight: bolder;
+        text-shadow: $white 0.5px 0.5px 1.1px;
+      }
+      .second-text {
+        margin-top: -10px;
+      }
+    }
+    .rew-sign {
+      .rew-text.sign-p {
+        font-size: 14px;
+        letter-spacing: -0.1em;
+        padding-top: 15px;
+      }
+    }
+    .a-area {
+      display: inline-block;
+      margin-left: 20px;
+      margin-top: 40px;
+      @include float(left);
+      .join {
+        margin-left: 55px;
+        @include btn($white);
+        background-color: #00704a;
+        border: 2px solid #00704a;
+      }
+      a {
+        @include btn($white);
+        margin-left: 10px;
+      }
+    }
+    .a-first {
+      margin-top: 90px;
+    }
+    &::after {
+      @include floatNone();
+    }
+  }
+}
+
+//bean 영역
+.bean {
+  background: url(../img/bean/bean-backgroundimg.jpg) no-repeat;
+  @include relative();
+  .move-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    .bean-text {
+      display: flex;
+      flex-direction: column;
+      a {
+        margin-top: 40px;
+        @include btn($blue);
+        @include hoverBtn($blue, $white);
+      }
+    }
+  }
+  .left-img {
+    @include absolute(0, -12%);
+    z-index: 0;
+  }
+  .right-img {
+    @include absolute(75%, 40%);
+    z-index: 0;
+  }
+}
+//indonesia영역
+.indonesia {
+  background: url(../img/indonesia-west-java/reserve_2022_indonesia_backgroundimg.jpg)
+    no-repeat;
+  @include relative();
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  .indo-left {
+    @include absolute(-5%, 33%);
+    z-index: 0;
+  }
+  .indo-text {
+    width: 60%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 496px;
+    }
+    a {
+      @include btn($brown);
+      @include hoverBtn($brown, $white);
+      margin-left: 250px;
+      margin-top: 50px;
+    }
+  }
+  .indo-main {
+    z-index: 0;
+    @include absolute(-5%, 0);
+  }
+  .indo-right {
+    z-index: 0;
+    @include absolute(70%, 25%);
+  }
+}
+//pick 영역
+.pick {
+  background: url(../img/pick/fav_prod_bg_new.jpg) center center fixed no-repeat
+    #45434c;
+  height: 800px;
+  padding-top: 150px;
+  .pick-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: -150px;
+    margin-right: 100px;
+    @include float(left);
+    .pick-btn {
+      margin-top: 50px;
+      a {
+        @include btn($white);
+        @include hoverBtn($white, $black);
+      }
+    }
+  }
+  &:after {
+    @include floatNone();
+  }
+}
+//매거진 영역
+.magazine {
+  background: url(../img/magazin/reserve_bg_pc.png) no-repeat 50% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .mag-text {
+    margin-right: 50px;
+    .mag-btn {
+      display: block;
+      text-align: center;
+      margin-left: 100px;
+      margin-top: 30px;
+      a {
+        @include btn($black);
+        @include hoverBtn($black, $white);
+      }
+    }
+  }
+}
+
+//매장 영역
+.store {
+  background: url(../img/store/store_bg.jpg) no-repeat;
+  background-size: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  @include relative();
+  .sto-area {
+    width: 80%;
+    .sto-img {
+      @include float(left);
+      &::after {
+        @include floatNone();
+      }
+      .sto-1 {
+        @include absolute(25%, 0);
+        z-index: 0;
+      }
+      .sto-2 {
+        @include absolute(38%, 35%);
+      }
+      .sto-3 {
+        @include absolute(44%, -15%);
+        z-index: 0;
+      }
+      .sto-4 {
+        @include absolute(70%, 75%);
+      }
+    }
+    .sto-text {
+      width: 80%;
+      padding: 0 25px;
+      margin-top: -30px;
+      display: flex;
+      justify-content: flex-end;
+      .sto-txt-area {
+        display: flex;
+        flex-direction: column;
+        margin-right: 80px;
+        img {
+          margin-bottom: 10px;
+        }
+      }
+      a {
+        @include btn($black);
+        @include hoverBtn($black, $white);
+        margin-top: 20px;
+      }
+    }
+  }
+}
+//footer영역
+footer{
+    background-color: $bc-black;
+    width: 100%;
+    padding: 35px 0;
+    .footer-first{
         display: flex;
         justify-content: center;
-        color: $white;
-        >img{
-            width: 172px;
-            height: 152px;
+        ul{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            li{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+                a{
+                    color: $white;
+                    font-size: 12px;
+                    margin-bottom: 8px;
+                    &:first-child{
+                        font-size: 14px;
+                        margin-top: 40px;
+                    }
+                }
+            }
+            .footer-logo{
+                margin-top: 40px;
+
+            }
         }
-        .rew-text{
-            a:first-child{
-                @include btn($white);
-                background-color: #00704a;
+
+    }
+    .footer-img{
+        width: 100%;
+        background-color: #282828;
+        height: 80px;
+        margin-top: 50px;
+        padding-bottom: 15px;
+        img{
+            margin-top: 20px;
+           @include relative();
+           left: 15%;
+            @include float(left);
+            &::after{
+                @include floatNone();
             }
-            a{
-                @include btn($white);
+        }
+    }
+    .copyrigth-1{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        a{
+            color: $gray;
+            font-size: 12px;
+            &:after{
+                margin: 10px;
+                content: '|';
             }
+            &:first-child{
+                color: #00b050;
+                font-weight: bolder;
+                text-shadow: #00b050 0.5px 0.5px 1.1px;
+            }
+        }
+    }
+    .footer-btn{
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        a{
+            @include btn($white);
+            font-size: 12px;
+            margin: 0 3px;
+        }
+    }
+    .copyrigth-2, p{
+        display: flex;
+        justify-content: center;
+        color: $gray;
+        font-size: 12px;
+        padding: 15px 0;
+        }
+    .copyrigth-2{
+        li{
+            @include float(left);
+        }
+        &::after{
+            @include floatNone();
         }
     }
 }
