@@ -13,7 +13,7 @@ $text-und: underline;
 //자주 사용할 구문 함수 정의
 @mixin bodyDefault {
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -40,10 +40,6 @@ $text-und: underline;
   left: $x;
   top: $y;
 }
-
-@mixin animation {
-  transition: all 1s;
-}
 //버튼
 @mixin btn($a) {
   font-size: 14px;
@@ -60,14 +56,14 @@ $text-und: underline;
 //버튼 마우스오버
 @mixin hoverBtn($a, $b) {
   color: $a;
-
   &:hover {
     color: $b;
     background-color: $a;
     text-decoration: $text-und;
-    @include animation();
+    transition: all 1s;
   }
 }
+
 body,
 html {
   @include bodyDefault();
@@ -107,30 +103,53 @@ nav {
       width: 80%;
       a {
         font-size: 13px;
-        padding: 5px;
+        padding: 0 5px;
         color: #555;
-        &:last-child::after,
+        padding-left: 8px;
         &:nth-child(4)::after {
           content: "";
+          padding-left: 5px;
+        }
+        &:last-child::after{
+          content: "";
+          padding-left: 0px;
         }
         &::after {
           content: "|";
-          padding: 8px;
+          padding-left: 8px;
         }
       }
-      a img {
-        background-color: $white;
-        padding: 5px;
+       .nav-icon {
         border: 1px solid gainsboro;
-        border-radius: 5px;
-        width: 20px;
+        padding: 0;
+        border-radius: 6px;
+        overflow: hidden;
+        background-color: $white;
+        .search{
+          border: none;
+          color: #777;
+          font-size: 12px;
+          width: 160px;
+          height: 22px;
+          @include float(left);
+          padding: 4px 0;
+          margin-top: 3px;
+          margin-left: 7px;
+          display: none;
+        }
+        img{
+          background-color: $white;
+          padding: 6px;
+          width: 20px;
+          &:after{@include floatNone();}
+        }
       }
     }
     //메뉴
     .nav-main {
       display: flex;
       justify-content: flex-end;
-      margin-top: 15px;
+      margin-top: 25px;
       width: 80%;
       a {
         font-size: 15px;
@@ -143,58 +162,70 @@ nav {
         }
       }
     }
-    //히든 메뉴
-    @at-root .nav-hidden {
-      display: flex;
-      flex-direction: column;
-      background-color: $bc-black;
-      width: 100%;
-      height: auto;
-      @include relative();
-      > ul {
-        width: 1200px;
+  }
+  //히든 메뉴
+  .hidden{display: none;}
+   .nav-hidden {
+    background-color: $bc-black;
+    transition: all 1s;
+    .nav-menu{
+      margin: auto;
+      ul{
+        width: 80%;
+        margin: auto;
       }
       li {
-        width: 225px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
         @include float(left);
-
-        &:after {
-          @include floatNone();
-        }
+        margin:10px 40px;
+        padding: 20px;
+        min-height: 160px;
         a {
+          display: flex;
           flex-direction: column;
+          flex-wrap: wrap;
           color: $gray;
-          margin: 5px 0;
+          margin: 10px 0;
           font-size: 12px;
+          letter-spacing: -1px;
           &:first-child {
             color: $white;
             font-size: 14px;
           }
         }
+        &::after{
+          @include floatNone();
+        }
       }
-      @at-root .hidden-text {
-        height: auto;
-        background-image: url(../img/nav/nav-hidden-backgroundimg.jpg);
-        background-size: 100%;
+      .hidden-text {
+        background: url(../img/nav/nav-hidden-backgroundimg.jpg) repeat-x;
+        background-position: left bottom;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        > a {
-          color: $gray;
-          font-weight: bolder;
-          font-size: 12px;
+        overflow:hidden ;
+        min-height: 10px;
+        padding: 20px 0;
+        &::before{
+          @include floatNone();
         }
-        > span {
-          color: $green;
-          font-size: 12px;
+        .hidden-txt-area{
+          padding-left: 35px;
+          width: 80%;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          a {
+            color: $gray;
+            font-weight: bolder;
+            font-size: 12px;
+            margin: 3px 30px;
+         }
+          span {
+           color: $green;
+           font-size: 12px;
+           padding-bottom: 5px;
+           margin-left: 30px;
+         }
         }
       }
-      display: none;
     }
   }
 }
@@ -220,6 +251,7 @@ nav {
   height: 646px;
   background-position: 63% bottom;
   @include relative();
+
   .main-title {
     @include absolute(20%, 8%);
     z-index: 1;
@@ -261,6 +293,7 @@ nav {
       font-weight: bolder;
     }
     > a {
+      display: inline-block;
       color: $white;
       font-size: 14px;
       padding: 0 10px;
@@ -351,15 +384,18 @@ nav {
 .bean {
   background: url(../img/bean/bean-backgroundimg.jpg) no-repeat;
   @include relative();
+  height: 572px;
   .move-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 50px;
+    .bean-img{
+      @include absolute(30%, 10%);
+      display: none;
+    }
     .bean-text {
-      display: flex;
-      flex-direction: column;
+      @include absolute(54%, 25%);
+      display: none;
       a {
+        display: block;
         margin-top: 40px;
         @include btn($blue);
         @include hoverBtn($blue, $white);
@@ -378,17 +414,14 @@ nav {
 //indonesia영역
 .indonesia {
   background: url(../img/indonesia-west-java/reserve_2022_indonesia_backgroundimg.jpg)
-    no-repeat;
+  no-repeat center top;
+  background-size: cover;;;
   @include relative();
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 400px;
-  .indo-left {
-    @include absolute(-5%, 33%);
-    z-index: 0;
-  }
   .indo-text {
     width: 60%;
     margin-left: 50px;
@@ -404,13 +437,20 @@ nav {
       margin-top: 50px;
     }
   }
-  .indo-main {
-    z-index: 0;
-    @include absolute(-5%, 0);
-  }
-  .indo-right {
-    z-index: 0;
-    @include absolute(70%, 25%);
+  .indo-img{
+    display: none;
+    .indo-left {
+      @include absolute(-5%, 33%);
+      z-index: 0;
+    }
+    .indo-main {
+      z-index: 0;
+      @include absolute(-5%, 0);
+    }
+    .indo-right {
+      z-index: 0;
+      @include absolute(70%, 25%);
+    }
   }
 }
 //pick 영역
@@ -427,13 +467,20 @@ nav {
     margin-left: -150px;
     margin-right: 100px;
     @include float(left);
+    .pick-tlt, .pick-intxt{
+      display: none;
+    }
     .pick-btn {
+      display: none;
       margin-top: 50px;
       a {
         @include btn($white);
         @include hoverBtn($white, $black);
       }
     }
+  }
+  .pick-img{
+    opacity: 0;
   }
   &:after {
     @include floatNone();
@@ -445,6 +492,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  .mag-img{display: none;}
   .mag-text {
     margin-right: 50px;
     .mag-btn {
@@ -474,6 +522,7 @@ nav {
     width: 80%;
     .sto-img {
       @include float(left);
+      display: none;
       &::after {
         @include floatNone();
       }
@@ -502,7 +551,8 @@ nav {
         display: flex;
         flex-direction: column;
         margin-right: 80px;
-        img {
+        .sto-tlt, .sto-txt2, .sto-btn {
+          display: none;
           margin-bottom: 10px;
         }
       }
