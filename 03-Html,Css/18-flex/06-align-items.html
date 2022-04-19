@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            box-sizing: border-box;
+            border: 2px solid gray;
+            padding:10px;
+            height: 200px;
+            width: 800px;
+            display: flex;
+        }
+        .item{
+            border: 2px solid brown;
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+        }
+        .container1{
+            align-items: stretch;
+        }
+        .container2{
+            align-items:flex-start;
+        }
+        .container3{
+            align-items:flex-end;
+        }
+        .container4{
+            align-items: center;
+        }
+        .container5{
+            align-items: baseline;
+        }
+    </style>
+</head>
+<body>
+    <h1>stretch</h1>
+    <div class="container container1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>flex-start</h1>
+    <div class="container container2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>flex-end</h1>
+    <div class="container container3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>center</h1>
+    <div class="container container4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>baseline</h1>
+    <div class="container container5">
+        <div class="item" style="font-size: 20px;">A</div>
+        <div class="item" style="font-size: 40px;">B</div>
+        <div class="item" style="font-size: 60px;">C</div>
+    </div>
+
+</body>
+</html>

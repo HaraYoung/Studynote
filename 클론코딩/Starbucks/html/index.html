@@ -7,6 +7,10 @@
     <title>Starbucks Korea</title>
     <link rel="stylesheet" href="../css/style.min.css" />
     <link rel="stylesheet" href="../css/animate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
   </head>
   <body>
     <nav>
@@ -21,12 +25,12 @@
         </div>
         <div class="event-area">
           <div class="nav-main">
-            <a href="#" class="coffee">COFFEE</a>
-            <a href="#" class="menu">MENU</a>
-            <a href="#" class="nav-store">STORE</a>
-            <a href="#" class="respon">RESPONSIBOLITY</a>
-            <a href="#" class="nav-rew">STARBUCKS REWARDS</a>
-            <a href="#" class="nav-new">WHAT'S NEW</a>
+            <a href="#" class="hover">COFFEE</a>
+            <a href="#" class="hover">MENU</a>
+            <a href="#" class="hover">STORE</a>
+            <a href="#" class="hover">RESPONSIBOLITY</a>
+            <a href="#" class="hover">STARBUCKS REWARDS</a>
+            <a href="#" class="hover">WHAT'S NEW</a>
           </div>
         </div>
         <div class="nav-hidden hidden">
@@ -301,23 +305,28 @@
       </div>
     </div>
     <div class="rewards">
-      <div class="ttl-line">
-        <span>공지사항</span>
-        <!--JS로 교체-->
-        <a href="#" class="animate__animated animate__slideInUp aanimate__slow">시스템 개선 및 점검 안내</a>
-        <a href="#"><img src="../img/rewards/btn_공지사항.png" /></a>
+      <div class="tlt-line">
+        <span class="tlt-1">
+          <span>공지사항</span>
+          <!--JS로 교체-->
+          <span class="ani-area">
+            <a href="#" class="animate__animated">시스템 개선 및 점검 안내</a>
+            <a href="#" class="animate__animated hidden">사이렌 오더/딜리버스 음료 기본 설정 변경 안내 (HOT → ICED)</a>
+            <a href="#" class="animate__animated hidden">페이지 이용약관 / 스타벅스 카드 이용약관 개정 안내</a>
+          </span>
+        </span>
+        <span class="tlt-img">
+          <a href="#"><img src="../img/rewards/btn_공지사항.png" width="36px"/></a>
+        </span>
       </div>
       <div class="pro-line">
-        <a href="#">
-          <img
-            class="pro-tlt"
-            src="../img/rewards/prom_ttl_b.png"
-            width="130px"
-          />
-        </a>
-        <a>
-          <img class="pro-btn" src="../img/rewards/btn프로모션.png" />
-        </a>
+        <div class="pro-wd">
+          <a href="#" class="pro-txt">
+            <img class="pro-tlt" src="../img/rewards/prom_ttl_b.png" width="130px"/>
+          </a>
+          <a href="#" class="pro-btn open-btn"><img src="../img/rewards/btn프로모션.png"></a>
+          <a href="#" class="pro-btn hid-btn"><img src="../img/rewards/btn프로모션_up.png"></a>
+        </div>
       </div>
       <div class="pro-hidden">
         <div class="card1"></div>
@@ -499,5 +508,33 @@
       </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script>
+      
+$('.pro-hidden').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+</script>
   </body>
 </html>

@@ -64,42 +64,87 @@ document.querySelector(".nav-icon").addEventListener("click", (e) => {
   document.querySelector(".img-icon").addEventListener("click", (e) => {
     if (search.value == 0) {
       alert("검색어를 입력하세요");
-    }else{
-        console.log(search.value);
+    } else {
+      console.log(search.value);
     }
   });
 });
 
-//네비 메뉴 마우스오버시 히든 영역 나타남
-// function navEvent(x) {
-//   const navHidden = document.querySelector(".nav-hidden");
-//   x.addEventListener("mouseover", (e) => {
-//     open(navHidden);
-
-//     navHidden.addEventListener("mousemove", (e) => {
-//       open(navHidden);
-//     });
-//   });
-//   navHidden.addEventListener("mouseout", (e) => {
-//     close(navHidden);
-//   });
+// function style(x,color,bcColor,txtDec){
+//   x.style.color=color;
+//   x.style.backgroundColor=bcColor;
+//   x.style.textDecoration=txtDec;
 // }
-// navEvent(document.querySelector(".coffee"));
-// navEvent(document.querySelector(".menu"));
-// navEvent(document.querySelector(".nav-store"));
-// navEvent(document.querySelector(".respon"));
-// navEvent(document.querySelector(".nav-rew"));
-// navEvent(document.querySelector(".nav-new"));
+//이벤트 발생시 nav의 hidden영역이 나타남
+document.querySelectorAll(".hover").forEach((v) => {
+  const navHidden = document.querySelector(".nav-hidden");
+  v.addEventListener("mouseover", (e) => {
+    open(navHidden);
+  });
+  navHidden.addEventListener("mousemove", (e) => {
+    //  if(navHidden.style.display=='block'){
+    //   v.style('#690','#2c2a29','underline');
+    // }
+    open(navHidden);
+  });
+  navHidden.addEventListener("mouseout", (e) => {
+    close(navHidden);
+  });
+});
 
-// document.querySelectorAll('.nav-main>a').forEach((v,i)=>{
-//    const navHidden = document.querySelector(".nav-hidden");
-//     v.addEventListener('mouseover',e=>{
-//         e.preventDefault();
-//         open(navHidden);
-//     })
-//     v.addEventListener('mouseout',e=>{
-//         e.preventDefault();
-//         close(navHidden);
+//공지사항
+// function tltInner(x) {
+  //   for (var i = 0; i < tlt_txt.txt.length; i++) {
+    //     open(tlt);
+    //     tlt.innerHTML = tlt_txt.txt[i];
+    //     tlt.classList.add("animate__slideInUp", "animate__slow");
+    //     index = x;
+    //   }}
+    
+let tlt = document.querySelectorAll(".ani-area>a");
+let tlt_area= document.querySelector('ani-area');
+let i = 0;
+setInterval(()=>{
+//function aniTxt(){
+  tlt.forEach((v,i)=>{
+   if(v.style.display== 'block'){
+      close(v)
+   }
+  });
+  if(tlt[i].style.display== 'block'){
+    close(tlt[i]);
+  }else{
+    tlt[i].style.display== 'none'
+  }
+    i++;
+  if(i> 3){
+    i=0;
+  }
 
-//     })
-// })
+
+    // close(tlt_area);
+    // i++;
+    // if(v[i].style.display== 'none'){
+    //   open(tlt_area);
+    // }
+    // if(i> tlt.length){
+    //   i=0;
+    // }
+
+//   aniTxt()
+ },3000);
+//프로모션 탭
+document.querySelector('.pro-wd').addEventListener('click',(e)=>{
+  e.preventDefault();
+  open(document.querySelector('.pro-hidden'));
+  close(document.querySelector('.open-btn'));
+  document.querySelector('.hid-btn').style.display='inline-block';
+
+  if(document.querySelector('.pro-hidden').style.display=='block'){
+    document.querySelector('.pro-wd').addEventListener('click',(e)=>{
+    close(document.querySelector('.pro-hidden'));
+    close(document.querySelector('.hid-btn'));
+    document.querySelector('.open-btn').style.display='inline-block';
+  }
+  )};
+});

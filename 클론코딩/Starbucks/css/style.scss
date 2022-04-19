@@ -64,6 +64,7 @@ $text-und: underline;
   }
 }
 
+
 body,
 html {
   @include bodyDefault();
@@ -77,6 +78,8 @@ a {
     text-decoration: $text-und;
   }
 }
+.hidden{display: none;}
+
 //네비바
 nav {
   position: fixed;
@@ -84,6 +87,7 @@ nav {
   z-index: 9999;
   width: 100%;
   background-color: #f6f5ef;
+  padding-bottom: 5px;
   .nav {
     height: 120px;
     @include relative();
@@ -151,7 +155,7 @@ nav {
       justify-content: flex-end;
       margin-top: 25px;
       width: 80%;
-      a {
+      .hover {
         font-size: 15px;
         color: #555;
         margin: 0 20px;
@@ -164,7 +168,16 @@ nav {
     }
   }
   //히든 메뉴
-  .hidden{display: none;}
+  .hiddenA{
+    color: #555;
+    background-color:#f6f5ef;
+    text-decoration: none;
+  }
+  .hiddenAhover{
+    color: $green;
+    background-color: $bc-black;
+    text-decoration: $text-und;
+  }
    .nav-hidden {
     background-color: $bc-black;
     transition: all 1s;
@@ -282,29 +295,38 @@ nav {
   @include relative();
   z-index: 1;
   //공지사항
-  .ttl-line {
+  .tlt-line {
     background-color: $black;
     @include float(left);
     width: 50%;
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
-    > span {
-      color: $white;
-      font-weight: bolder;
+    .tlt-1 {
+      display: inline-block;
+      padding-top: 10px;
+      letter-spacing: -1px;
+      span{
+        font-weight: bolder;
+        color: $white;
+      }
+      .ani-area{
+        margin: 0 5px;
+        a{
+          color: $white;
+          font-weight: normal;
+          font-size: 14px;
+        }
+      }
+    }
+    .tlt-img{
+      @include float(right);
+      margin-right: 20px;
     }
     > a {
       display: inline-block;
       color: $white;
       font-size: 14px;
       padding: 0 10px;
-      > img {
-        width: 36px;
-        @include float(right);
-        &:after {
-          @include floatNone();
-        }
-        margin-right: 20px;
-      }
     }
   }
   //프로모션
@@ -314,13 +336,30 @@ nav {
     &:after {
       @include floatNone();
     }
+    .pro-wd{
+      width: 90%;
+    }
     a {
-      padding: 10 20px;
+      display: inline-block;
+    }
+    .pro-txt{
+      img{
+        margin-bottom: 10px;
+        margin-right: 25px;
+      }
     }
     .pro-btn {
-      margin-left: 15px;
+      margin-left: 25px;
       margin-top: 15px;
+      @at-root &.hid-btn{
+        display: none;
+      }
     }
+  }
+  .pro-hidden{
+    height: 658px;
+    background-color: #f6f5ef;
+    display: none;
   }
   //리워드 메인
   .rew-item {

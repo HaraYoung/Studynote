@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            box-sizing: border-box;
+            border: 2px solid gray;
+            padding:10px;
+            height: 200px;
+            width: 500px;
+            display: flex;
+        }
+        .item{
+            border: 2px solid brown;
+            padding: 10px;
+            margin: 5px;
+        }
+        .wd100{width: 100%;}
+        .wd250px{width: 250px;}
+        .item:first-child{
+            flex-shrink: 0;
+            width: 100px;
+        }
+        .item:nth-child(2){
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>container width 100%</h1>
+    <div class="container wd100">
+        <div class="item">Normal contents</div>
+        <div class="item">very &nbsp; &nbsp; &nbsp; &nbsp; long</div>
+    </div>
+
+    <h1>container width 250px</h1>
+    <div class="container wd250px">
+        <div class="item">Normal contents</div>
+        <div class="item">very  &nbsp; &nbsp; &nbsp; &nbsp; long</div>
+    </div>
+
+</body>
+</html>
