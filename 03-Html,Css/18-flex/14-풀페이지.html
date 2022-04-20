@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .header{
+            height: 65px;
+            background-color: chocolate;
+            text-align: center;
+        }
+        .tablist{
+            height: 70px;
+            background-color: grey;
+            text-align: center;
+        }
+        .content{
+            display:flex;
+            /*content안의 자식들이 어떻게 배치될지 정함*/
+            flex:1;
+            /*부모에게 display:flex가 적용된 상태에서 부모안의 다른 아이템의 크기를 제외한
+            나머지 공간을 자지하도록 설정됨*/
+            /*wrap과 header영역은 고정 사이즈를 갖고있으므로 남은 영역에서 100%가 됨
+            width,height 100%와 같은 결과이지만 실제 width,height를 100%를 주면
+            부모만큼의 100%영역을 차지해야하기때문에 header와wrap의 높이만큼 밖으로 넘어감 */
+        }
+        .aside{
+            display: flex;
+            flex: none;
+            width: 400px;
+            background-color: brown;
+        }
+        .main{
+            display: flex;
+            flex: 1;
+            overflow: auto;
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <header class="header">
+            <h1>풀페이지 레이아웃</h1>
+        </header>
+        <div class="tablist">
+            <h2>메뉴 영역</h2>
+        </div>
+        <div class="content">
+            <div class="aside"></div>
+            <div class="main"></div>
+        </div>
+    </div>
+</body>
+</html>
