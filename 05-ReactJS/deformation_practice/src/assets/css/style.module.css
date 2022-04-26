@@ -1,0 +1,15 @@
+.table{
+    border: 2px solid white;
+    background-color: salmon;
+    text-align: center;
+    color: maroon;
+}
+.title{
+    color: brown;
+}
+.thBorder{
+    border: 5px solid white;
+    background-color: salmon;
+    color: rgb(75, 45, 0);
+}
+
