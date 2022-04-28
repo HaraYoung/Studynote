@@ -1,0 +1,19 @@
+@import './colors.scss' ;
+@import './common.scss';
+
+.myScss{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .myScssBox{     //.myScss .myScssBox
+        cursor: pointer;
+
+        &.red {background-color:$red; @include myMixin(1);}
+        &.green {background-color:$green; @include myMixin(2);}
+        &.blue {background-color:$blue; @include myMixin(3);}
+        &.orange {background-color:$orange; @include myMixin(4);}
+        &.yellow {background-color:$yellow; @include myMixin(5);}
+        &.pink {background-color:$pink; @include myMixin(6);}
+        //두개 클래스가 함께 사용- &클래스=> .myScss .myScssBox.red
+    }
+}

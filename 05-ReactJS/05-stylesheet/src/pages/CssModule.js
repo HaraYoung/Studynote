@@ -12,7 +12,7 @@ const CssModule= () =>{
             <div className={myStyles.myBorderBox}/>
 
             <h3>다중 클래스 적용 -1 : 역따옴표 사용</h3>
-            <div className={`$myStyles['my-size']} ${myStyles['my-bg']}`}/>
+            <div className={`${myStyles['my-size']} ${myStyles['my-bg']}`}/>
 
             <h3>다중 클래스 적용 -2 : 배열로 구성한후 join함수로 결합</h3>
             <div className={[myStyles['my-size'], myStyles['my-bg']].join(' ')}/>
