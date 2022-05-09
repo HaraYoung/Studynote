@@ -1,10 +1,10 @@
-import React from 'react';
-import  Map from './ex/Map';
+import React from "react";
+import UseReducer from "./ex/UseReducer";
 
 function App() {
   return (
     <div>
-      <Map/>
+      <UseReducer />
     </div>
   );
 }
