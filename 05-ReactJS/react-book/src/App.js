@@ -1,11 +1,10 @@
-import "./App.css";
-import Event from "./Event";
-function App() {
+import React from 'react';
+import  Map from './ex/Map';
 
+function App() {
   return (
-    <div className="react">
-      <br />
-      <Event/>
+    <div>
+      <Map/>
     </div>
   );
 }
