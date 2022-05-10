@@ -1,10 +1,10 @@
 import React from "react";
-import CssModule from "./ex/CssModule";
+import StyledComponents from "./ex/StyledComponents";
 
 function App() {
   return (
     <div>
-      <CssModule />
+      <StyledComponents />
     </div>
   );
 }
