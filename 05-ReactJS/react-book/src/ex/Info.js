@@ -1,21 +1,15 @@
-import React from "react";
+import React from 'react'
+import useInputs from './useInputs'
 
-function render(state, action) {
-    return {
-        ...state,
-        [action.name]: action.value  //입력값 그자체- <input>
-    };
-}
-
-const UseReducer = () => {
-  const [state, dispatch] = React.useReducer(render, {
-      name:'',
+const Info = () => {
+  const [state,onChange]= useInputs({
+      name: '',
       nickname: ''
   });
   const {name, nickname} = state;
-  const onChange= e=>{dispatch(e.target);};
-  return <div>
-        <div>
+    return (
+    <div>
+         <div>
             <input name="name" value={name} onChange={onChange}/>
             <input name="nickname" value={nickname} onChange={onChange}/>
         </div>
@@ -26,7 +20,8 @@ const UseReducer = () => {
         <div>
             <b>닉네임:: </b><span>{nickname}</span>
         </div>
-  </div>
-};
+    </div>
+  )
+}
 
-export default UseReducer;
+export default Info

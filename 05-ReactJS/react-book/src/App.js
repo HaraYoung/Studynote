@@ -1,10 +1,10 @@
 import React from "react";
-import UseReducer from "./ex/UseReducer";
+import CssModule from "./ex/CssModule";
 
 function App() {
   return (
     <div>
-      <UseReducer />
+      <CssModule />
     </div>
   );
 }
