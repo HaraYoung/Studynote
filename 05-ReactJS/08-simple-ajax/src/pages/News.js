@@ -31,12 +31,12 @@ const News = () => {
       //로딩시간이 너무 빨라 예제에 딜레이 적용으로 확인
       (async () => {
         //즉시 실행 함수
-        //let json= null; -즉시 실행 함수 아닐때
+        //let json= null; -
         try {
           const response = await axios.get("http://localhost:3001/news");
-          //json= response.data; -즉시 실행 함수 아닐때
+          //json= response.data; -
 
-          setNewsList(response.data);
+          setNewsList(newsList=> response.data);
         } catch (e) {
           console.error(e);
           alert("Ajax 연동 실패!!");
@@ -45,7 +45,7 @@ const News = () => {
           setLoading(false);
         }
         /*if(json!= null)setNewsList(json);}
-          -즉시 실행 함수 아닐때, ajax연동결과가 있다면 결과를 상태값에 적용*/
+          - ajax연동결과가 있다면 결과를 상태값에 적용*/
       })();
     }, 1000);
   }, []);
