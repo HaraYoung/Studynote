@@ -6,6 +6,9 @@ import URLparameter from "./ex/pages/URLparameter";
 import Articles from "./ex/pages/Articles";
 import InArticles from "./ex/pages/InArticles";
 import Layout from "./styled/Layout";
+import NotFind from "./ex/pages/NotFind";
+import Mypages from "./ex/Mypages";
+import Login from "./ex/Login";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="/articles" element={<Articles />}>
           <Route path=":id" element={<InArticles />} />
         </Route>
+        <Route path='/login' element={<Login />} />
+        <Route path='/mypages' element={<Mypages />} />
+        <Route path='*' element={<NotFind/>}/>
       </Routes>
     </div>
   );
