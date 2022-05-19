@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
+
+import PropessorAdd from './pages/PropessorAdd';
+import PropessorList from './pages/PropessorList';
+import PropessorEdit from './pages/PropessorEdit';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1> Axios hooks CRUD 연습문제</h1>
+      <br />
+      <Routes>
+        <Route path="/" export={true} element={<PropessorList/>}/>
+        <Route path='/add' element={<PropessorAdd/>}/>
+        <Route path='/edit/:id' element={<PropessorEdit/>}/>
+      </Routes>
+    </>
   );
 }
 

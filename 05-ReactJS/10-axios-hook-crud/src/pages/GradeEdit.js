@@ -7,7 +7,6 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import regexHelper from "../libs/RegexHelper";
 
-
 import Spinner from "../components/Spinner";
 import Table from "../components/Table";
 
@@ -43,14 +42,14 @@ const TableEx = styled(Table)`
 
 const GradeEdit = () => {
   //path파라미터로 전달된 일련번호- id값만 비구조문법으로 분리
-  const { id } = useParams();   //모든 파라미터가 json객체로 떨어짐
+  const { id } = useParams(); //모든 파라미터가 json객체로 떨어짐
 
   //데이터 수정후 목록 페이지로 강제 이동하기 위한 함수 생성
   const navigate = useNavigate();
 
   //수정할 대상을 백엔드로 부터 로드함->자동 실행 모드
   const [{ data, loading, error }, refetch] = useAxios(
-    `http://localhost:3001/grade/${id}`   //1.수정대상 조회
+    `http://localhost:3001/grade/${id}` //1.수정대상 조회
   );
 
   const onSubmit = React.useCallback((e) => {
@@ -59,27 +58,33 @@ const GradeEdit = () => {
     //이벤트가 발생한 폼 객체
     const current = e.target;
 
-        //입력값에 대한 유효성 검사
-        try{
-          regexHelper.value(current.name, '이름을 입력하세요');
-          regexHelper.kor(current.name, '이름은 한글로 입력하세요');
-          regexHelper.minLength(current.name, '이름은 최소 2글자 이상 입력해야 합니다');
-          regexHelper.maxLength(current.name, '이름은 최대 10글자까지 입력 가능합니다');
-          regexHelper.value(current.level, '학년을 선택하세요');
-          regexHelper.check(current.sex, '성별을 선택하세요');
-          regexHelper.value(current.kor, '국어 점수를 입력하세요');
-          regexHelper.value(current.kor, '국어 점수는 숫자만 입력 가능합니다');
-          regexHelper.value(current.eng, '영어 점수를 입력하세요');
-          regexHelper.value(current.eng, '영어 점수는 숫자만 입력 가능합니다');
-          regexHelper.value(current.math, '수학 점수를 입력하세요');
-          regexHelper.value(current.math, '수학 점수는 숫자만 입력 가능합니다');
-          regexHelper.value(current.sin, '과학 점수를 입력하세요');
-          regexHelper.value(current.sin, '과학 점수는 숫자만 입력 가능합니다');
-        } catch (e) {
-          window.alert(e.message);
-          e.field.focus();
-          return;
-        }
+    //입력값에 대한 유효성 검사
+    try {
+      regexHelper.value(current.name, "이름을 입력하세요");
+      regexHelper.kor(current.name, "이름은 한글로 입력하세요");
+      regexHelper.minLength(
+        current.name, 2,
+        "이름은 최소 2글자 이상 입력해야 합니다"
+      );
+      regexHelper.maxLength(
+        current.name, 10,
+        "이름은 최대 10글자까지 입력 가능합니다"
+      );
+      regexHelper.value(current.level, "학년을 선택하세요");
+      regexHelper.check(current.sex, "성별을 선택하세요");
+      regexHelper.value(current.kor, "국어 점수를 입력하세요");
+      regexHelper.value(current.kor, "국어 점수는 숫자만 입력 가능합니다");
+      regexHelper.value(current.eng, "영어 점수를 입력하세요");
+      regexHelper.value(current.eng, "영어 점수는 숫자만 입력 가능합니다");
+      regexHelper.value(current.math, "수학 점수를 입력하세요");
+      regexHelper.value(current.math, "수학 점수는 숫자만 입력 가능합니다");
+      regexHelper.value(current.sin, "과학 점수를 입력하세요");
+      regexHelper.value(current.sin, "과학 점수는 숫자만 입력 가능합니다");
+    } catch (e) {
+      window.alert(e.message);
+      e.field.focus();
+      return;
+    }
 
     //입력받은 값 취득하기
     const name = current.name.value;
@@ -96,8 +101,9 @@ const GradeEdit = () => {
     (async () => {
       try {
         const response = await refetch({
-          method: "PUT",    //기본적으로 GET방식으로 가져오기때문에 PUT으로 바꿈
-          data: {   //수정을 할경우 수정된 결과가 반환됨
+          method: "PUT", //기본적으로 GET방식으로 가져오기때문에 PUT으로 바꿈
+          data: {
+            //수정을 할경우 수정된 결과가 반환됨
             name: name,
             level: parseInt(level),
             sex: sex,
@@ -115,6 +121,7 @@ const GradeEdit = () => {
         );
       }
       //정상적으로 저장되어 응답을 받았다면
+      
       if (json != null) {
         window.alert("수정되었습니다.");
         //페이지 강제 이동=> window.location.href= URL기능과 동일함
@@ -122,7 +129,7 @@ const GradeEdit = () => {
       }
     })();
   }, []);
-  
+
   return (
     <>
       <Spinner visible={loading} />
@@ -156,7 +163,7 @@ const GradeEdit = () => {
                        [onChange이벤트로 입력값 취득->상태값으로 복사-> 복사한 상태값을 value값으로 줘야함]
                       데이터를 로드해 출력만 할때는 defaultValue를 사용
                       */
-                      />
+                    />
                   </td>
                 </tr>
                 <tr>
