@@ -7,189 +7,99 @@ import Logo from "../로고.png";
 /*전체적인 CSS손보기 ->  ajax 구현-> ajax 실험후 작동한다면 -> 유효성 검사 넣기*/
 
 const FormStyle = styled.div`
-  /*공통 영역*/
-  html,
-  body {
-    background-color: #f5f6f7;
-    width: 100%;
-    height: 100%;
-    font-family: Dotum, "돋움", Helvetica, sans-serif;
-    font-size: 12px;
-    margin: auto;
-    padding: 0;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  ul,
-  li {
-    list-style: none;
-  }
-
-  #header,
-  #main,
-  #footer {
-    margin: auto;
-    width: 40%;
-    max-width: 768px;
-    min-width: 460px;
-  }
-  /*head 영역*/
+  margin: 0 auto;
+  width: 460px;
   #header {
-    padding: 60px 0 54px;
+    padding: 60px 0 20px;
+    display: flex;
+    justify-content: center;
     img {
-      width: 40%;
-      margin-left: 200px;
+      width: 240px;
+      height: 44px;
     }
   }
-
-  /*main 영역*/
   #main {
-.form-item {
-  padding: 15px 0;
-}
+    .form-item {
+      padding: 0.5% 0;
+      label {
+        font-size: 14px;
+        font-weight: bold;
+        display: block;
+        margin: 10px 0;
+        cursor: pointer;
+      }
+      div {
+        position: relative;
+        input {
+          width: 100%;
+          cursor: pointer;
+          height: 51px;
+          border: solid 1px #dadada;
+          &:focus {
+            outline: 1px solid #03c75a;
+          }
+        }
+        .id-in {
+          position: absolute;
+          top: 16px;
+          right: 13px;
+          font-size: 15px;
+          line-height: 18px;
+          color: #8e8e8e;
+          font-weight: bold;
+        }
+      }
+      &.name-form {
+        padding-top: 5%;
+      }
+      .birthArea {
+        display: flex;
+        justify-content: space-between;
+        .select {
+          margin-left: 5%;
+          width: 65%;
+          select {
+            width: 65%;
+            height: 55px;
+            border: solid 1px #dadada;
+            background: #fff;
+            cursor: pointer;
+            &:focus {
+              outline: 1px solid #03c75a;
+            }
+          }
+        }
+        input {
+          box-sizing: inherit;
+          padding-left: 4px;
+        }
+        .th-ma-r {
+          margin-left: -15%;
+        }
+      }
 
-.form-item:first-child {
-padding-top: 0;
-}
-.form-item:last-child {
-text-align: center;
-}
-label {
-font-size: 14px;
-font-weight: 700;
-cursor: pointer;
-display: inline-block;
-margin-bottom: 10px;
-}
-  }
-  input {
-    border: solid 1px #a7a7a7;
-    width: 100%;
-    height: 51px;
-    cursor: pointer;
-    padding-left: 10px;
-    &:focus {
-      outline: 1px solid #00a149;
-      /*https://velog.io/@ssumniee/ 참고*/
+      #gender {
+        box-sizing: inherit;
+        width: 100%;
+        padding-right: 1%;
+        cursor: pointer;
+        border: solid 1px #dadada;
+        height: 55px;
+        &:focus {
+          outline: 1px solid #03c75a;
+        }
+      }
     }
-  }
-  .relative {
-    position: relative;
-  }
-  /*아이디 입력란 안의 텍스트영역*/
-  .id-in {
-    position: absolute;
-    top: 16px;
-    right: 13px;
-    font-size: 15px;
-    line-height: 18px;
-    color: #8e8e8e;
-  }
-  /*비밀번호 입력란 안의 아이콘 영역1*/
-  .icon1 {
-    position: absolute;
-    background-image: url(./m_icon_pw_step.png);
-    top: 50%;
-    right: 13px;
-    width: 24px;
-    height: 24px;
-    margin-top: -15px;
-    background-repeat: no-repeat;
-    background-size: 125px 75px;
-    cursor: pointer;
-  }
-  /*비밀번호 입력란 안의 아이콘 영역2*/
-  .icon2 {
-    position: absolute;
-    background-image: url(./m_icon_pw_step.png);
-    top: 50%;
-    right: 13px;
-    width: 24px;
-    height: 24px;
-    margin-top: -12px;
-    background-repeat: no-repeat;
-    background-size: 125px 75px;
-    cursor: pointer;
-    background-position: -27px 0;
-    #user_mm {
-      width: 181px;
-      height: 55px;
-      margin-left: 15px;
-    }
-    /*일 입력란 영역*/
-    .th-ma-r {
-        margin-right: 0;
-    }
-    /*월 선택영역*/
-    #gender,
-    #nation {
-      width: 102%;
-      height: 51px;
-      padding-left: 10px;
-    }
-
-    /*이메일 옆*/
-    .email-item {
-      font-size: 12px;
-      font-weight: 400;
-      color: #8e8e8e;
-    }
-    .tel-width {
-      width: 70%;
-      margin: 10px 0;
-    }
-    /*버튼 공통*/
-    .button-item {
-      background-color: #03c75a;
-      color: white;
-      border: 1px solid #00a149;
-    }
-    .button1 {
-      display: inline-block;
-      padding: 15px;
-      width: 100%;
-      margin-left: 20px;
-      text-align: center;
-    }
-    .button2 {
-      width: 100%;
-      padding: 10px 0;
-      font-size: 18px;
-      font-weight: 700;
+    .emailText {
+      display: flex;
       cursor: pointer;
+      .email-item {
+        display: inline-block;
+        margin-top: 3%;
+        font-size: 12px;
+        color: #8e8e8e;
+      }
     }
-}
-  .float-left {
-    float: left;
-    margin-right: 15px;
-  }
-  .form-item::after,
-  .float-none::after {
-    content: "";
-    display: block;
-    clear: both;
-    float: none;
-  }
-  .float-none {
-    margin-left: 50px;
-  }
-  #footer {
-    padding-bottom: 20px;
-    .ma-le {
-      margin-left: 130px;
-    }
-    address {
-      display: inline;
-      font: 9px Verdana;
-      padding-left: 5px;
-    }
-    ul li a:hover,
-   address a:hover {
-     color: #438a01;
-     text-decoration: underline;
-   }
   }
 `;
 
@@ -204,69 +114,66 @@ const Form = () => {
       <form id="main" name="join-form">
         <div className="form-item">
           <label for="user_id">아이디</label>
-          <div className="relative">
+          <div>
             <input type="text" name="user_id" id="user_id" />
             <span className="id-in">@naver.com</span>
           </div>
         </div>
         <div className="form-item">
           <label for="user_pw">비밀번호</label>
-          <div className="relative">
+          <div>
             <input type="password" name="user_pw" id="user_pw" />
             <span className="icon1"></span>
           </div>
         </div>
         <div className="form-item">
           <label for="user_pw">비밀번호 재확인</label>
-          <div className="relative">
+          <div>
             <input type="password" name="user_pw_re" id="user_pw_re" />
             <span className="icon2"></span>
           </div>
         </div>
-        <div className="form-item">
+        <div className="form-item name-form">
           <label for="user_name">이름</label>
           <div>
             <input type="text" name="user_name" id="user_name" />
           </div>
         </div>
         <div className="form-item">
-          <label style={{ display: "block" }} for="user_birth">
-            생년월일
-          </label>
-          <div className="float-left">
-            <input
-              type="text"
-              name="user_yy"
-              id="user_yy"
-              placeholder="년(4자)"
-            />
-          </div>
-          <div className="float-left">
-            <select name="user_mm" id="user_mm" >
-              <option value="">월</option>
-              {/*반복문으로 설정 */}
-              <option value="01">1</option>
-              <option value="02">2</option>
-              <option value="03">3</option>
-              <option value="04">4</option>
-              <option value="05">5</option>
-              <option value="06">6</option>
-              <option value="07">7</option>
-              <option value="08">8</option>
-              <option value="09">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>
-          </div>
-          <div className="float-left th-ma-r">
-            <input type="text" name="user_dd" id="user_dd" placeholder="일" />
+          <label for="user_birth">생년월일</label>
+          <div className="birthArea">
+            <div className="float-left">
+              <input
+                type="text"
+                name="user_yy"
+                id="user_yy"
+                placeholder="년(4자)"
+              />
+            </div>
+            <div className="select">
+              <select name="user_mm" id="user_mm">
+                <option value="">월</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+            <div className="float-left th-ma-r">
+              <input type="text" name="user_dd" id="user_dd" placeholder="일" />
+            </div>
           </div>
         </div>
         <div className="form-item">
-          <label for="gender" style={{ display: "block" }}>
-            성별
-          </label>
+          <label for="gender">성별</label>
           <select id="gender" name="gender">
             <option value="">성별</option>
             <option value="M">남자</option>
@@ -275,8 +182,10 @@ const Form = () => {
           </select>
         </div>
         <div className="form-item">
-          <label for="email">본인 확인 이메일</label>
-          <span className="email-item">(선택)</span>
+          <div className="emailText">
+            <label for="email">본인 확인 이메일</label>
+            <span className="email-item">(선택)</span>
+          </div>
           <div>
             <input
               type="email"
