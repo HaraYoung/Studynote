@@ -89,6 +89,19 @@ const FormStyle = styled.div`
           outline: 1px solid #03c75a;
         }
       }
+      &.telArea{
+        margin-top: 5%;
+        #nation{
+          width: 100%;
+            height: 55px;
+            border: solid 1px #dadada;
+            background: #fff;
+            cursor: pointer;
+            &:focus {
+              outline: 1px solid #03c75a;
+            }
+        }
+      }
     }
     .emailText {
       display: flex;
@@ -195,7 +208,7 @@ const Form = () => {
             />
           </div>
         </div>
-        <div className="form-item">
+        <div className="form-item telArea">
           <label for="tel">휴대 전화</label>
           <div>
             <select id="nation">
