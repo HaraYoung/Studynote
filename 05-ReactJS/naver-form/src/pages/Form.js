@@ -89,19 +89,49 @@ const FormStyle = styled.div`
           outline: 1px solid #03c75a;
         }
       }
-      &.telArea{
+      &.telArea {
         margin-top: 5%;
-        #nation{
+        #nation {
           width: 100%;
-            height: 55px;
-            border: solid 1px #dadada;
-            background: #fff;
-            cursor: pointer;
-            &:focus {
-              outline: 1px solid #03c75a;
-            }
+          height: 55px;
+          border: solid 1px #dadada;
+          background: #fff;
+          box-sizing: inherit;
+          padding-right: 5px;
+          cursor: pointer;
+          &:focus {
+            outline: 1px solid #03c75a;
+          }
+        }
+        .tel-width{
+          margin-top: 3%;
+          display: flex;
+          justify-content: space-between;
+          input{
+            width: 73%;
+          }
         }
       }
+      .button-item{
+        background-color: #03c75a;
+        padding: 17px 5px;
+        font-size: 15px;
+        color: #fff;
+        font-weight: bold;
+        &.btn{
+          position: relative;
+          top: 30%;
+          left: 6%;
+        }
+        &.btn2{
+          border: 1px solid #03c75a;
+          width: 100%;
+          margin-top: 5%;
+        }
+      }
+      .aut{
+          margin-top: 3%;
+        }
     }
     .emailText {
       display: flex;
@@ -111,6 +141,38 @@ const FormStyle = styled.div`
         margin-top: 3%;
         font-size: 12px;
         color: #8e8e8e;
+      }
+    }
+  }
+  #footer{
+    margin-top: 7%;
+    .footerText{
+      display: flex;
+      li{
+        a{
+          color: #7e7e7e;
+        }
+        &:after {
+          content: '|';
+          margin: 0 3px;
+          color: #7e7e7e;
+        }
+        &:last-child:after {
+          content: '';
+        }
+      }
+    }
+    .corpRigths{
+      display: flex;
+      justify-content:center;
+      padding-bottom: 3%;
+      address{
+        font: 9px verdana;
+        padding-left: 5px;
+        color:#333;
+        a{
+          padding-left: 5px;
+        }
       }
     }
   }
@@ -217,41 +279,42 @@ const Form = () => {
               <option value="1">미국/캐나다 +1</option>
             </select>
           </div>
-          <div className="float-left tel-width">
+          <div className="tel-width">
             <input type="tel" name="tel" id="tel" placeholder="전화번호 입력" />
-          </div>
-          <div className="form-item float-left">
-            <NavLink className="button-item button1" to="#aut-num">
+          <div className="form-item">
+            <NavLink className="button-item btn" to="#aut-num">
               <span>인증번호 받기</span>
             </NavLink>
           </div>
-          <div>
+          </div>
+          <div className="aut">
             <input id="aut-num" placeholder="인증번호를 입력하세요" disabled />
           </div>
         </div>
         <div className="form-item">
-          <button className="button-item button2" type="submit">
+          <button className="button-item btn2" type="submit">
             <span>가입하기</span>
           </button>
         </div>
       </form>
       <div id="footer">
-        <ul className="float-none">
-          <li className="float-left">
+        <ul className="footerText">
+          <li>
             <NavLink to="#">이용약관</NavLink>
           </li>
-          <li className="float-left">
+          <li>
             <NavLink to="#">
               <b>개인정보처리방침</b>
             </NavLink>
           </li>
-          <li className="float-left">
+          <li>
             <NavLink to="#">책임의 한계와 법적고지</NavLink>
           </li>
-          <li className="float-left">
+          <li>
             <NavLink to="#">회원정보 고객센터</NavLink>
           </li>
         </ul>
+        <div className='corpRigths'>
         <NavLink to="#" className="ma-le">
           <img src={Logo} width="63px" alt="logo" />
         </NavLink>
@@ -262,6 +325,7 @@ const Form = () => {
           </NavLink>
           All Rights Reserved.
         </address>
+        </div>
       </div>
     </FormStyle>
   );
