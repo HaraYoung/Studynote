@@ -34,12 +34,13 @@ const Form= styled.form`
 const Top = memo(() => {
     const navigate = useNavigate();
     
-    /*const qs= useQueryString();
+    const qs= useQueryString();
     console.log(qs);
-    const query= qs.query; */
-    const {query}= useQueryString();
+    const query= qs.query; 
+    //const {query}= useQueryString();
 
     const onSearchSubmit = useCallback((e)=>{
+        //이벤트 발생시 useNavigate()안의 주소로 url변경
         e.preventDefault();
         navigate(`/web?query=${e.target.query.value}`);
     },[navigate]);
