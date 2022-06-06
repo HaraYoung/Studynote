@@ -22,9 +22,8 @@ export const getList = createAsyncThunk(
       //이전시간에서의 response로 정의했던것 = result를 받아 바로 리턴함
       result = await axios.get("http://localhost:3001/covid19", {
         params: {
-          query: payload.query,
-          gte: payload.gte,
-          lte: payload.lte
+          date_gte: payload.date_gte,
+          date_lte: payload.date_lte
         }
       });
     } catch (e) {

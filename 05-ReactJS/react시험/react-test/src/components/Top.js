@@ -1,12 +1,10 @@
 import React, { memo, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { useQueryString } from "../hooks/useQueryString";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
 import { getList } from "../slices/Covid19Slice";
-
-
-import MenuLink from "./MenuLink";
+import dayjs from "dayjs";
+import MenuLink from "../components/MenuLink";
+import { useDispatch } from "react-redux";
 
 const Form = styled.form`
   position: sticky;
@@ -38,57 +36,95 @@ const Form = styled.form`
 const Top = memo(() => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+ // const { date_gte, date_lte } = useQueryString();
 
-  /*const qs= useQueryString();
-    console.log(qs);
-    const query= qs.query; */
-  const { query, gte, lte } = useQueryString();
+   let [gteDate, setGteDate]= React.useState('2020-02-17');
+   let [lteDate, setLteDate]= React.useState('2022-05-31');
+
+  const onDateGteChange = (
+    (e) => {
+      setGteDate(e.target.value);
+    });
+
+  const onDateLteChange = (
+    (e) => {
+      setLteDate(e.target.value);
+    });
 
   const onSearchSubmit = useCallback(
     (e) => {
       e.preventDefault();
-      navigate(`/covid19?query=confirmed_gte=${gte}&confirmed_lte=${lte}`);
-    },[navigate, gte, lte ]
-  );
-    const onDateChange= useCallback((e)=>{
-      const gteName= document.dateForm.gte.value;
-      const lteName= document.dateForm.lte.value;
-      dispatch(getList({
-        gte: gteName,
-        lte: lteName}
-      ))
-    },[dispatch]) 
+      if(gteDate> lteDate){
+        alert('시작 날짜가 더 빨라야합니다');
+      }else if(gteDate < '2020-02-17' || lteDate > '2022-05-31'){
+        alert('2020-02-17부터 2022-05-31까지의 날짜만 선택 가능합니다.');
+      }
+      navigate(`/confirmed?gteDate=${gteDate}&lteDate=${lteDate}`);
+    },
+    [navigate, gteDate, lteDate]
+    );
+    const lteOneDay= dayjs(lteDate).add(1, 'd').format('YYYY-MM-DD');
+
+    React.useEffect(()=>{
+      dispatch(getList({date_gte: gteDate, date_lte: lteOneDay}))
+    },[dispatch, gteDate, lteOneDay]);
+
   return (
     <div>
       <h1> Covid19 현황 </h1>
       <br />
-      <Form onSubmit={onSearchSubmit} name='dateForm' onChange={onDateChange}>
-      <input type='date' name='gte' defaultValue={gte}/> ~ <input type='date'name='lte' defaultValue={lte}/> <button type='submit'name="query" defaultValue={query}>검색</button>
-      {/*선택된 값을 데이터에서 찾아서 반복을 돌린후 두번째 선택된 값에서 마침.. */}
+      <Form onSubmit={onSearchSubmit} name="dateForm">
+        <input
+          type="date"
+          name="gte"
+          value={gteDate}
+          onChange={onDateGteChange}
+        />
+        ~
+        <input
+          type="date"
+          name="lte"
+          value={lteDate}
+          onChange={onDateLteChange}
+        />
+        <button type="submit" >
+          검색
+        </button>
       </Form>
-      {query && (
-        <nav>
-          <MenuLink to={`/covid19?query=confirmed_gte=${gte}&confirmed_lte=${lte}`}>일일 확진자</MenuLink>
-          <MenuLink to={`/covid19?query=confirmed_acc_gte=${gte}&confirmed_acc_lte=${lte}`}>
+       
+      <nav>
+          <MenuLink
+            to={`/confirmed?gteDate=${gteDate}&lteDate=${lteDate}`}
+          >
+            일일 확진자
+          </MenuLink>
+          <MenuLink
+            to={`/confirmed_acc?gteDate=${gteDate}&lteDate=${lteDate}`}
+          >
             누적 확진자
           </MenuLink>
-          <MenuLink to={`/covid19?query=active_gte=${gte}&active_lte=${lte}`}>
+          <MenuLink to={`/active?gteDate=${gteDate}&lteDate=${lteDate}`}>
             격리 환자
           </MenuLink>
-          <MenuLink to={`/covid19?query=released_gte=${gte}&released_lte=${lte}`}>
+          <MenuLink
+            to={`/released?gteDate=${gteDate}&lteDate=${lteDate}`}
+          >
             격리 해제
           </MenuLink>
-          <MenuLink to={`/covid19?query=released_acc_gte=${gte}&released_acc_lte=${lte}`}>
+          <MenuLink
+            to={`/released_acc?gteDate=${gteDate}&lteDate=${lteDate}`}
+          >
             누적 격리 해제
           </MenuLink>
-          <MenuLink to={`/covid19?query=death_gte=${gte}&death_lte=${lte}`}>
+          <MenuLink to={`/death?gteDate=${gteDate}&lteDate=${lteDate}`}>
             사망자
           </MenuLink>
-          <MenuLink to={`/covid19?query=death_acc_gte=${gte}&death_acc_lte=${lte}`}>
+          <MenuLink
+            to={`/death_acc?gteDate=${gteDate}&lteDate=${lteDate}`}
+          >
             누적 사망자
           </MenuLink>
         </nav>
-      )}
     </div>
   );
 });

@@ -16,7 +16,6 @@ function App() {
   return (
     <div>
       <Top/> 
-       <Covid19/> 
        <Routes>
           <Route path='/:api' element={<Covid19/>}/>
       </Routes>
