@@ -1,0 +1,11 @@
+{
+  "name": "08-BatchScheduler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dayjs": "^1.11.3",
+    "node-schedule": "^2.1.0"
+  }
+}
