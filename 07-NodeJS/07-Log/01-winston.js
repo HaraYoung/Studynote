@@ -1,5 +1,5 @@
 //1- 패키지 참조
-import {mkdirs} from './helper/FileHelper';
+import {mkdirs} from './helper/FileHelper.js';
 import {join, resolve} from 'path';
 import winston from 'winston';
 import winstonDaily from 'winston-daily-rotate-file';
@@ -17,7 +17,7 @@ const config= {
             level: 'debug'
         },
         //시스템에 심각한 문제가 발생했을 때의 정보를 저장할 파일
-        err:{
+        error:{
             path: join(__dirname, '_files/_logs'),
             level: 'error'
         }
@@ -62,7 +62,7 @@ const logger= winston.createLogger({
             //에러 내용만 기록할 별도의 설정
             new winstonDaily({
                 name: 'error-file',
-                level: config.log.erro.level,  
+                level: config.log.error.level,  
                 datePattern: 'YYMMDD',         
                 filename: 'error_%DATE%.log',  
                 maxsize: 50000000,

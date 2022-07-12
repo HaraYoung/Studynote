@@ -7,10 +7,6 @@ import winstonDaily from 'winston-daily-rotate-file';
 //1- 설정 파일 가져오기
 dotenv.config({path: join(resolve(), '../config.env')});
 
-console.log(process.env.LOG_PATH);
-console.log(process.env.LOG_LEVEL);
-
-
 //2- 로그가 저장될 폴더 생성
 mkdirs(process.env.LOG_PATH);
 

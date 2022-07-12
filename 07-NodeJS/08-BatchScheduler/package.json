@@ -6,6 +6,9 @@
   "type": "module",
   "dependencies": {
     "dayjs": "^1.11.3",
-    "node-schedule": "^2.1.0"
+    "dotenv": "^16.0.1",
+    "node-schedule": "^2.1.0",
+    "winston": "^3.8.1",
+    "winston-daily-rotate-file": "^4.7.1"
   }
 }
