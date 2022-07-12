@@ -8,7 +8,7 @@ import schedule from 'node-schedule';
 schedule.scheduleJob('* * * * *', ()=> logger.debug('1분에 한번씩 수행'));
 
 //3- 매 시 15,45분 마다 수행
-schedule.scheduleJob('15,45 * * * *', ()=> logger.debug('매 시 15,45분 마다 수행'));
+schedule.scheduleJob('15,17 * * * *', ()=> logger.debug('매 시 15,17분 마다 수행'));
 
 //4- 2분마다
 schedule.scheduleJob('*/2 * * * *', ()=> logger.debug('2분마다 수행'));

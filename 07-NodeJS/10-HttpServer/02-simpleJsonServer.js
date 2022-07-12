@@ -1,7 +1,7 @@
 import logger from "./helper/LogHelper.js";
 import { myip } from "./helper/UtilHelper.js";
-import http, { request } from "http";
-import fs from "path";
+import http from "http";
+import fs from "fs";
 import path from "path";
 
 const __dirname = path.resolve();
@@ -101,7 +101,7 @@ server.on('close', function(){
     logger.debug('백엔드가 종료되었습니다.');
 });
 
-//예제이므로 타이머를 텅해 백엔드를 60초 후 강제 종료
-setTime(()=>{
-    server.close();
-},6000) 
+// //예제이므로 타이머를 텅해 백엔드를 60초 후 강제 종료
+// setTime(()=>{
+//     server.close();
+// },6000) 

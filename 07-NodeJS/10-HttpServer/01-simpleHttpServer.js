@@ -53,7 +53,6 @@ server.on('request', (req,res)=> {
     }else{
         res.write('     <h1>node.js로 부터의 응답 페이지</h1>');
     }
-
     res.write('  </body>');
     res.write('</html>');
 
@@ -67,7 +66,7 @@ server.on('close', function(){
     logger.debug('백엔드가 종료되었습니다.');
 });
 
-//예제이므로 타이머를 텅해 백엔드를 60초 후 강제 종료
-setTimeout(()=>{
-    server.close();
-},6000) 
+// //예제이므로 타이머를 텅해 백엔드를 60초 후 강제 종료
+// setTimeout(()=>{
+//     server.close();
+// },6000) 

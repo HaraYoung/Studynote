@@ -5,10 +5,12 @@ import winston from 'winston';
 import winstonDaily from 'winston-daily-rotate-file';
 
 //1- 설정 파일 가져오기
-dotenv.config({path: join(resolve(), '../config.env')});
+dotenv.config({path: join(resolve(), '../config.txt')});
 
-console.log(process.env.LOG_PATH);
-console.log(process.env.LOG_LEVEL);
+//console.log(process.env.LOG_PATH);
+//console.log(process.env.LOG_LEVEL);
+//console.log(process.env.PORT);
+
 
 
 //2- 로그가 저장될 폴더 생성
