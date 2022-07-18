@@ -2,10 +2,11 @@
 //직접 구현한 모듈
 import logger from "./helper/LogHelper.js";
 import { myip, urlFormat } from "./helper/UtilHelper.js";
+import {mkdirs, initMulter, checkUploadError, createThumbnail, createThumbnailMultiple} from "./helper/FileHelper.js";
 
 //내장 모듈
 import url from "url";
-import path from "path";
+import path, { extname } from "path";
 import { request } from "http";
 
 //설치가 필요한 모듈
@@ -16,8 +17,11 @@ import serveStatic from "serve-static"; //특정 폴더의 파일을 URL로 노�
 import serveFavicon from "serve-favicon"; //favicon 처리
 import bodyParser from "body-parser"; //post 파라미터 처리
 import methodOverride from "method-override"; //put,delete 파라미터 처리
-import cookieParser from "cookie-parser";   //cookie 처리
+import cookieParser from "cookie-parser"; //cookie 처리
 import expressSessions from "express-session"; //Session처리
+import nodemailer from "nodemailer"; //메일 발송-> app.use()로 추가 설정 필요 없음
+// import multer from "multer";         //업로드 모듈
+// import thumbnail from 'node-thumbnail';       //썸네일 이미지 생성 모듈
 
 /*--- 01 setup --- */
 /*2- Express 객체 생성 */
@@ -111,19 +115,25 @@ app.use(methodOverride("_method")); //HTML from
 app.use(cookieParser(process.env.COOKIE_ENCRYPT_KEY));
 
 /**세션 설정 */
-app.use(expressSessions({
+app.use(
+  expressSessions({
     //암호화 키
     secret: process.env.SESSION_ENCRYPT_KEY,
     //세션이 초기화되지 않더라도 새로 저장할지 여부(일반적으로 false)
     resave: false,
     //세션이 저장되기 전에 기존의 세션을 초기화 상태로 만들지 여부
-    saveUninitialized: false
-}));
+    saveUninitialized: false,
+  })
+);
 
 /*html,css,img,js 등 정적 파일을 url에 노출시킬 폴더 연결
 'http://IP(혹은 도메인): port번호' 이후 경로가 router에 등록되지 않은 경로라면
 static모듈에 연결된 폴더 안에서 해당 경로를 탐색함 */
 app.use("/", serveStatic(process.env.PUBLIC_PATH));
+//업로드된 파일이 저장될 폴더를 URL에 노출함
+app.use(process.env.UPLOAD_URL, serveStatic(process.env.UPLOAD_DIR));
+//썸네일 이미지가 저장될 폴더를 URL에 노출함
+app.use(process.env.THUMB_URL, serveStatic(process.env.THUMB_DIR));
 
 //favicon설정
 app.use(serveFavicon(process.env.FAVICON_PATH));
@@ -278,190 +288,323 @@ router.delete("/send_delete", (req, res, next) => {
 /*상품에 대한 Restful API 정의하기
 위의 형태 처럼 개별적인 함수로 구현 가능하지만 대부분 하나의 URL에 메서드 체인을 사용해 4가지 전송 방식을 한번에 구현*/
 router
-    .get("/product/:productNumber", (req, res, next) => {
-        //URL params 형식으로 조회할 상품의 일련번호를 전달받아야 함
-        const html =
-        "<h1><span style='color:blue'>" +
-        req.params.productNumber +
-        "</span>번 상품 <span style='color:red'>조회</span>하기</h1>";
-        res.status(200).send(html);
-    })
-    .post("/product", (req, res, next) => {
-        //form 태그 상에 저장할 상품 정보를 입력 후 전송함- 주로 관리자 기능
-        //저장시에는 일련번호는 전송하지 않고 저장 후 자동으로 발급되는 일련번호를 프론트에게 돌려줘야함
-        const html =
-        "<h1><span style='color:blue'>" +
-        req.body.productNumber +
-        "</span> 상품 <span style='color:red'>등록</span>하기</h1>";
-        res.status(200).send(html);
-    })
-    .put("/product/:productNumber", (req, res, next) => {
-        //form 태그 상에 수정할 상품 정보를 입력 후 전송함- 주로 관리자 기능
-        //몇 번 상품을 수정할지 식별하기 위해 상품 일련번호가 함께 전송됨
-        const html =
-        "<h1><span style='color:blue'>" +
-        req.params.productNumber +
-        "</span> 상품 <span style='color:red'>수정</span>하기</h1>";
-        res.status(200).send(html);
-    })
-    .delete("/product/:productNumber", (req, res, next) => {
-        //삭제할 상품의 일련번호 전송
-        const html =
-        "<h1><span style='color:blue'>" +
-        req.params.productNumber +
-        "</span> 상품 <span style='color:red'>삭제</span>하기</h1>";
-        res.status(200).send(html);
-    });
-
+  .get("/product/:productNumber", (req, res, next) => {
+    //URL params 형식으로 조회할 상품의 일련번호를 전달받아야 함
+    const html =
+      "<h1><span style='color:blue'>" +
+      req.params.productNumber +
+      "</span>번 상품 <span style='color:red'>조회</span>하기</h1>";
+    res.status(200).send(html);
+  })
+  .post("/product", (req, res, next) => {
+    //form 태그 상에 저장할 상품 정보를 입력 후 전송함- 주로 관리자 기능
+    //저장시에는 일련번호는 전송하지 않고 저장 후 자동으로 발급되는 일련번호를 프론트에게 돌려줘야함
+    const html =
+      "<h1><span style='color:blue'>" +
+      req.body.productNumber +
+      "</span> 상품 <span style='color:red'>등록</span>하기</h1>";
+    res.status(200).send(html);
+  })
+  .put("/product/:productNumber", (req, res, next) => {
+    //form 태그 상에 수정할 상품 정보를 입력 후 전송함- 주로 관리자 기능
+    //몇 번 상품을 수정할지 식별하기 위해 상품 일련번호가 함께 전송됨
+    const html =
+      "<h1><span style='color:blue'>" +
+      req.params.productNumber +
+      "</span> 상품 <span style='color:red'>수정</span>하기</h1>";
+    res.status(200).send(html);
+  })
+  .delete("/product/:productNumber", (req, res, next) => {
+    //삭제할 상품의 일련번호 전송
+    const html =
+      "<h1><span style='color:blue'>" +
+      req.params.productNumber +
+      "</span> 상품 <span style='color:red'>삭제</span>하기</h1>";
+    res.status(200).send(html);
+  });
 
 /*--- 04 cookie --- */
 // public/04_cookie.html
 router
-    .post('/cookie', (req, res, next)=>{
-        //post로 전달된 파라미터 받기
-        const msg= req.body.msg;
+  .post("/cookie", (req, res, next) => {
+    //post로 전달된 파라미터 받기
+    const msg = req.body.msg;
 
-        //일반 쿠키 저장-> 유효시간을 30초로 설정
-        res.cookie('my_msg', msg,{
-            maxAge: 30* 1000,
-            path: '/'
-        });
-
-        //암호화된 쿠키 저장-> 유효시간을 30초로 설정
-        res.cookie('my_msg_signed', msg,{
-            maxAge: 30* 1000,
-            path: '/',
-            signed: true
-        });
-        res.status(200).send('ok');
-    })
-    .get('/cookie', (req, res, next)=> {
-        //일반 쿠키 값들은 req.cookies 객체의 하위 데이터로 저장됨(일반 데이터)
-        for(let key in req.cookies){
-            const str= '[cookies] '+ key+ '='+ req.cookies[key];
-            logger.debug(str);
-        }
-        //암호화된 쿠기값들은 req.sigenCookies 객체의 하위데이터로 저장됨
-        for(let key in req.signedCookies){
-            const str= '[signedCookies] '+ key+ '='+ req.signedCookies[key];
-            logger.debug(str);
-        }
-
-        //원하는 쿠키값을 가져옴
-        const my_msg= req.cookies.my_msg;
-        const my_msg_signed= req.signedCookies.my_msg_signed;
-
-        const result_data={
-            my_msg: my_msg,
-            my_msg_signed: my_msg_signed
-        };
-        res.status(200).send(result_data);
-    })
-    .delete('/cookie', (req, res, next)=>{
-        //저장시 domain,path를 설정했다면 삭제시에도 동일한 값을 지정해야함
-        res.clearCookie('my_msg', {path: '/'});
-        res.clearCookie('my_msg_signed', {path:'/'});
-        res.status(200).send('clear');
+    //일반 쿠키 저장-> 유효시간을 30초로 설정
+    res.cookie("my_msg", msg, {
+      maxAge: 30 * 1000,
+      path: "/",
     });
+
+    //암호화된 쿠키 저장-> 유효시간을 30초로 설정
+    res.cookie("my_msg_signed", msg, {
+      maxAge: 30 * 1000,
+      path: "/",
+      signed: true,
+    });
+    res.status(200).send("ok");
+  })
+  .get("/cookie", (req, res, next) => {
+    //일반 쿠키 값들은 req.cookies 객체의 하위 데이터로 저장됨(일반 데이터)
+    for (let key in req.cookies) {
+      const str = "[cookies] " + key + "=" + req.cookies[key];
+      logger.debug(str);
+    }
+    //암호화된 쿠기값들은 req.sigenCookies 객체의 하위데이터로 저장됨
+    for (let key in req.signedCookies) {
+      const str = "[signedCookies] " + key + "=" + req.signedCookies[key];
+      logger.debug(str);
+    }
+
+    //원하는 쿠키값을 가져옴
+    const my_msg = req.cookies.my_msg;
+    const my_msg_signed = req.signedCookies.my_msg_signed;
+
+    const result_data = {
+      my_msg: my_msg,
+      my_msg_signed: my_msg_signed,
+    };
+    res.status(200).send(result_data);
+  })
+  .delete("/cookie", (req, res, next) => {
+    //저장시 domain,path를 설정했다면 삭제시에도 동일한 값을 지정해야함
+    res.clearCookie("my_msg", { path: "/" });
+    res.clearCookie("my_msg_signed", { path: "/" });
+    res.status(200).send("clear");
+  });
 
 /*--- 05 session --- */
 //insomnia로 테스트
 router
-    .post('/session', (req, res, next)=>{
-        //post로 전송된 변수값을 추출
-        const username= req.body.username;
-        const nickname= req.body.nickname;
+  .post("/session", (req, res, next) => {
+    //post로 전송된 변수값을 추출
+    const username = req.body.username;
+    const nickname = req.body.nickname;
 
-        //세션 저장
-        req.session.username= username;
-        req.session.nickname= nickname;
+    //세션 저장
+    req.session.username = username;
+    req.session.nickname = nickname;
 
-        //결과 응답
-        const json= {rt: 'ok'};
-        res.status(200).send(json);
-    })
-    .get('/session', (req, res, next)=>{
-        //저장되어있는 모든 session값 탐색
-        for(let key in req.session){
-            const str= '[session] '+ key+ '='+ req.session[key];
-            logger.debug(str);
-        }
-        //세션데이터를 json으로 구성 후 클라이언트에게 응답으로 전송
-        const my_data={
-            username: req.session.username,
-            nickname: req.session.nickname
-        };
-        res.status(200).send(my_data);
-    })
-    .delete('/session', async (req, res, next) => {
-        let result= 'ok';
-        let code= 200;
-        try{
-            await req.session.destroy();
-        }catch(e){
-            logger.error(e.message)
-            result= e.message;
-            code= 500;
-        }
-        const json= {rt: result};
-        res.status(code).send(json);
-    });
+    //결과 응답
+    const json = { rt: "ok" };
+    res.status(200).send(json);
+  })
+  .get("/session", (req, res, next) => {
+    //저장되어있는 모든 session값 탐색
+    for (let key in req.session) {
+      const str = "[session] " + key + "=" + req.session[key];
+      logger.debug(str);
+    }
+    //세션데이터를 json으로 구성 후 클라이언트에게 응답으로 전송
+    const my_data = {
+      username: req.session.username,
+      nickname: req.session.nickname,
+    };
+    res.status(200).send(my_data);
+  })
+  .delete("/session", async (req, res, next) => {
+    let result = "ok";
+    let code = 200;
+    try {
+      await req.session.destroy();
+    } catch (e) {
+      logger.error(e.message);
+      result = e.message;
+      code = 500;
+    }
+    const json = { rt: result };
+    res.status(code).send(json);
+  });
 
 //public/06_login.html
 router
-    .post('/session/login',(req, res, next) => {
-        const id= req.body.userid;
-        const pw= req.body.userpw;
-        logger.debug('id= '+ id);
-        logger.debug('pw= '+ pw);
+  .post("/session/login", (req, res, next) => {
+    const id = req.body.userid;
+    const pw = req.body.userpw;
+    logger.debug("id= " + id);
+    logger.debug("pw= " + pw);
 
-        let login_ok= false;
-        if(id == 'node' && pw== '1234'){
-            logger.debug('로그인 성공');
-            login_ok= true;
-        }
-        let result_code= null;
-        let result_msg= null;
-        if(login_ok){
-            req.session.userid= id;
-            req.session.userpw= pw;
-            result_code= 200;
-            result_msg= 'ok';
-        }else{
-            result_code= 403;
-            result_msg= 'fail';
-        }
-        const json= {rt: result_msg};
-        res.status(result_code).send(json);
-    })
-    .delete('/session/login', async (req, res, next)=>{
-        let result= 'ok';
-        let code= 200;
-        try{
-            await req.session.destroy();
-        }catch(e){
-            logger.error(e.message);
-            result= e.message;
-            code= 500;
-        }
-        const json= {rt: result}
-        res.status(code).send(json);
-    })
-    .get('/session/login', (req, res, next)=>{
-        const id= req.session.userid;
-        const pw= req.session.userpw;
+    let login_ok = false;
+    if (id == "node" && pw == "1234") {
+      logger.debug("로그인 성공");
+      login_ok = true;
+    }
+    let result_code = null;
+    let result_msg = null;
+    if (login_ok) {
+      req.session.userid = id;
+      req.session.userpw = pw;
+      result_code = 200;
+      result_msg = "ok";
+    } else {
+      result_code = 403;
+      result_msg = "fail";
+    }
+    const json = { rt: result_msg };
+    res.status(result_code).send(json);
+  })
+  .delete("/session/login", async (req, res, next) => {
+    let result = "ok";
+    let code = 200;
+    try {
+      await req.session.destroy();
+    } catch (e) {
+      logger.error(e.message);
+      result = e.message;
+      code = 500;
+    }
+    const json = { rt: result };
+    res.status(code).send(json);
+  })
+  .get("/session/login", (req, res, next) => {
+    const id = req.session.userid;
+    const pw = req.session.userpw;
 
-        let result_code= null;
-        let result_msg= null;
-        if(id!== undefined && pw!== undefined){
-            logger.debug('현재 로그인중이 맞습니다.');
-            result_code= 200;
-            result_msg= 'ok';
-        }else{
-            logger.debug('현재 로그인중이 아닙니다.');
-            result_code= 400;
-            result_msg= 'fail';
-        }
-        const json= {rt: result_msg};
-        res.status(result_code).send(json);
-    });
+    let result_code = null;
+    let result_msg = null;
+    if (id !== undefined && pw !== undefined) {
+      logger.debug("현재 로그인중이 맞습니다.");
+      result_code = 200;
+      result_msg = "ok";
+    } else {
+      logger.debug("현재 로그인중이 아닙니다.");
+      result_code = 400;
+      result_msg = "fail";
+    }
+    const json = { rt: result_msg };
+    res.status(result_code).send(json);
+  });
+
+/*--- 06 SendMail --- */
+// public/06_mail.html
+router.post("/send_mail", async (req, res, next) => {
+  //1-프론트엔드에서 전달한 사용자 입력값
+  const writer_name = req.body.writer_name;
+  let writer_email = req.body.writer_email;
+  const receiver_name = req.body.receiver_name;
+  let receiver_email = req.body.receiver_email;
+  const subject = req.body.subject;
+  const content = req.body.content;
+
+  //2- 보내는 사람, 받는 사람의 이메일 주소와 이름
+  /*보내는 사람의 이름과 주소
+  -> 외부 SMTP연동시 주의사항:: 발신 주소가 로그인 계정과 다를 경우 발송이  거부됨*/
+  if (writer_name) {
+    //ex)이름 <이메일@.com>
+    writer_email = writer_name + " <" + writer_email + " >";
+  }
+
+  //받는 사람의 이름과 주소
+  if (receiver_name) {
+    receiver_email = receiver_name + " <" + receiver_email + " >";
+  }
+
+  //3- 메일 발송 정보 구성
+  const send_info = {
+    from: writer_email,
+    to: receiver_email,
+    subject: subject,
+    html: content,
+  };
+
+  //4- 발송에 필요한 서버 정보를 사용해 발송 객체 생성
+  const smtp = nodemailer.createTransport({
+    host: process.env.SMTP_HOST, //SMTP서버명: smtp.gmail.com
+    port: process.env.SMTP_PORT, //SMTP 포트: 465
+    secure: true, //보안 연결(SSL) 필요
+    auth: {
+      user: process.env.SMTP_USERNAME, //Gmail 로그인에 사용하는 메일주소
+      pass: process.env.SMTP_PASSWORD, //앱 비밀번호
+    },
+  });
+
+  //5- 메일 발송 요청
+  let rt = 200;
+  let rtMsg = "OK";
+  try {
+    await smtp.sendMail(send_info);
+  } catch (err) {
+    rt = 500;
+    rtMsg = err.message;
+  }
+  res.status(rt).send(rtMsg);
+});
+
+/*--- 07 FileUpload.js --- */
+
+// public/07_upload_single.html
+router.route('/upload/single').post((req, res, nex)=>{
+  /*name속성이 myphoto인 경우에 대한 업로드를 수행
+  -> multer객체가 생성되고 설정 내용이 실행됨 
+  <input type='file' name='myphoto'/>*/
+  const upload= initMulter().single('myphoto');
+  upload(req,res, (err)=>{
+    console.group('request');
+    console.debug(req.file);
+    console.groupEnd();
+
+    //에러 여부를 확인하여 결과 코드와 메세지를 생성함
+    const {result_code, result_msg}= checkUploadError(err);
+
+    
+    //업로드 결과가 성공이라면 썸네일 생성 함수를 호출함
+    if(result_code ==200){
+      try{
+        createThumbnail(req.file)
+      }catch(error){
+        console.error(error);
+        result_code= 500;
+        result_msg= '썸네일 이미지 생성에 실패했습니다.';
+      }
+    }
+
+    //업로드된 파일의 정보와 결과 코드 및 메세지를 조합하여 응답 정보를 구성함
+     const result= {
+      rt: result_code,
+      rtmsg: result_msg,
+      item: req.file,
+     };
+     //준비한 결과값 변수를 활용해 클라이언트에게 응답을 보냄
+     res.status(result_code).send(result);
+  });
+});
+
+// public/07_upload_multi.html
+router.route('/upload/multiple').post((req, res, next) => {
+  //업로드 처리시 배열로 설정
+  req.file=[];
+    /*name속성이 myphoto인 경우에 대한 업로드를 수행
+  -> multer객체가 생성되고 설정 내용이 실행됨 
+  <input type='file' name='myphoto'/>*/
+  const upload= initMulter().array('myphoto');
+
+  //single upload와 동일한 코드 재사용
+  upload(req,res, (err)=>{
+    console.group('request');
+    console.debug(req.file);
+    console.groupEnd();
+
+    //에러 여부를 확인하여 결과 코드와 메세지를 생성함
+    const {result_code, result_msg}= checkUploadError(err);
+
+    //업로드 결과가 성공이라면 썸네일 생성 함수를 호출함
+    if(result_code ==200){
+      try{
+        createThumbnailMultiple(req.file);
+      }catch(error){
+        console.error(error);
+        result_code= 500;
+        result_msg= '썸네일 이미지 생성에 실패했습니다.';
+      }
+    }
+
+    //업로드된 파일의 정보와 결과 코드 및 메세지를 조합하여 응답 정보를 구성함
+     const result= {
+      rt: result_code,
+      rtmsg: result_msg,
+      item: req.file,
+     };
+     //준비한 결과값 변수를 활용해 클라이언트에게 응답을 보냄
+     res.status(result_code).send(result);
+  });
+})
