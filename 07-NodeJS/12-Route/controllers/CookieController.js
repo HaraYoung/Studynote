@@ -5,7 +5,12 @@ export default () => {
   router
     .post("/cookie", (req, res, next) => {
       //post로 전달된 파라미터 받기
-      const msg = req.body.msg;
+      /**WebHelper적용 전
+       * 
+       const msg = req.body.msg;
+       */
+      //WebHelper 적용 후
+      const msg = req.post("msg");
 
       //일반 쿠키 저장-> 유효시간을 30초로 설정
       res.cookie("my_msg", msg, {
@@ -19,7 +24,11 @@ export default () => {
         path: "/",
         signed: true,
       });
+      /**WebHelper적용 전
       res.status(200).send("ok");
+      */
+      //WebHelper 적용 후
+      res.sendResult();
     })
     .get("/cookie", (req, res, next) => {
       //일반 쿠키 값들은 req.cookies 객체의 하위 데이터로 저장됨(일반 데이터)
@@ -41,13 +50,22 @@ export default () => {
         my_msg: my_msg,
         my_msg_signed: my_msg_signed,
       };
+      /**WebHelper적용 전
       res.status(200).send(result_data);
+      */
+      //WebHelper 적용 후
+      res.sendResult(result_data);
     })
     .delete("/cookie", (req, res, next) => {
       //저장시 domain,path를 설정했다면 삭제시에도 동일한 값을 지정해야함
       res.clearCookie("my_msg", { path: "/" });
       res.clearCookie("my_msg_signed", { path: "/" });
-      res.status(200).send("clear");
+
+      /**WebHelper적용 전
+       *       res.status(200).send("clear");
+       */
+      //WebHelper 적용 후
+      res.sendResult();
     });
 
   return router;

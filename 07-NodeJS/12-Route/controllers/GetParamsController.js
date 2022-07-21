@@ -1,8 +1,6 @@
 import logger from "../helper/LogHelper.js";
 import express from "express";
 export default () => {
-  const url = "/";
-  let result = { rt: 200, rtmsg: "OK" };
   const router = express.Router();
   router.get("/send_get", (req, res, next) => {
     /*ex) ?answer=400&age=10&height=175&weight=80

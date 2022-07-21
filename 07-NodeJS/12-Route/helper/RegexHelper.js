@@ -3,7 +3,7 @@
 @author: 박세영 (qkrtpdud9899@gmail.com)
 @description: 정규표현식 검사 수행
 */
-import BadRequestException from '../exceptions/BadRequestException';
+import BadRequestException from '../exceptions/BadRequestException.js';
 
 /*for node.js
 => const BadRequestException= require('./BadRequestException'); */
@@ -16,14 +16,13 @@ class RegexHelper {
     @param {string} msg 값이 없을 경우 표시할 메세지 내용 
     ex) regexHelper.value('#user_id', '아이디를 입력하세요.');
     */
-  value(field, msg) {
-    const content = field.value;
+  value(content, msg) {
     if (
       content === undefined ||
-      content === null ||
+      content == null ||
       (typeof content == "string" && content.trim().length === 0)
     ) {
-      throw new BadRequestException(msg, field);
+      throw new BadRequestException(msg, content);
     }
     return true;
   }
@@ -117,10 +116,10 @@ class RegexHelper {
   }
 
   /*숫자로만 이루어졌는지 검사하기 위해 field()를 간접적으로 호출
-      @param {HTMlElement} field 검사에 대한 <input>요소의 DOM객체 
+      @param {string} content 검사에 대한 <input>요소의 DOM객체 
       @param {string} msg 표시할 메세지 내용*/
-  num(selector, msg) {
-    return this.field(selector, msg, /^[0-9]*$/);
+  num(content, msg) {
+    return content, /^[0-9]*$/;
   }
 
   /*영문로만 이루어졌는지 검사하기 위해 field()를 간접적으로 호출

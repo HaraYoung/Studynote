@@ -2,6 +2,7 @@
 //직접 구현한 모듈
 import logger from "./helper/LogHelper.js";
 import { myip, urlFormat } from "./helper/UtilHelper.js";
+import WebHelper from "./helper/WebHelper.js";
 
 //내장 모듈
 import url from "url";
@@ -32,6 +33,7 @@ import CookieController from "./controllers/CookieController.js";
 import SessionController from "./controllers/SessionController.js";
 import SendMailController from "./controllers/SendMailController.js";
 import FileUploadController from "./controllers/FileUploadController.js";
+import ApiTest from "./controllers/ApiTest.js";
 
 /*--- 01 setup --- */
 /*2- Express 객체 생성 */
@@ -148,6 +150,9 @@ app.use(process.env.THUMB_URL, serveStatic(process.env.THUMB_DIR));
 //favicon설정
 app.use(serveFavicon(process.env.FAVICON_PATH));
 
+//webHelper 설정
+app.use(WebHelper());
+
 //라우터(URL 분배기) 객체 설정-> 맨 마지막에 설정
 //const router = express.Router();
 //라우터를 express에 등록
@@ -162,6 +167,13 @@ app.use(CookieController());
 app.use(SessionController());
 app.use(SendMailController());
 app.use(FileUploadController());
+app.use(ApiTest());
+
+//컨트롤러에서 에러발생시 'next(에러객체)'를 호출했을 때 동작할 처리
+app.use((err, req, res, next) => res.sendError(err));
+
+//앞에서 정의하지 않은 기타 url에 대한 일괄 처리 (무조건 맨 마지막에 정의해야함)
+app.use('*', (req, res, next)=> res.sendError(new PageNotFoundException()));
 
 /*6- 설정한 내용을 기반으로 서버 구동 시작 */
 const ip = myip();
