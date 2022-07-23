@@ -1,18 +1,36 @@
 import logger from '../helper/LogHelper.js';
 import express from 'express';
 import nodemailer from "nodemailer"; //메일 발송-> app.use()로 추가 설정 필요 없음
+import regexHelper from '../helper/RegexHelper.js';
 
 export default () => {
 
  const router = express.Router();
  router.post("/send_mail", async (req, res, next) => {
     //1-프론트엔드에서 전달한 사용자 입력값
-    const writer_name = req.body.writer_name;
-    let writer_email = req.body.writer_email;
-    const receiver_name = req.body.receiver_name;
-    let receiver_email = req.body.receiver_email;
-    const subject = req.body.subject;
-    const content = req.body.content;
+    /**WebHelper적용 전
+     * const writer_name = req.body.writer_name;
+     */
+    const writer_name = req.post('writer_name');
+    let writer_email = req.post('writer_email');
+    const receiver_name = req.post('receiver_name');
+    let receiver_email = req.post('receiver_email');
+    const subject = req.post('subject');
+    const content = req.post('content');
+
+    /**WebHelper적용 후 2- 입력값에 대한 유효성 검사가 필요 */
+    try{
+      regexHelper.value(writer_email, '발신자 메일주소를 입력하세요.');
+      regexHelper.email(writer_email, '발신자 메일주소가 잘못되었습니다.');
+
+      regexHelper.value(receiver_email, '수신자 메일주소를 입력하세요.');
+      regexHelper.value(receiver_email, '수신자 메일주소가 잘못되었습니다.');
+
+      regexHelper.value(subject, '메일 제목을 입력하세요.');
+      regexHelper.value(content, '본문 내용을 입력하세요.');
+    }catch(e){
+      return next(e);
+    }
   
     //2- 보내는 사람, 받는 사람의 이메일 주소와 이름
     /*보내는 사람의 이름과 주소
@@ -47,15 +65,27 @@ export default () => {
     });
   
     //5- 메일 발송 요청
-    let rt = 200;
+    /** WebHelper적용 전
+     *  let rt = 200;
     let rtMsg = "OK";
+     */
+   
     try {
       await smtp.sendMail(send_info);
     } catch (err) {
+    /** WebHelper적용 전
       rt = 500;
       rtMsg = err.message;
+      */
+     //WebHelper적용 후
+     return next(err);
     }
+    /** WebHelper적용 전
     res.status(rt).send(rtMsg);
+    */
+     //WebHelper적용 후
+     res.sendResult();
+
   });
   
  return router;

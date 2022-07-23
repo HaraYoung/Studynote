@@ -73,7 +73,10 @@ const WebHelper = () => {
             rtmsg: message || 'OK'
         }
         if(data){
-            json.data= data;
+            //json.data= data;
+            for(const item in data){
+              json[item]= data[item];
+            }
         }
 
         //표준시로부터 한국의 시차를 적용해 IOS포멧을 생성

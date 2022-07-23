@@ -1,0 +1,100 @@
+2022-07-22 16:07:31 015 [debug] : -------------------------------
+2022-07-22 16:07:31 017 [debug] :     Start Express Server       
+2022-07-22 16:07:31 018 [debug] : -------------------------------
+2022-07-22 16:07:31 018 [debug] : server address => http://192.168.0.25: 3001
+2022-07-22 16:07:31 018 [debug] : -------------------------------
+2022-07-22 16:07:58 131 [debug] : 클라이언트가 접속했습니다.
+2022-07-22 16:07:58 132 [debug] : [client] ::1 / Windows 10.0 / Chrome (103.0.0.0) / Microsoft Windows
+2022-07-22 16:07:58 133 [debug] : [GET] http://localhost:3001/api_test/make_result
+2022-07-22 16:07:58 140 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:07:58 141 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:07:58 142 [error] : [Error] num1의 값이 없습니다.
+2022-07-22 16:07:58 143 [error] : Error: num1의 값이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/ApiTest.js:19:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-22 16:07:58 151 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 19ms
+2022-07-22 16:07:58 151 [debug] : --------------------------------
+2022-07-22 16:09:03 843 [debug] : 클라이언트가 접속했습니다.
+2022-07-22 16:09:03 843 [debug] : [client] ::1 / Windows 10.0 / Chrome (103.0.0.0) / Microsoft Windows
+2022-07-22 16:09:03 844 [debug] : [GET] http://localhost:3001/api_test/make_result?num1=100
+2022-07-22 16:09:03 846 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:09:03 847 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:09:03 848 [error] : [Error] num2의 값이 없습니다.
+2022-07-22 16:09:03 848 [error] : Error: num2의 값이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/ApiTest.js:21:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-22 16:09:03 852 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 9ms
+2022-07-22 16:09:03 853 [debug] : --------------------------------
+2022-07-22 16:09:24 777 [debug] : 클라이언트가 접속했습니다.
+2022-07-22 16:09:24 778 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-22 16:09:24 778 [debug] : [GET] http://localhost:3001/api_test/make_result?num1=100
+2022-07-22 16:09:24 781 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:09:24 781 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:09:24 782 [error] : [Error] num2의 값이 없습니다.
+2022-07-22 16:09:24 782 [error] : Error: num2의 값이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/ApiTest.js:21:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-22 16:09:24 785 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 7ms
+2022-07-22 16:09:24 785 [debug] : --------------------------------
+2022-07-22 16:09:47 168 [debug] : 클라이언트가 접속했습니다.
+2022-07-22 16:09:47 169 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-22 16:09:47 169 [debug] : [GET] http://localhost:3001/api_test/make_result
+2022-07-22 16:09:47 171 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:09:47 171 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:09:47 172 [error] : [Error] num1의 값이 없습니다.
+2022-07-22 16:09:47 172 [error] : Error: num1의 값이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/ApiTest.js:19:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-22 16:09:47 175 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 6ms
+2022-07-22 16:09:47 176 [debug] : --------------------------------
+2022-07-22 16:09:51 289 [debug] : 클라이언트가 접속했습니다.
+2022-07-22 16:09:51 289 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-22 16:09:51 290 [debug] : [GET] http://localhost:3001/api_test/make_result?num1=100
+2022-07-22 16:09:51 291 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:09:51 291 [debug] : [HTTP %s Params] %s= %s
+2022-07-22 16:09:51 292 [error] : [Error] num2의 값이 없습니다.
+2022-07-22 16:09:51 292 [error] : Error: num2의 값이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/ApiTest.js:21:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-22 16:09:51 302 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 13ms
+2022-07-22 16:09:51 303 [debug] : --------------------------------

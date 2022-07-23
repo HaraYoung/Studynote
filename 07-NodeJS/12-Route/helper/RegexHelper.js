@@ -153,12 +153,10 @@ class RegexHelper {
   /* 이메일주소 형식인지 검사하기 위해 field()를 간접적으로 호출
     @param {HTMlElement} field 검사에 대한 <input>요소의 DOM객체
     @param {string} msg 표시할 메세지 내용*/
-  email(field, msg) {
-    return this.field(
-      field,
-      msg,
+  email(content, msg) {
+    return content,
       /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
-    );
+    ;
   }
 
   /*핸드폰 번호 형식 검사하기 위해 field()를 간접적으로 호출

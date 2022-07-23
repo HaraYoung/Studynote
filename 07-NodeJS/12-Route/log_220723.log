@@ -1,0 +1,319 @@
+2022-07-23 15:50:44 873 [debug] : -------------------------------
+2022-07-23 15:50:44 875 [debug] :     Start Express Server       
+2022-07-23 15:50:44 876 [debug] : -------------------------------
+2022-07-23 15:50:44 876 [debug] : server address => http://192.168.219.103: 3001
+2022-07-23 15:50:44 877 [debug] : -------------------------------
+2022-07-23 15:50:48 996 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 15:50:48 997 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 15:50:48 998 [debug] : [GET] http://localhost:3001/api_test/make_result?num1=100
+2022-07-23 15:50:49 004 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:50:49 005 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:50:49 005 [error] : [Error] num2의 값이 없습니다.
+2022-07-23 15:50:49 006 [error] : Error: num2의 값이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/ApiTest.js:21:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-23 15:50:49 012 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 15ms
+2022-07-23 15:50:49 013 [debug] : --------------------------------
+2022-07-23 15:51:21 874 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 15:51:21 874 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 15:51:21 875 [debug] : [GET] http://localhost:3001/api_test/make_result?num1=100&num2=100
+2022-07-23 15:51:21 877 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:51:21 878 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:51:21 880 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 6ms
+2022-07-23 15:51:21 880 [debug] : --------------------------------
+2022-07-23 15:51:39 199 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 15:51:39 199 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 15:51:39 200 [debug] : [GET] http://localhost:3001/api_test/make_result?num1&num2=100
+2022-07-23 15:51:39 201 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:51:39 201 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:51:39 201 [error] : [Error] num1의 값이 없습니다.
+2022-07-23 15:51:39 202 [error] : Error: num1의 값이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/ApiTest.js:19:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-23 15:51:39 205 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 6ms
+2022-07-23 15:51:39 205 [debug] : --------------------------------
+2022-07-23 15:51:50 461 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 15:51:50 462 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 15:51:50 462 [debug] : [GET] http://localhost:3001/api_test/make_result?num1=hello&num2=100
+2022-07-23 15:51:50 463 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:51:50 463 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:51:50 464 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 3ms
+2022-07-23 15:51:50 464 [debug] : --------------------------------
+2022-07-23 15:52:01 856 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 15:52:01 857 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 15:52:01 857 [debug] : [GET] http://localhost:3001/api_test/make_result?num1=hello&num2=hello
+2022-07-23 15:52:01 858 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:52:01 858 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:52:01 859 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 3ms
+2022-07-23 15:52:01 860 [debug] : --------------------------------
+2022-07-23 15:59:36 001 [debug] : -------------------------------
+2022-07-23 15:59:36 003 [debug] :     Start Express Server       
+2022-07-23 15:59:36 004 [debug] : -------------------------------
+2022-07-23 15:59:36 005 [debug] : server address => http://192.168.219.103: 3001
+2022-07-23 15:59:36 005 [debug] : -------------------------------
+2022-07-23 15:59:40 138 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 15:59:40 139 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 15:59:40 140 [debug] : [GET] http://localhost:3001/api_test/make_result?num1=hello&num2=hello
+2022-07-23 15:59:40 147 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:59:40 148 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 15:59:40 149 [error] : [TypeError] Cannot read properties of undefined (reading 'trim')
+2022-07-23 15:59:40 150 [error] : TypeError: Cannot read properties of undefined (reading 'trim')
+    at RegexHelper.field (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:112:37)
+    at RegexHelper.num (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:122:17)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/ApiTest.js:20:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+2022-07-23 15:59:40 156 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 17ms
+2022-07-23 15:59:40 157 [debug] : --------------------------------
+2022-07-23 16:00:04 757 [debug] : -------------------------------
+2022-07-23 16:00:04 759 [debug] :     Start Express Server       
+2022-07-23 16:00:04 759 [debug] : -------------------------------
+2022-07-23 16:00:04 760 [debug] : server address => http://192.168.219.103: 3001
+2022-07-23 16:00:04 760 [debug] : -------------------------------
+2022-07-23 16:00:07 453 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:00:07 454 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:00:07 455 [debug] : [GET] http://localhost:3001/api_test/make_result?num1=hello&num2=hello
+2022-07-23 16:00:07 461 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:00:07 462 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:00:07 467 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 13ms
+2022-07-23 16:00:07 468 [debug] : --------------------------------
+2022-07-23 16:54:19 076 [debug] : -------------------------------
+2022-07-23 16:54:19 078 [debug] :     Start Express Server       
+2022-07-23 16:54:19 078 [debug] : -------------------------------
+2022-07-23 16:54:19 079 [debug] : server address => http://192.168.219.103: 3001
+2022-07-23 16:54:19 079 [debug] : -------------------------------
+2022-07-23 16:54:34 077 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:54:34 078 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:54:34 079 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 16:54:34 101 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:34 102 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:34 103 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:34 104 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:34 104 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:34 105 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:34 106 [error] : [Error] 발신자 메일주소를 입력하세요.
+2022-07-23 16:54:34 106 [error] : Error: 발신자 메일주소를 입력하세요.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/SendMailController.js:23:19
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-23 16:54:34 113 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 35ms
+2022-07-23 16:54:34 114 [debug] : --------------------------------
+2022-07-23 16:54:53 635 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:54:53 636 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:54:53 636 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 16:54:53 640 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:53 641 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:53 641 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:53 641 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:53 642 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:53 642 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:54:53 643 [error] : [TypeError] Cannot read properties of undefined (reading 'trim')
+2022-07-23 16:54:53 644 [error] : TypeError: Cannot read properties of undefined (reading 'trim')
+    at RegexHelper.field (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:112:37)
+    at RegexHelper.email (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:157:17)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/SendMailController.js:24:19
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+2022-07-23 16:54:53 647 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 11ms
+2022-07-23 16:54:53 648 [debug] : --------------------------------
+2022-07-23 16:56:23 598 [debug] : -------------------------------
+2022-07-23 16:56:23 600 [debug] :     Start Express Server       
+2022-07-23 16:56:23 601 [debug] : -------------------------------
+2022-07-23 16:56:23 601 [debug] : server address => http://192.168.219.103: 3001
+2022-07-23 16:56:23 602 [debug] : -------------------------------
+2022-07-23 16:56:27 931 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:56:27 932 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:56:27 932 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 16:56:27 946 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:27 948 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:27 948 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:27 949 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:27 949 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:27 949 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:27 950 [error] : [Error] 수신자 메일주소를 입력하세요.
+2022-07-23 16:56:27 950 [error] : Error: 수신자 메일주소를 입력하세요.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/SendMailController.js:26:19
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-23 16:56:27 955 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 24ms
+2022-07-23 16:56:27 956 [debug] : --------------------------------
+2022-07-23 16:56:42 643 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:56:42 644 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:56:42 644 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 16:56:42 647 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:42 647 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:42 648 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:42 648 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:42 648 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:42 648 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:42 649 [error] : [Error] 메일 제목을 입력하세요.
+2022-07-23 16:56:42 649 [error] : Error: 메일 제목을 입력하세요.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/SendMailController.js:29:19
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-23 16:56:42 652 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 8ms
+2022-07-23 16:56:42 652 [debug] : --------------------------------
+2022-07-23 16:56:50 743 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:56:50 743 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:56:50 744 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 16:56:50 745 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:50 746 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:50 746 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:50 746 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:50 747 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:50 747 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:56:50 748 [error] : [Error] 수신자 메일주소를 입력하세요.
+2022-07-23 16:56:50 748 [error] : Error: 수신자 메일주소를 입력하세요.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/SendMailController.js:26:19
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-23 16:56:50 751 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 8ms
+2022-07-23 16:56:50 751 [debug] : --------------------------------
+2022-07-23 16:57:11 644 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:57:11 644 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:57:11 644 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 16:57:11 646 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:11 646 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:11 647 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:11 647 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:11 647 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:11 648 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:11 648 [error] : [Error] 메일 제목을 입력하세요.
+2022-07-23 16:57:11 649 [error] : Error: 메일 제목을 입력하세요.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/SendMailController.js:29:19
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-23 16:57:11 652 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 8ms
+2022-07-23 16:57:11 652 [debug] : --------------------------------
+2022-07-23 16:57:29 921 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:57:29 921 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:57:29 922 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 16:57:29 923 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:29 924 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:29 924 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:29 925 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:29 925 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:29 925 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:29 926 [error] : [Error] 본문 내용을 입력하세요.
+2022-07-23 16:57:29 926 [error] : Error: 본문 내용을 입력하세요.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/helper/RegexHelper.js:25:13)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/12-Route/controllers/SendMailController.js:30:19
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\12-Route\node_modules\express\lib\router\index.js:175:3)
+2022-07-23 16:57:29 929 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 8ms
+2022-07-23 16:57:29 929 [debug] : --------------------------------
+2022-07-23 16:57:44 517 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:57:44 517 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:57:44 518 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 16:57:44 519 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:44 519 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:44 520 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:44 520 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:44 520 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:44 521 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:47 213 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 2696ms
+2022-07-23 16:57:47 213 [debug] : --------------------------------
+2022-07-23 16:57:57 368 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 16:57:57 368 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 16:57:57 369 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 16:57:57 370 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:57 370 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:57 371 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:57 371 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:57 371 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:57 372 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 16:57:59 452 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 2084ms
+2022-07-23 16:57:59 452 [debug] : --------------------------------
+2022-07-23 17:02:26 168 [debug] : -------------------------------
+2022-07-23 17:02:26 170 [debug] :     Start Express Server       
+2022-07-23 17:02:26 170 [debug] : -------------------------------
+2022-07-23 17:02:26 170 [debug] : server address => http://192.168.219.103: 3001
+2022-07-23 17:02:26 171 [debug] : -------------------------------
+2022-07-23 17:02:28 632 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 17:02:28 633 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 17:02:28 633 [debug] : [POST] http://localhost:3001/send_mail
+2022-07-23 17:02:28 646 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 17:02:28 647 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 17:02:28 648 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 17:02:28 648 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 17:02:28 649 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 17:02:28 649 [debug] : [HTTP %s Params] %s= %s
+2022-07-23 17:02:31 362 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 2730ms
+2022-07-23 17:02:31 362 [debug] : --------------------------------
+2022-07-23 17:29:05 222 [debug] : -------------------------------
+2022-07-23 17:29:05 224 [debug] :     Start Express Server       
+2022-07-23 17:29:05 225 [debug] : -------------------------------
+2022-07-23 17:29:05 225 [debug] : server address => http://192.168.219.103: 3001
+2022-07-23 17:29:05 225 [debug] : -------------------------------
+2022-07-23 17:29:42 917 [debug] : 클라이언트가 접속했습니다.
+2022-07-23 17:29:42 918 [debug] : [client] ::ffff:192.168.219.103 / unknown / insomnia (2022.4.2) / unknown
+2022-07-23 17:29:42 920 [debug] : [POST] http://192.168.219.103:3001/upload/multiple
+2022-07-23 17:29:42 997 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 79ms
+2022-07-23 17:29:42 998 [debug] : --------------------------------
