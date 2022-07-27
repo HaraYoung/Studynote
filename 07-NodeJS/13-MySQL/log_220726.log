@@ -1,0 +1,4 @@
+2022-07-26 19:00:12 606 [info] :  >> DATABASE 접속됨 [threaId= %d]
+2022-07-26 19:00:12 609 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-26 19:00:12 610 [debug] : select name from student
+2022-07-26 19:00:12 652 [info] :  >> Connection이 반납됨 [threaId= %d]

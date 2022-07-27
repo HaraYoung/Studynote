@@ -1,6 +1,7 @@
 import express from "express";
 import regexHelper from '../helper/RegexHelper.js';
 import BadRequestException from "../exceptions/BadRequestException.js";
+import mysql2 from 'mysql2/promise';
 
 export default () => {
     const router= express.Router();
@@ -27,6 +28,33 @@ export default () => {
         num2= parseInt(num2);
         console.log(num1);
         res.sendResult({params1: num1, params2: num2, result: num1+ num2})
+    });
+
+    router.get('/department', async (req, res, next)=>{
+        //접속 정보 설정
+        const connectionInfo= {
+            host: process.env.DATABASE_HOST, //MYSQL 서버 주소 (다른 PC인 경우 IP주소),
+            post: process.env.DATABASE_PORT, //MYSQL 포트번호
+            user: process.env.DATABASE_USERNAME, //MYSQL의 로그인 할 수 있는 계정이름
+            password: process.env.DATABASE_PASSWORD, //비밀번호
+            database: process.env.DATABASE_SCHEMA, //사용하고자 하는 데이터 베이스 이름
+          };
+          let dbcon= null;
+          try{
+            dbcon= await mysql2.createConnection(connectionInfo);
+            await dbcon.connect();
+
+            const sql= "select name, position, sal, date_format(hiredate, '%Y-%m-%d') as hiredate from professor";
+            const [result1]= await dbcon.query(sql);
+
+            res.sendResult({item: result1});
+          }catch(err){
+            return next(err);
+          }finally{
+            if(dbcon){
+                dbcon.end();
+            }
+          }
     });
     return router;
 };
