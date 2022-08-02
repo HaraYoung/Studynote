@@ -1,0 +1,49 @@
+2022-07-29 12:18:32 301 [info] :  >> DATABASE 접속됨 [threaId= %d]
+2022-07-29 12:18:32 305 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:18:32 310 [debug] : select deptno, dname, loc from department      order by deptno desc
+2022-07-29 12:18:32 320 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:18:32 327 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:18:32 329 [debug] : select deptno, dname, loc from department      order by deptno desc
+2022-07-29 12:18:32 330 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:31:35 291 [info] :  >> DATABASE 접속됨 [threaId= %d]
+2022-07-29 12:31:35 295 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:31:35 301 [debug] : select deptno, dname, loc from department      order by deptno desc
+2022-07-29 12:31:35 312 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:31:35 320 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:31:35 323 [debug] : select deptno, dname, loc from department      order by deptno desc
+2022-07-29 12:31:35 325 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:31:52 288 [info] :  >> DATABASE 접속됨 [threaId= %d]
+2022-07-29 12:31:52 292 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:31:52 297 [debug] : select deptno, dname, loc from department      order by deptno desc
+2022-07-29 12:31:52 313 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:31:52 319 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:31:52 323 [debug] : select deptno, dname, loc from department      order by deptno desc
+2022-07-29 12:31:52 325 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:31:52 330 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:31:52 332 [debug] : insert into department (dname, loc) values ('MVC학과', '여긴어뒤?');
+2022-07-29 12:31:52 348 [debug] : select deptno, dname, loc from department where deptno='310';
+2022-07-29 12:31:52 350 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:31:52 353 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:31:52 355 [debug] : update department set dname= 'MVC학과', loc= '여긴어뒤?' where deptno= '102';
+2022-07-29 12:31:52 367 [debug] : select deptno, dname, loc from department where deptno='102';
+2022-07-29 12:31:52 369 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:32:50 499 [info] :  >> DATABASE 접속됨 [threaId= %d]
+2022-07-29 12:32:50 506 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:32:50 512 [debug] : select deptno, dname, loc from department      order by deptno desc
+2022-07-29 12:32:50 522 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:32:50 530 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:32:50 533 [debug] : select deptno, dname, loc from department      order by deptno desc
+2022-07-29 12:32:50 535 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:32:50 539 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:32:50 542 [debug] : insert into department (dname, loc) values ('MVC학과', '여긴어뒤?');
+2022-07-29 12:32:50 553 [debug] : select deptno, dname, loc from department where deptno='311';
+2022-07-29 12:32:50 555 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:32:50 556 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:32:50 557 [debug] : update department set dname= 'MVC학과', loc= '여긴어뒤?' where deptno= '102';
+2022-07-29 12:32:50 559 [debug] : select deptno, dname, loc from department where deptno='102';
+2022-07-29 12:32:50 560 [info] :  >> Connection이 반납됨 [threaId= %d]
+2022-07-29 12:32:50 561 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:32:50 563 [debug] : delete from student where deptno= '102';
+2022-07-29 12:32:50 573 [debug] : delete from professor where deptno= '102';
+2022-07-29 12:32:50 582 [debug] : delete from department where deptno= '102';
+2022-07-29 12:32:50 588 [info] :  >> Connection이 반납됨 [threaId= %d]

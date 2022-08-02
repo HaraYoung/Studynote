@@ -1,0 +1,744 @@
+22/08/02 00:08:12 199 [info]:  >> DATABASE 접속됨 [threaId=88]
+22/08/02 00:08:12 202 [info]:  >> Connection 임대됨 [threaId=88]
+22/08/02 00:08:12 203 [info]:  >> Connection 반납됨 [threaId=88]
+22/08/02 00:08:12 206 [info]: Database Pool is closed
+22/08/02 00:26:45 936 [info]:  >> DATABASE 접속됨 [threaId=89]
+22/08/02 00:26:45 938 [info]:  >> Connection 임대됨 [threaId=89]
+22/08/02 00:26:45 940 [info]:  >> Connection 반납됨 [threaId=89]
+22/08/02 00:26:45 944 [info]: Database Pool is closed
+22/08/02 00:27:22 791 [info]:  >> DATABASE 접속됨 [threaId=90]
+22/08/02 00:27:22 793 [info]:  >> Connection 임대됨 [threaId=90]
+22/08/02 00:27:22 797 [debug]: select p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 00:27:22 844 [info]:  >> Connection 반납됨 [threaId=90]
+22/08/02 00:27:22 851 [info]: Database Pool is closed
+22/08/02 00:29:15 925 [info]:  >> DATABASE 접속됨 [threaId=91]
+22/08/02 00:29:15 928 [info]:  >> Connection 임대됨 [threaId=91]
+22/08/02 00:29:15 931 [debug]: select p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 00:29:15 941 [info]:  >> Connection 반납됨 [threaId=91]
+22/08/02 00:29:15 945 [info]: Database Pool is closed
+22/08/02 00:36:24 095 [info]:  >> DATABASE 접속됨 [threaId=92]
+22/08/02 00:36:24 097 [info]:  >> Connection 임대됨 [threaId=92]
+22/08/02 00:36:24 101 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 00:36:24 110 [info]:  >> Connection 반납됨 [threaId=92]
+22/08/02 00:36:24 118 [info]:  >> Connection 임대됨 [threaId=92]
+22/08/02 00:36:24 120 [debug]: SELECT deptno, name, loc FROM professor WHERE profno='9902'
+22/08/02 00:36:24 125 [info]:  >> Connection 반납됨 [threaId=92]
+22/08/02 00:36:24 131 [info]: Database Pool is closed
+22/08/02 00:36:57 567 [info]:  >> DATABASE 접속됨 [threaId=93]
+22/08/02 00:36:57 569 [info]:  >> Connection 임대됨 [threaId=93]
+22/08/02 00:36:57 572 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 00:36:57 580 [info]:  >> Connection 반납됨 [threaId=93]
+22/08/02 00:36:57 586 [info]: Database Pool is closed
+22/08/02 00:39:19 219 [info]:  >> DATABASE 접속됨 [threaId=94]
+22/08/02 00:39:19 221 [info]:  >> Connection 임대됨 [threaId=94]
+22/08/02 00:39:19 224 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 00:39:19 232 [info]:  >> Connection 반납됨 [threaId=94]
+22/08/02 00:39:19 239 [info]:  >> Connection 임대됨 [threaId=94]
+22/08/02 00:39:19 240 [info]:  >> Connection 반납됨 [threaId=94]
+22/08/02 00:39:19 243 [info]: Database Pool is closed
+22/08/02 00:40:54 275 [info]:  >> DATABASE 접속됨 [threaId=95]
+22/08/02 00:40:54 277 [info]:  >> Connection 임대됨 [threaId=95]
+22/08/02 00:40:54 280 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 00:40:54 288 [info]:  >> Connection 반납됨 [threaId=95]
+22/08/02 00:40:54 296 [info]:  >> Connection 임대됨 [threaId=95]
+22/08/02 00:40:54 298 [info]:  >> Connection 반납됨 [threaId=95]
+22/08/02 00:40:54 300 [info]: Database Pool is closed
+22/08/02 00:42:41 639 [info]:  >> DATABASE 접속됨 [threaId=96]
+22/08/02 00:42:41 641 [info]:  >> Connection 임대됨 [threaId=96]
+22/08/02 00:42:41 645 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 00:42:41 653 [info]:  >> Connection 반납됨 [threaId=96]
+22/08/02 00:42:41 660 [info]:  >> Connection 임대됨 [threaId=96]
+22/08/02 00:42:41 661 [debug]: SELECT deptno, name, loc FROM professor WHERE profno='9902'
+22/08/02 00:42:41 662 [info]:  >> Connection 반납됨 [threaId=96]
+22/08/02 00:42:41 666 [info]: Database Pool is closed
+22/08/02 00:47:31 083 [info]:  >> DATABASE 접속됨 [threaId=97]
+22/08/02 00:47:31 085 [info]:  >> Connection 임대됨 [threaId=97]
+22/08/02 00:47:31 088 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 00:47:31 095 [info]:  >> Connection 반납됨 [threaId=97]
+22/08/02 00:47:31 103 [info]:  >> Connection 임대됨 [threaId=97]
+22/08/02 00:47:31 105 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 00:47:31 108 [info]:  >> Connection 반납됨 [threaId=97]
+22/08/02 00:47:31 110 [info]: Database Pool is closed
+22/08/02 00:48:55 740 [info]:  >> DATABASE 접속됨 [threaId=98]
+22/08/02 00:48:55 742 [info]:  >> Connection 임대됨 [threaId=98]
+22/08/02 00:48:55 745 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 00:48:55 750 [info]:  >> Connection 반납됨 [threaId=98]
+22/08/02 00:48:55 754 [info]: Database Pool is closed
+22/08/02 01:03:06 366 [info]:  >> DATABASE 접속됨 [threaId=99]
+22/08/02 01:03:06 369 [info]:  >> Connection 임대됨 [threaId=99]
+22/08/02 01:03:06 372 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 01:03:06 377 [info]:  >> Connection 반납됨 [threaId=99]
+22/08/02 01:03:06 385 [info]:  >> Connection 임대됨 [threaId=99]
+22/08/02 01:03:06 387 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 01:03:06 389 [info]:  >> Connection 반납됨 [threaId=99]
+22/08/02 01:03:06 390 [info]:  >> Connection 임대됨 [threaId=99]
+22/08/02 01:03:06 391 [debug]: INSERT INTO professor (name, userid, position, sal, hiredate, comm, deptno)  VALUES ('김교수', 'prokim123','교수','300','2022-01-03 00:00:00','10','302')
+22/08/02 01:03:06 430 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9930'
+22/08/02 01:03:06 432 [info]:  >> Connection 반납됨 [threaId=99]
+22/08/02 01:03:06 434 [info]: Database Pool is closed
+22/08/02 01:20:55 199 [info]:  >> DATABASE 접속됨 [threaId=100]
+22/08/02 01:20:55 202 [info]:  >> Connection 임대됨 [threaId=100]
+22/08/02 01:20:55 205 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 01:20:55 220 [info]:  >> Connection 반납됨 [threaId=100]
+22/08/02 01:20:55 229 [info]:  >> Connection 임대됨 [threaId=100]
+22/08/02 01:20:55 231 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 01:20:55 232 [info]:  >> Connection 반납됨 [threaId=100]
+22/08/02 01:20:55 234 [info]:  >> Connection 임대됨 [threaId=100]
+22/08/02 01:20:55 236 [info]:  >> Connection 반납됨 [threaId=100]
+22/08/02 01:20:55 239 [info]: Database Pool is closed
+22/08/02 01:33:40 230 [info]:  >> DATABASE 접속됨 [threaId=101]
+22/08/02 01:33:40 232 [info]:  >> Connection 임대됨 [threaId=101]
+22/08/02 01:33:40 236 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 01:33:40 243 [info]:  >> Connection 반납됨 [threaId=101]
+22/08/02 01:33:40 250 [info]:  >> Connection 임대됨 [threaId=101]
+22/08/02 01:33:40 251 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 01:33:40 252 [info]:  >> Connection 반납됨 [threaId=101]
+22/08/02 01:33:40 255 [info]:  >> Connection 임대됨 [threaId=101]
+22/08/02 01:33:40 256 [info]:  >> Connection 반납됨 [threaId=101]
+22/08/02 01:33:40 260 [info]: Database Pool is closed
+22/08/02 01:34:26 611 [info]:  >> DATABASE 접속됨 [threaId=102]
+22/08/02 01:34:26 614 [info]:  >> Connection 임대됨 [threaId=102]
+22/08/02 01:34:26 617 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 01:34:26 623 [info]:  >> Connection 반납됨 [threaId=102]
+22/08/02 01:34:26 633 [info]:  >> Connection 임대됨 [threaId=102]
+22/08/02 01:34:26 635 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 01:34:26 636 [info]:  >> Connection 반납됨 [threaId=102]
+22/08/02 01:34:26 638 [info]:  >> Connection 임대됨 [threaId=102]
+22/08/02 01:34:26 639 [info]:  >> Connection 반납됨 [threaId=102]
+22/08/02 01:34:26 643 [info]: Database Pool is closed
+22/08/02 01:49:14 416 [info]:  >> DATABASE 접속됨 [threaId=103]
+22/08/02 01:49:14 418 [info]:  >> Connection 임대됨 [threaId=103]
+22/08/02 01:49:14 422 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 01:49:14 436 [info]:  >> Connection 반납됨 [threaId=103]
+22/08/02 01:49:14 444 [info]:  >> Connection 임대됨 [threaId=103]
+22/08/02 01:49:14 445 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 01:49:14 446 [info]:  >> Connection 반납됨 [threaId=103]
+22/08/02 01:49:14 448 [info]:  >> Connection 임대됨 [threaId=103]
+22/08/02 01:49:14 449 [debug]: UPDATE professor SET  name='김교수', userid='prokim123', position='교수', sal='100',  hiredate='2022-01-03 00:00:00',comm='10',deptno='302'  WHERE profno='9930'
+22/08/02 01:49:14 466 [info]:  >> Connection 반납됨 [threaId=103]
+22/08/02 01:49:14 469 [info]: Database Pool is closed
+22/08/02 01:50:47 065 [info]:  >> DATABASE 접속됨 [threaId=104]
+22/08/02 01:50:47 068 [info]:  >> Connection 임대됨 [threaId=104]
+22/08/02 01:50:47 071 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 01:50:47 079 [info]:  >> Connection 반납됨 [threaId=104]
+22/08/02 01:50:47 092 [info]:  >> Connection 임대됨 [threaId=104]
+22/08/02 01:50:47 093 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 01:50:47 095 [info]:  >> Connection 반납됨 [threaId=104]
+22/08/02 01:50:47 097 [info]:  >> Connection 임대됨 [threaId=104]
+22/08/02 01:50:47 098 [info]:  >> Connection 반납됨 [threaId=104]
+22/08/02 01:50:47 102 [info]: Database Pool is closed
+22/08/02 01:51:29 103 [info]:  >> DATABASE 접속됨 [threaId=105]
+22/08/02 01:51:29 105 [info]:  >> Connection 임대됨 [threaId=105]
+22/08/02 01:51:29 108 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 01:51:29 114 [info]:  >> Connection 반납됨 [threaId=105]
+22/08/02 01:51:29 121 [info]:  >> Connection 임대됨 [threaId=105]
+22/08/02 01:51:29 123 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 01:51:29 124 [info]:  >> Connection 반납됨 [threaId=105]
+22/08/02 01:51:29 126 [info]:  >> Connection 임대됨 [threaId=105]
+22/08/02 01:51:29 127 [info]:  >> Connection 반납됨 [threaId=105]
+22/08/02 01:51:29 129 [info]: Database Pool is closed
+22/08/02 01:52:10 543 [info]:  >> DATABASE 접속됨 [threaId=106]
+22/08/02 01:52:10 546 [info]:  >> Connection 임대됨 [threaId=106]
+22/08/02 01:52:10 549 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 01:52:10 554 [info]:  >> Connection 반납됨 [threaId=106]
+22/08/02 01:52:10 561 [info]:  >> Connection 임대됨 [threaId=106]
+22/08/02 01:52:10 563 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 01:52:10 564 [info]:  >> Connection 반납됨 [threaId=106]
+22/08/02 01:52:10 565 [info]:  >> Connection 임대됨 [threaId=106]
+22/08/02 01:52:10 566 [debug]: DELETE FROM student WHERE profno='9930';
+22/08/02 01:52:10 572 [debug]: DELETE FROM professor WHERE profno='9930'
+22/08/02 01:52:10 581 [info]:  >> Connection 반납됨 [threaId=106]
+22/08/02 01:52:10 582 [info]: Database Pool is closed
+22/08/02 10:22:26 543 [info]:  >> DATABASE 접속됨 [threaId=107]
+22/08/02 10:22:26 547 [info]:  >> Connection 임대됨 [threaId=107]
+22/08/02 10:22:26 551 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 10:22:26 568 [info]:  >> Connection 반납됨 [threaId=107]
+22/08/02 10:22:26 576 [info]:  >> Connection 임대됨 [threaId=107]
+22/08/02 10:22:26 579 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 10:22:26 581 [info]:  >> Connection 반납됨 [threaId=107]
+22/08/02 10:22:26 584 [info]:  >> Connection 임대됨 [threaId=107]
+22/08/02 10:22:26 585 [debug]: INSERT INTO professor (name, userid, position, sal, hiredate, comm, deptno)  VALUES ('김교수', 'prokim123','교수','300','2022-01-03 00:00:00','10','302')
+22/08/02 10:22:26 611 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9931'
+22/08/02 10:22:26 615 [info]:  >> Connection 반납됨 [threaId=107]
+22/08/02 10:22:26 618 [info]: Database Pool is closed
+22/08/02 10:29:14 522 [info]:  >> DATABASE 접속됨 [threaId=108]
+22/08/02 10:29:14 525 [info]:  >> Connection 임대됨 [threaId=108]
+22/08/02 10:29:14 530 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 10:29:14 540 [info]:  >> Connection 반납됨 [threaId=108]
+22/08/02 10:29:14 551 [info]:  >> Connection 임대됨 [threaId=108]
+22/08/02 10:29:14 554 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 10:29:14 555 [info]:  >> Connection 반납됨 [threaId=108]
+22/08/02 10:29:14 558 [info]:  >> Connection 임대됨 [threaId=108]
+22/08/02 10:29:14 561 [debug]: UPDATE professor SET  name='김교수', userid='prokim123', position='교수', sal='100',  hiredate='2022-01-03 00:00:00',comm='15',deptno='302'  WHERE profno='9931'
+22/08/02 10:29:14 569 [info]:  >> Connection 반납됨 [threaId=108]
+22/08/02 10:29:14 574 [info]: Database Pool is closed
+22/08/02 10:32:55 327 [info]:  >> DATABASE 접속됨 [threaId=109]
+22/08/02 10:32:55 330 [info]:  >> Connection 임대됨 [threaId=109]
+22/08/02 10:32:55 334 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 10:32:55 343 [info]:  >> Connection 반납됨 [threaId=109]
+22/08/02 10:32:55 354 [info]:  >> Connection 임대됨 [threaId=109]
+22/08/02 10:32:55 356 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 10:32:55 359 [info]:  >> Connection 반납됨 [threaId=109]
+22/08/02 10:32:55 363 [info]:  >> Connection 임대됨 [threaId=109]
+22/08/02 10:32:55 365 [debug]: UPDATE professor SET  name='김교수', userid='prokim123', position='교수', sal='200',  hiredate='2022-01-03 00:00:00',comm='15',deptno='302'  WHERE profno='9931'
+22/08/02 10:32:55 373 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9931'
+22/08/02 10:32:55 375 [info]:  >> Connection 반납됨 [threaId=109]
+22/08/02 10:32:55 377 [info]: Database Pool is closed
+22/08/02 10:59:19 594 [debug]: --------------------------------------------------
+22/08/02 10:59:19 597 [debug]: |              Start Express Server              |
+22/08/02 10:59:19 598 [debug]: --------------------------------------------------
+22/08/02 10:59:19 598 [debug]: server address => http://192.168.219.102:3001
+22/08/02 10:59:19 598 [debug]: --------------------------------------------------
+22/08/02 10:59:35 755 [debug]: 클라이언트가 접속했습니다.
+22/08/02 10:59:35 756 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 10:59:35 758 [debug]: [GET] http://192.168.219.102:3001/professor
+22/08/02 10:59:35 790 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 35ms
+22/08/02 10:59:35 791 [debug]: --------------------------------------------------
+22/08/02 10:59:35 798 [debug]: 클라이언트가 접속했습니다.
+22/08/02 10:59:35 798 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 10:59:35 799 [debug]: [GET] http://192.168.219.102:3001/professor/
+22/08/02 10:59:35 802 [debug]: [HTTP %s Params] %s=%s
+22/08/02 10:59:35 803 [debug]: [HTTP %s Params] %s=%s
+22/08/02 10:59:35 804 [debug]: [HTTP %s Params] %s=%s
+22/08/02 10:59:35 809 [error]: [TypeError] professorService.getCount is not a function
+22/08/02 10:59:35 810 [error]: TypeError: professorService.getCount is not a function
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/controllers/ProfessorController.js:33:55
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:175:3)
+    at router (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:47:12)
+22/08/02 10:59:35 816 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 17ms
+22/08/02 10:59:35 816 [debug]: --------------------------------------------------
+22/08/02 11:01:14 517 [info]: Database Pool is closed
+22/08/02 11:07:41 357 [debug]: --------------------------------------------------
+22/08/02 11:07:41 359 [debug]: |              Start Express Server              |
+22/08/02 11:07:41 360 [debug]: --------------------------------------------------
+22/08/02 11:07:41 360 [debug]: server address => http://192.168.219.102:3001
+22/08/02 11:07:41 361 [debug]: --------------------------------------------------
+22/08/02 11:07:44 181 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:07:44 182 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:07:44 183 [debug]: [GET] http://192.168.219.102:3001/professor
+22/08/02 11:07:44 210 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 27ms
+22/08/02 11:07:44 211 [debug]: --------------------------------------------------
+22/08/02 11:07:44 220 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:07:44 221 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:07:44 222 [debug]: [GET] http://192.168.219.102:3001/professor/
+22/08/02 11:07:44 226 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:07:44 228 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:07:44 229 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:07:44 271 [info]:  >> DATABASE 접속됨 [threaId=112]
+22/08/02 11:07:44 272 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:07:44 275 [debug]: select count(*) as cnt from professor
+22/08/02 11:07:44 312 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:07:44 313 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:07:44 316 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 0, 10
+22/08/02 11:07:44 325 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:07:44 330 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 109ms
+22/08/02 11:07:44 331 [debug]: --------------------------------------------------
+22/08/02 11:12:46 591 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:12:46 602 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:12:46 606 [debug]: [GET] http://192.168.219.102:3001/professor?page=1
+22/08/02 11:12:46 633 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 31ms
+22/08/02 11:12:46 634 [debug]: --------------------------------------------------
+22/08/02 11:12:46 640 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:12:46 641 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:12:46 641 [debug]: [GET] http://192.168.219.102:3001/professor/?page=1
+22/08/02 11:12:46 648 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:12:46 650 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:12:46 650 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:12:46 652 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:12:46 660 [debug]: select count(*) as cnt from professor
+22/08/02 11:12:46 676 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:12:46 678 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:12:46 682 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 0, 10
+22/08/02 11:12:46 686 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:12:46 689 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 48ms
+22/08/02 11:12:46 690 [debug]: --------------------------------------------------
+22/08/02 11:12:56 603 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:12:56 603 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:12:56 604 [debug]: [GET] http://192.168.219.102:3001/professor?page=1&rows=2
+22/08/02 11:12:56 606 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 3ms
+22/08/02 11:12:56 607 [debug]: --------------------------------------------------
+22/08/02 11:12:56 608 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:12:56 609 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:12:56 609 [debug]: [GET] http://192.168.219.102:3001/professor/?page=1&rows=2
+22/08/02 11:12:56 611 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:12:56 611 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:12:56 612 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:12:56 612 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:12:56 615 [debug]: select count(*) as cnt from professor
+22/08/02 11:12:56 629 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:12:56 630 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:12:56 632 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 0, 2
+22/08/02 11:12:56 633 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:12:56 634 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 25ms
+22/08/02 11:12:56 635 [debug]: --------------------------------------------------
+22/08/02 11:13:58 242 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:13:58 243 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:13:58 243 [debug]: [GET] http://192.168.219.102:3001/professor?page=2&rows=2
+22/08/02 11:13:58 246 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 3ms
+22/08/02 11:13:58 246 [debug]: --------------------------------------------------
+22/08/02 11:13:58 247 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:13:58 247 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:13:58 248 [debug]: [GET] http://192.168.219.102:3001/professor/?page=2&rows=2
+22/08/02 11:13:58 250 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:13:58 250 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:13:58 251 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:13:58 251 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:13:58 252 [debug]: select count(*) as cnt from professor
+22/08/02 11:13:58 256 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:13:58 257 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:13:58 258 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 2, 2
+22/08/02 11:13:58 260 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:13:58 263 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 16ms
+22/08/02 11:13:58 264 [debug]: --------------------------------------------------
+22/08/02 11:14:11 930 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:14:11 930 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:14:11 931 [debug]: [GET] http://192.168.219.102:3001/professor?page=3&rows=2
+22/08/02 11:14:11 934 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 4ms
+22/08/02 11:14:11 934 [debug]: --------------------------------------------------
+22/08/02 11:14:11 937 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:14:11 937 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:14:11 938 [debug]: [GET] http://192.168.219.102:3001/professor/?page=3&rows=2
+22/08/02 11:14:11 940 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:14:11 940 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:14:11 941 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:14:11 941 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:14:11 949 [debug]: select count(*) as cnt from professor
+22/08/02 11:14:11 953 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:14:11 954 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:14:11 955 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 4, 2
+22/08/02 11:14:11 958 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:14:11 960 [error]: [Error] 조회된 데이터가 없습니다.
+22/08/02 11:14:11 963 [error]: Error: 조회된 데이터가 없습니다.
+    at DepartmentService.getList (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/services/ProfessorService.js:28:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/controllers/ProfessorController.js:45:20
+22/08/02 11:14:11 966 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 29ms
+22/08/02 11:14:11 967 [debug]: --------------------------------------------------
+22/08/02 11:14:20 672 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:14:20 673 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:14:20 673 [debug]: [GET] http://192.168.219.102:3001/professor?page=2&rows=2
+22/08/02 11:14:20 676 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 4ms
+22/08/02 11:14:20 676 [debug]: --------------------------------------------------
+22/08/02 11:14:20 678 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:14:20 679 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:14:20 679 [debug]: [GET] http://192.168.219.102:3001/professor/?page=2&rows=2
+22/08/02 11:14:20 682 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:14:20 683 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:14:20 683 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:14:20 683 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:14:20 684 [debug]: select count(*) as cnt from professor
+22/08/02 11:14:20 687 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:14:20 687 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:14:20 688 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 2, 2
+22/08/02 11:14:20 689 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:14:20 691 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 12ms
+22/08/02 11:14:20 691 [debug]: --------------------------------------------------
+22/08/02 11:14:42 842 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:14:42 842 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:14:42 843 [debug]: [GET] http://192.168.219.102:3001/professor?name=이재우
+22/08/02 11:14:42 846 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 4ms
+22/08/02 11:14:42 847 [debug]: --------------------------------------------------
+22/08/02 11:14:42 848 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:14:42 849 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:14:42 850 [debug]: [GET] http://192.168.219.102:3001/professor/?name=이재우
+22/08/02 11:14:42 852 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:14:42 853 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:14:42 857 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:14:42 858 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:14:42 859 [debug]: select count(*) as cnt from professor
+22/08/02 11:14:42 862 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:14:42 862 [info]:  >> Connection 임대됨 [threaId=112]
+22/08/02 11:14:42 863 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 0, 10
+22/08/02 11:14:42 864 [info]:  >> Connection 반납됨 [threaId=112]
+22/08/02 11:14:42 867 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 18ms
+22/08/02 11:14:42 868 [debug]: --------------------------------------------------
+22/08/02 11:15:29 672 [info]: Database Pool is closed
+22/08/02 11:15:52 246 [info]:  >> DATABASE 접속됨 [threaId=113]
+22/08/02 11:15:52 249 [info]:  >> Connection 임대됨 [threaId=113]
+22/08/02 11:15:52 251 [info]:  >> Connection 반납됨 [threaId=113]
+22/08/02 11:15:52 257 [info]: Database Pool is closed
+22/08/02 11:17:03 355 [info]:  >> DATABASE 접속됨 [threaId=114]
+22/08/02 11:17:03 358 [info]:  >> Connection 임대됨 [threaId=114]
+22/08/02 11:17:03 359 [info]:  >> Connection 반납됨 [threaId=114]
+22/08/02 11:17:03 364 [info]: Database Pool is closed
+22/08/02 11:34:01 082 [info]:  >> DATABASE 접속됨 [threaId=115]
+22/08/02 11:34:01 085 [info]:  >> Connection 임대됨 [threaId=115]
+22/08/02 11:34:01 089 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 11:34:01 104 [info]:  >> Connection 반납됨 [threaId=115]
+22/08/02 11:34:01 114 [info]:  >> Connection 임대됨 [threaId=115]
+22/08/02 11:34:01 118 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 11:34:01 125 [info]:  >> Connection 반납됨 [threaId=115]
+22/08/02 11:34:01 131 [info]: Database Pool is closed
+22/08/02 11:34:31 457 [info]:  >> DATABASE 접속됨 [threaId=116]
+22/08/02 11:34:31 460 [info]:  >> Connection 임대됨 [threaId=116]
+22/08/02 11:34:31 463 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 11:34:31 480 [info]:  >> Connection 반납됨 [threaId=116]
+22/08/02 11:34:31 494 [info]: Database Pool is closed
+22/08/02 11:34:59 136 [debug]: --------------------------------------------------
+22/08/02 11:34:59 139 [debug]: |              Start Express Server              |
+22/08/02 11:34:59 139 [debug]: --------------------------------------------------
+22/08/02 11:34:59 139 [debug]: server address => http://192.168.219.102:3001
+22/08/02 11:34:59 140 [debug]: --------------------------------------------------
+22/08/02 11:35:01 448 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:35:01 449 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:35:01 450 [debug]: [GET] http://192.168.219.102:3001/professor?name=이재우
+22/08/02 11:35:01 484 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 34ms
+22/08/02 11:35:01 485 [debug]: --------------------------------------------------
+22/08/02 11:35:01 491 [debug]: 클라이언트가 접속했습니다.
+22/08/02 11:35:01 493 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 11:35:01 494 [debug]: [GET] http://192.168.219.102:3001/professor/?name=이재우
+22/08/02 11:35:01 498 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:35:01 500 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:35:01 502 [debug]: [HTTP %s Params] %s=%s
+22/08/02 11:35:01 539 [info]:  >> DATABASE 접속됨 [threaId=118]
+22/08/02 11:35:01 540 [info]:  >> Connection 임대됨 [threaId=118]
+22/08/02 11:35:01 545 [debug]: select count(*) as cnt from professor
+22/08/02 11:35:01 558 [info]:  >> Connection 반납됨 [threaId=118]
+22/08/02 11:35:01 559 [info]:  >> Connection 임대됨 [threaId=118]
+22/08/02 11:35:01 561 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 0, 10
+22/08/02 11:35:01 568 [info]:  >> Connection 반납됨 [threaId=118]
+22/08/02 11:35:01 572 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 79ms
+22/08/02 11:35:01 573 [debug]: --------------------------------------------------
+22/08/02 11:40:09 103 [info]: Database Pool is closed
+22/08/02 11:40:26 592 [info]:  >> DATABASE 접속됨 [threaId=119]
+22/08/02 11:40:26 595 [info]:  >> Connection 임대됨 [threaId=119]
+22/08/02 11:40:26 599 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 11:40:26 606 [info]:  >> Connection 반납됨 [threaId=119]
+22/08/02 11:40:26 616 [info]: Database Pool is closed
+22/08/02 12:13:02 262 [debug]: --------------------------------------------------
+22/08/02 12:13:02 265 [debug]: |              Start Express Server              |
+22/08/02 12:13:02 265 [debug]: --------------------------------------------------
+22/08/02 12:13:02 266 [debug]: server address => http://192.168.219.102:3001
+22/08/02 12:13:02 266 [debug]: --------------------------------------------------
+22/08/02 12:13:10 725 [debug]: 클라이언트가 접속했습니다.
+22/08/02 12:13:10 726 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 12:13:10 728 [debug]: [GET] http://192.168.219.102:3001/professor/9931
+22/08/02 12:13:10 760 [debug]: [HTTP %s Params] %s=%s
+22/08/02 12:13:10 820 [info]:  >> DATABASE 접속됨 [threaId=121]
+22/08/02 12:13:10 822 [info]:  >> Connection 임대됨 [threaId=121]
+22/08/02 12:13:10 827 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9931'
+22/08/02 12:13:10 845 [info]:  >> Connection 반납됨 [threaId=121]
+22/08/02 12:13:10 852 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 126ms
+22/08/02 12:13:10 854 [debug]: --------------------------------------------------
+22/08/02 12:20:26 061 [info]: Database Pool is closed
+22/08/02 12:20:30 126 [info]:  >> DATABASE 접속됨 [threaId=122]
+22/08/02 12:20:30 129 [info]:  >> Connection 임대됨 [threaId=122]
+22/08/02 12:20:30 132 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 12:20:30 145 [info]:  >> Connection 반납됨 [threaId=122]
+22/08/02 12:20:30 158 [info]: Database Pool is closed
+22/08/02 12:21:02 198 [info]:  >> DATABASE 접속됨 [threaId=123]
+22/08/02 12:21:02 201 [info]:  >> Connection 임대됨 [threaId=123]
+22/08/02 12:21:02 204 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC
+22/08/02 12:21:02 211 [info]:  >> Connection 반납됨 [threaId=123]
+22/08/02 12:21:02 224 [info]: Database Pool is closed
+22/08/02 12:38:49 798 [debug]: --------------------------------------------------
+22/08/02 12:38:49 803 [debug]: |              Start Express Server              |
+22/08/02 12:38:49 804 [debug]: --------------------------------------------------
+22/08/02 12:38:49 804 [debug]: server address => http://192.168.219.102:3001
+22/08/02 12:38:49 804 [debug]: --------------------------------------------------
+22/08/02 12:38:52 307 [debug]: 클라이언트가 접속했습니다.
+22/08/02 12:38:52 308 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 12:38:52 310 [debug]: [GET] http://192.168.219.102:3001/professor/?name=이재우
+22/08/02 12:38:52 335 [debug]: [HTTP %s Params] %s=%s
+22/08/02 12:38:52 337 [debug]: [HTTP %s Params] %s=%s
+22/08/02 12:38:52 337 [debug]: [HTTP %s Params] %s=%s
+22/08/02 12:38:52 370 [info]:  >> DATABASE 접속됨 [threaId=125]
+22/08/02 12:38:52 371 [info]:  >> Connection 임대됨 [threaId=125]
+22/08/02 12:38:52 375 [debug]: select count(*) as cnt from professor
+22/08/02 12:38:52 394 [info]:  >> Connection 반납됨 [threaId=125]
+22/08/02 12:38:52 395 [info]:  >> Connection 임대됨 [threaId=125]
+22/08/02 12:38:52 397 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 0, 10
+22/08/02 12:38:52 406 [info]:  >> Connection 반납됨 [threaId=125]
+22/08/02 12:38:52 413 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 105ms
+22/08/02 12:38:52 414 [debug]: --------------------------------------------------
+22/08/02 12:40:57 162 [debug]: 클라이언트가 접속했습니다.
+22/08/02 12:40:57 163 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 12:40:57 164 [debug]: [GET] http://192.168.219.102:3001/professor/?name=이재우
+22/08/02 12:40:57 166 [debug]: [HTTP %s Params] %s=%s
+22/08/02 12:40:57 167 [debug]: [HTTP %s Params] %s=%s
+22/08/02 12:40:57 167 [debug]: [HTTP %s Params] %s=%s
+22/08/02 12:40:57 168 [info]:  >> Connection 임대됨 [threaId=125]
+22/08/02 12:40:57 170 [debug]: select count(*) as cnt from professor
+22/08/02 12:40:57 174 [info]:  >> Connection 반납됨 [threaId=125]
+22/08/02 12:40:57 175 [info]:  >> Connection 임대됨 [threaId=125]
+22/08/02 12:40:57 177 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate, p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY deptno DESC  LIMIT 0, 10
+22/08/02 12:40:57 180 [info]:  >> Connection 반납됨 [threaId=125]
+22/08/02 12:40:57 182 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 19ms
+22/08/02 12:40:57 182 [debug]: --------------------------------------------------
+22/08/02 12:49:47 302 [info]: Database Pool is closed
+22/08/02 12:49:55 008 [info]:  >> DATABASE 접속됨 [threaId=126]
+22/08/02 12:49:55 011 [info]:  >> Connection 임대됨 [threaId=126]
+22/08/02 12:49:55 015 [debug]: SELECT profno, name, userid, position, sal, hiredate, comm, deptno FROM professor  WHERE  name LIKE concat('%', '김교수', '%')  ORDER BY profno DESC
+22/08/02 12:49:55 030 [info]:  >> Connection 반납됨 [threaId=126]
+22/08/02 12:49:55 036 [info]: Database Pool is closed
+22/08/02 12:50:27 746 [info]:  >> DATABASE 접속됨 [threaId=127]
+22/08/02 12:50:27 749 [info]:  >> Connection 임대됨 [threaId=127]
+22/08/02 12:50:27 752 [debug]: SELECT profno, name, userid, position, sal, hiredate, comm, deptno FROM professor  WHERE  name LIKE concat('%', '김교수', '%')  ORDER BY profno DESC
+22/08/02 12:50:27 758 [info]:  >> Connection 반납됨 [threaId=127]
+22/08/02 12:50:27 762 [info]: Database Pool is closed
+22/08/02 12:51:00 467 [info]:  >> DATABASE 접속됨 [threaId=128]
+22/08/02 12:51:00 469 [info]:  >> Connection 임대됨 [threaId=128]
+22/08/02 12:51:00 472 [debug]: SELECT profno, name, userid, position, sal, hiredate, comm, deptno FROM professor  WHERE  name LIKE concat('%', '김교수', '%')  ORDER BY profno DESC
+22/08/02 12:51:00 477 [info]:  >> Connection 반납됨 [threaId=128]
+22/08/02 12:51:00 480 [info]: Database Pool is closed
+22/08/02 12:53:31 808 [info]:  >> DATABASE 접속됨 [threaId=129]
+22/08/02 12:53:31 810 [info]:  >> Connection 임대됨 [threaId=129]
+22/08/02 12:53:31 814 [debug]: SELECT profno, name, userid, position, sal, hiredate, comm, deptno FROM professor  WHERE  name LIKE concat('%', '김교수', '%')  ORDER BY profno DESC
+22/08/02 12:53:31 822 [info]:  >> Connection 반납됨 [threaId=129]
+22/08/02 12:53:31 828 [info]:  >> Connection 임대됨 [threaId=129]
+22/08/02 12:53:31 830 [debug]: select profno, name, userid, position, sal, hiredate, comm, deptno, d.dname  from professor  WHERE profno='9902'
+22/08/02 12:53:31 833 [info]:  >> Connection 반납됨 [threaId=129]
+22/08/02 12:53:31 839 [info]: Database Pool is closed
+22/08/02 12:54:19 821 [info]:  >> DATABASE 접속됨 [threaId=130]
+22/08/02 12:54:19 823 [info]:  >> Connection 임대됨 [threaId=130]
+22/08/02 12:54:19 831 [debug]: SELECT profno, name, userid, position, sal, hiredate, comm, deptno FROM professor  WHERE  name LIKE concat('%', '김교수', '%')  ORDER BY profno DESC
+22/08/02 12:54:19 836 [info]:  >> Connection 반납됨 [threaId=130]
+22/08/02 12:54:19 842 [info]:  >> Connection 임대됨 [threaId=130]
+22/08/02 12:54:19 843 [debug]: select profno, name, userid, position, sal, hiredate, comm, deptno, dname  from professor  WHERE profno='9902'
+22/08/02 12:54:19 846 [info]:  >> Connection 반납됨 [threaId=130]
+22/08/02 12:54:19 851 [info]: Database Pool is closed
+22/08/02 12:57:36 899 [info]:  >> DATABASE 접속됨 [threaId=131]
+22/08/02 12:57:36 901 [info]:  >> Connection 임대됨 [threaId=131]
+22/08/02 12:57:36 904 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate,  p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE  name LIKE concat('%', '김교수', '%')  ORDER BY profno DESC
+22/08/02 12:57:36 911 [info]:  >> Connection 반납됨 [threaId=131]
+22/08/02 12:57:36 915 [info]:  >> Connection 임대됨 [threaId=131]
+22/08/02 12:57:36 916 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate,  p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE profno='9902'
+22/08/02 12:57:36 918 [info]:  >> Connection 반납됨 [threaId=131]
+22/08/02 12:57:36 920 [info]: Database Pool is closed
+22/08/02 12:58:43 813 [debug]: --------------------------------------------------
+22/08/02 12:58:43 816 [debug]: |              Start Express Server              |
+22/08/02 12:58:43 816 [debug]: --------------------------------------------------
+22/08/02 12:58:43 817 [debug]: server address => http://192.168.219.102:3001
+22/08/02 12:58:43 817 [debug]: --------------------------------------------------
+22/08/02 13:05:00 688 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:05:00 690 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:05:00 692 [debug]: [GET] http://192.168.219.102:3001/professor/?name=이재우
+22/08/02 13:05:00 723 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:05:00 724 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:05:00 725 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:05:00 768 [info]:  >> DATABASE 접속됨 [threaId=133]
+22/08/02 13:05:00 769 [info]:  >> Connection 임대됨 [threaId=133]
+22/08/02 13:05:00 773 [debug]: select count(*) as cnt from professor
+22/08/02 13:05:00 786 [info]:  >> Connection 반납됨 [threaId=133]
+22/08/02 13:05:00 788 [info]:  >> Connection 임대됨 [threaId=133]
+22/08/02 13:05:00 790 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate,  p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY profno DESC  LIMIT 0, 10
+22/08/02 13:05:00 794 [info]:  >> Connection 반납됨 [threaId=133]
+22/08/02 13:05:00 800 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 110ms
+22/08/02 13:05:00 801 [debug]: --------------------------------------------------
+22/08/02 13:05:42 863 [info]: Database Pool is closed
+22/08/02 13:05:49 870 [debug]: --------------------------------------------------
+22/08/02 13:05:49 872 [debug]: |              Start Express Server              |
+22/08/02 13:05:49 873 [debug]: --------------------------------------------------
+22/08/02 13:05:49 874 [debug]: server address => http://192.168.219.102:3001
+22/08/02 13:05:49 874 [debug]: --------------------------------------------------
+22/08/02 13:05:54 074 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:05:54 075 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:05:54 076 [debug]: [GET] http://192.168.219.102:3001/professor/?name=이재우
+22/08/02 13:05:54 099 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:05:54 101 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:05:54 102 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:05:54 134 [info]:  >> DATABASE 접속됨 [threaId=135]
+22/08/02 13:05:54 135 [info]:  >> Connection 임대됨 [threaId=135]
+22/08/02 13:05:54 139 [debug]: select count(*) as cnt from professor
+22/08/02 13:05:54 146 [info]:  >> Connection 반납됨 [threaId=135]
+22/08/02 13:05:54 147 [info]:  >> Connection 임대됨 [threaId=135]
+22/08/02 13:05:54 150 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate,  p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY profno DESC  LIMIT 0, 10
+22/08/02 13:05:54 156 [info]:  >> Connection 반납됨 [threaId=135]
+22/08/02 13:05:54 163 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 88ms
+22/08/02 13:05:54 164 [debug]: --------------------------------------------------
+22/08/02 13:06:10 712 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:06:10 712 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:06:10 713 [debug]: [GET] http://192.168.219.102:3001/professor/?name=남은혁
+22/08/02 13:06:10 715 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:06:10 716 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:06:10 717 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:06:10 717 [info]:  >> Connection 임대됨 [threaId=135]
+22/08/02 13:06:10 719 [debug]: select count(*) as cnt from professor
+22/08/02 13:06:10 722 [info]:  >> Connection 반납됨 [threaId=135]
+22/08/02 13:06:10 723 [info]:  >> Connection 임대됨 [threaId=135]
+22/08/02 13:06:10 725 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate,  p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY profno DESC  LIMIT 0, 10
+22/08/02 13:06:10 727 [info]:  >> Connection 반납됨 [threaId=135]
+22/08/02 13:06:10 730 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 18ms
+22/08/02 13:06:10 731 [debug]: --------------------------------------------------
+22/08/02 13:06:15 624 [info]: Database Pool is closed
+22/08/02 13:06:32 551 [info]:  >> DATABASE 접속됨 [threaId=136]
+22/08/02 13:06:32 554 [info]:  >> Connection 임대됨 [threaId=136]
+22/08/02 13:06:32 557 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate,  p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY profno DESC
+22/08/02 13:06:32 567 [info]:  >> Connection 반납됨 [threaId=136]
+22/08/02 13:06:32 575 [info]: Database Pool is closed
+22/08/02 13:06:49 491 [info]:  >> DATABASE 접속됨 [threaId=137]
+22/08/02 13:06:49 494 [info]:  >> Connection 임대됨 [threaId=137]
+22/08/02 13:06:49 497 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate,  p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  WHERE  p.name LIKE concat('%', '김교수', '%')  ORDER BY profno DESC
+22/08/02 13:06:49 501 [info]:  >> Connection 반납됨 [threaId=137]
+22/08/02 13:06:49 505 [info]: Database Pool is closed
+22/08/02 13:07:01 380 [debug]: --------------------------------------------------
+22/08/02 13:07:01 383 [debug]: |              Start Express Server              |
+22/08/02 13:07:01 384 [debug]: --------------------------------------------------
+22/08/02 13:07:01 384 [debug]: server address => http://192.168.219.102:3001
+22/08/02 13:07:01 385 [debug]: --------------------------------------------------
+22/08/02 13:07:05 627 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:07:05 629 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:07:05 630 [debug]: [GET] http://192.168.219.102:3001/professor/?name=남은혁
+22/08/02 13:07:05 650 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:07:05 652 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:07:05 653 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:07:05 688 [info]:  >> DATABASE 접속됨 [threaId=139]
+22/08/02 13:07:05 689 [info]:  >> Connection 임대됨 [threaId=139]
+22/08/02 13:07:05 694 [debug]: select count(*) as cnt from professor
+22/08/02 13:07:05 702 [info]:  >> Connection 반납됨 [threaId=139]
+22/08/02 13:07:05 705 [info]:  >> Connection 임대됨 [threaId=139]
+22/08/02 13:07:05 708 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate,  p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY profno DESC  LIMIT 0, 10
+22/08/02 13:07:05 712 [info]:  >> Connection 반납됨 [threaId=139]
+22/08/02 13:07:05 718 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 90ms
+22/08/02 13:07:05 720 [debug]: --------------------------------------------------
+22/08/02 13:27:22 274 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:27:22 288 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:27:22 291 [debug]: [POST] http://192.168.219.102:3001/professor/?name=교수형형&userid=professorid&position=조교수&sal=200&hiredate=2000-03-13 00:00:00&comm=5&deptno=103
+22/08/02 13:27:22 315 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:27:22 318 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:27:22 318 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:27:22 318 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:27:22 319 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:27:22 319 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:27:22 320 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:27:22 322 [error]: [Error] 교수 이름이 없습니다.
+22/08/02 13:27:22 323 [error]: Error: 교수 이름이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/helper/RegexHelper.js:16:19)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/controllers/ProfessorController.js:94:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:175:3)
+22/08/02 13:27:22 330 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 43ms
+22/08/02 13:27:22 331 [debug]: --------------------------------------------------
+22/08/02 13:54:09 228 [info]: Database Pool is closed
+22/08/02 13:54:15 052 [debug]: --------------------------------------------------
+22/08/02 13:54:15 056 [debug]: |              Start Express Server              |
+22/08/02 13:54:15 057 [debug]: --------------------------------------------------
+22/08/02 13:54:15 057 [debug]: server address => http://192.168.219.102:3001
+22/08/02 13:54:15 058 [debug]: --------------------------------------------------
+22/08/02 13:54:32 238 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:54:32 239 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:54:32 240 [debug]: [POST] http://192.168.219.102:3001/professor?name=교수형형&userid=professorid&position=조교수&sal=200&hiredate=2000-03-13 00:00:00&comm=5&deptno=103
+22/08/02 13:54:32 270 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:54:32 271 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:54:32 272 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:54:32 272 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:54:32 273 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:54:32 273 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:54:32 274 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:54:32 276 [error]: [Error] 교수 이름이 없습니다.
+22/08/02 13:54:32 277 [error]: Error: 교수 이름이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/helper/RegexHelper.js:16:19)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/controllers/ProfessorController.js:94:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:346:12)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:175:3)
+22/08/02 13:54:32 286 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 47ms
+22/08/02 13:54:32 288 [debug]: --------------------------------------------------
+22/08/02 13:56:59 698 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:56:59 698 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:56:59 699 [debug]: [PUT] http://192.168.219.102:3001/professor?name=교수형형&userid=professorid&position=조교수&sal=200&hiredate=2000-03-13 00:00:00&comm=5&deptno=103&profno=9921
+22/08/02 13:56:59 702 [error]: [Error] 페이지를 찾을 수 없습니다.
+22/08/02 13:56:59 703 [error]: Error: 페이지를 찾을 수 없습니다.
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/app.js:131:48
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:286:9
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:365:14)
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:421:3)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:280:10)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:91:12)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+22/08/02 13:56:59 705 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 7ms
+22/08/02 13:56:59 705 [debug]: --------------------------------------------------
+22/08/02 13:57:51 851 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:57:51 851 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:57:51 852 [debug]: [PUT] http://192.168.219.102:3001/professor/9921?name=교수형형&userid=professorid&position=조교수&sal=200&hiredate=2000-03-13 00:00:00&comm=5&deptno=103
+22/08/02 13:57:51 854 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:57:51 855 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:57:51 856 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:57:51 856 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:57:51 856 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:57:51 857 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:57:51 857 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:57:51 857 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:57:51 858 [error]: [Error] 교수 이름이 없습니다.
+22/08/02 13:57:51 859 [error]: Error: 교수 이름이 없습니다.
+    at RegexHelper.value (file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/helper/RegexHelper.js:16:19)
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/controllers/ProfessorController.js:140:25
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:284:15
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:365:14)
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:421:3)
+22/08/02 13:57:51 862 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 11ms
+22/08/02 13:57:51 863 [debug]: --------------------------------------------------
+22/08/02 13:59:21 394 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:59:21 394 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:59:21 395 [debug]: [DELETE] http://192.168.219.102:3001/professor/9921
+22/08/02 13:59:21 396 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:59:21 440 [info]:  >> DATABASE 접속됨 [threaId=144]
+22/08/02 13:59:21 441 [info]:  >> Connection 임대됨 [threaId=144]
+22/08/02 13:59:21 445 [debug]: DELETE FROM student WHERE profno='9921';
+22/08/02 13:59:21 479 [debug]: DELETE FROM professor WHERE profno='9921'
+22/08/02 13:59:21 509 [info]:  >> Connection 반납됨 [threaId=144]
+22/08/02 13:59:21 511 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 117ms
+22/08/02 13:59:21 511 [debug]: --------------------------------------------------
+22/08/02 13:59:45 667 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:59:45 667 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:59:45 668 [debug]: [DELETE] http://192.168.219.102:3001/professor
+22/08/02 13:59:45 669 [error]: [Error] 페이지를 찾을 수 없습니다.
+22/08/02 13:59:45 670 [error]: Error: 페이지를 찾을 수 없습니다.
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/RestfulAPIComplete/14-RestfulAPI/app.js:131:48
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:286:9
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:365:14)
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:421:3)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:280:10)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\layer.js:91:12)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\RestfulAPIComplete\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+22/08/02 13:59:45 673 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 6ms
+22/08/02 13:59:45 674 [debug]: --------------------------------------------------
+22/08/02 13:59:49 473 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:59:49 473 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:59:49 474 [debug]: [GET] http://192.168.219.102:3001/professor
+22/08/02 13:59:49 481 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 8ms
+22/08/02 13:59:49 482 [debug]: --------------------------------------------------
+22/08/02 13:59:49 484 [debug]: 클라이언트가 접속했습니다.
+22/08/02 13:59:49 485 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/02 13:59:49 486 [debug]: [GET] http://192.168.219.102:3001/professor/
+22/08/02 13:59:49 490 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:59:49 491 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:59:49 492 [debug]: [HTTP %s Params] %s=%s
+22/08/02 13:59:49 492 [info]:  >> Connection 임대됨 [threaId=144]
+22/08/02 13:59:49 497 [debug]: select count(*) as cnt from professor
+22/08/02 13:59:49 521 [info]:  >> Connection 반납됨 [threaId=144]
+22/08/02 13:59:49 522 [info]:  >> Connection 임대됨 [threaId=144]
+22/08/02 13:59:49 525 [debug]: select p.profno, p.name, p.userid, p.position, p.sal, p.hiredate,  p.comm, p.deptno, d.dname  from professor p inner join department d on  p.deptno= d.deptno  ORDER BY profno DESC  LIMIT 0, 10
+22/08/02 13:59:49 536 [info]:  >> Connection 반납됨 [threaId=144]
+22/08/02 13:59:49 540 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 55ms
+22/08/02 13:59:49 541 [debug]: --------------------------------------------------
+22/08/02 14:10:33 566 [info]: Database Pool is closed

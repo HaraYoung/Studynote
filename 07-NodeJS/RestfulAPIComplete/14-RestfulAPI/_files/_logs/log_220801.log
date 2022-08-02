@@ -1,0 +1,220 @@
+22/08/01 21:32:54 714 [debug]: --------------------------------------------------
+22/08/01 21:32:54 717 [debug]: |              Start Express Server              |
+22/08/01 21:32:54 717 [debug]: --------------------------------------------------
+22/08/01 21:32:54 717 [debug]: server address => http://192.168.219.102:3001
+22/08/01 21:32:54 717 [debug]: --------------------------------------------------
+22/08/01 21:33:04 765 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:33:04 766 [debug]: [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:33:04 768 [debug]: [GET] http://localhost:3001/department
+22/08/01 21:33:04 778 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 12ms
+22/08/01 21:33:04 779 [debug]: --------------------------------------------------
+22/08/01 21:33:04 785 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:33:04 786 [debug]: [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:33:04 786 [debug]: [GET] http://localhost:3001/department/
+22/08/01 21:33:04 790 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:33:04 790 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:33:04 791 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:33:04 793 [error]: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:33:04 794 [error]: [Error] connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:33:04 795 [error]: Error: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1195:16)
+22/08/01 21:33:04 797 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 11ms
+22/08/01 21:33:04 798 [debug]: --------------------------------------------------
+22/08/01 21:34:10 177 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:34:10 178 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:34:10 178 [debug]: [GET] http://192.168.219.102:3001/department
+22/08/01 21:34:10 180 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 2ms
+22/08/01 21:34:10 180 [debug]: --------------------------------------------------
+22/08/01 21:34:10 181 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:34:10 181 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:34:10 182 [debug]: [GET] http://192.168.219.102:3001/department/
+22/08/01 21:34:10 183 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:34:10 183 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:34:10 183 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:34:10 185 [error]: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:34:10 185 [error]: [Error] connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:34:10 185 [error]: Error: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1195:16)
+22/08/01 21:34:10 186 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 5ms
+22/08/01 21:34:10 187 [debug]: --------------------------------------------------
+22/08/01 21:34:27 671 [info]: Database Pool is closed
+22/08/01 21:35:21 220 [debug]: --------------------------------------------------
+22/08/01 21:35:21 222 [debug]: |              Start Express Server              |
+22/08/01 21:35:21 222 [debug]: --------------------------------------------------
+22/08/01 21:35:21 223 [debug]: server address => http://192.168.219.102:3001
+22/08/01 21:35:21 223 [debug]: --------------------------------------------------
+22/08/01 21:35:23 039 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:35:23 040 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:35:23 041 [debug]: [GET] http://192.168.219.102:3001/department
+22/08/01 21:35:23 048 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 8ms
+22/08/01 21:35:23 049 [debug]: --------------------------------------------------
+22/08/01 21:35:23 054 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:35:23 055 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:35:23 056 [debug]: [GET] http://192.168.219.102:3001/department/
+22/08/01 21:35:23 060 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:35:23 061 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:35:23 061 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:35:23 064 [error]: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:35:23 065 [error]: [Error] connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:35:23 066 [error]: Error: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1195:16)
+22/08/01 21:35:23 069 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 14ms
+22/08/01 21:35:23 070 [debug]: --------------------------------------------------
+22/08/01 21:35:30 181 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:35:30 182 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:35:30 183 [debug]: [GET] http://192.168.219.102:3001/department
+22/08/01 21:35:30 185 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 3ms
+22/08/01 21:35:30 186 [debug]: --------------------------------------------------
+22/08/01 21:35:30 191 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:35:30 191 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:35:30 192 [debug]: [GET] http://192.168.219.102:3001/department/
+22/08/01 21:35:30 194 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:35:30 195 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:35:30 196 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:35:30 198 [error]: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:35:30 199 [error]: [Error] connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:35:30 199 [error]: Error: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1195:16)
+22/08/01 21:35:30 201 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 10ms
+22/08/01 21:35:30 201 [debug]: --------------------------------------------------
+22/08/01 21:36:32 266 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:36:32 267 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:36:32 267 [debug]: [GET] http://192.168.219.102:3001/department
+22/08/01 21:36:32 268 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 1ms
+22/08/01 21:36:32 269 [debug]: --------------------------------------------------
+22/08/01 21:36:32 270 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:36:32 270 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:36:32 271 [debug]: [GET] http://192.168.219.102:3001/department/
+22/08/01 21:36:32 271 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:36:32 272 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:36:32 272 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:36:32 273 [error]: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:36:32 273 [error]: [Error] connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+22/08/01 21:36:32 273 [error]: Error: connect ENOENT /Applications/MAMP/tmp/mysql/mysql.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1195:16)
+22/08/01 21:36:32 274 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 4ms
+22/08/01 21:36:32 275 [debug]: --------------------------------------------------
+22/08/01 21:39:46 428 [info]: Database Pool is closed
+22/08/01 21:39:50 354 [debug]: --------------------------------------------------
+22/08/01 21:39:50 358 [debug]: |              Start Express Server              |
+22/08/01 21:39:50 359 [debug]: --------------------------------------------------
+22/08/01 21:39:50 359 [debug]: server address => http://192.168.219.102:3001
+22/08/01 21:39:50 360 [debug]: --------------------------------------------------
+22/08/01 21:39:53 048 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:39:53 049 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:39:53 050 [debug]: [GET] http://192.168.219.102:3001/department
+22/08/01 21:39:53 057 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 7ms
+22/08/01 21:39:53 057 [debug]: --------------------------------------------------
+22/08/01 21:39:53 062 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:39:53 063 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:39:53 064 [debug]: [GET] http://192.168.219.102:3001/department/
+22/08/01 21:39:53 067 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:39:53 068 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:39:53 069 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:39:53 072 [error]: connect ECONNREFUSED ::1:3307
+22/08/01 21:39:53 073 [error]: [Error] connect ECONNREFUSED ::1:3307
+22/08/01 21:39:53 074 [error]: Error: connect ECONNREFUSED ::1:3307
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1195:16)
+22/08/01 21:39:53 077 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 14ms
+22/08/01 21:39:53 077 [debug]: --------------------------------------------------
+22/08/01 21:42:26 367 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:42:26 369 [debug]: [client] ::ffff:192.168.219.102 / Windows 10.0 / Chrome (103.0.0.0) / Microsoft Windows
+22/08/01 21:42:26 370 [debug]: [GET] http://192.168.219.102:3001/department/
+22/08/01 21:42:26 374 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:42:26 375 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:42:26 375 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:42:26 379 [error]: connect ECONNREFUSED ::1:3307
+22/08/01 21:42:26 380 [error]: [Error] connect ECONNREFUSED ::1:3307
+22/08/01 21:42:26 381 [error]: Error: connect ECONNREFUSED ::1:3307
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1195:16)
+22/08/01 21:42:26 383 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 14ms
+22/08/01 21:42:26 384 [debug]: --------------------------------------------------
+22/08/01 21:42:26 522 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:42:26 522 [debug]: [client] ::ffff:192.168.219.102 / Windows 10.0 / Chrome (103.0.0.0) / Microsoft Windows
+22/08/01 21:42:26 523 [debug]: [GET] http://192.168.219.102:3001/favicon.ico
+22/08/01 21:42:26 528 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 6ms
+22/08/01 21:42:26 529 [debug]: --------------------------------------------------
+22/08/01 21:44:15 438 [info]: Database Pool is closed
+22/08/01 21:44:18 269 [debug]: --------------------------------------------------
+22/08/01 21:44:18 271 [debug]: |              Start Express Server              |
+22/08/01 21:44:18 272 [debug]: --------------------------------------------------
+22/08/01 21:44:18 272 [debug]: server address => http://192.168.219.102:3001
+22/08/01 21:44:18 272 [debug]: --------------------------------------------------
+22/08/01 21:44:21 161 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:44:21 161 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:44:21 163 [debug]: [GET] http://192.168.219.102:3001/department
+22/08/01 21:44:21 168 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 7ms
+22/08/01 21:44:21 169 [debug]: --------------------------------------------------
+22/08/01 21:44:21 174 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:44:21 175 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:44:21 176 [debug]: [GET] http://192.168.219.102:3001/department/
+22/08/01 21:44:21 178 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:44:21 179 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:44:21 180 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:44:21 218 [info]:  >> DATABASE 접속됨 [threaId=87]
+22/08/01 21:44:21 218 [info]:  >> Connection 임대됨 [threaId=87]
+22/08/01 21:44:21 222 [debug]: SELECT COUNT(*) AS cnt FROM department
+22/08/01 21:44:21 260 [info]:  >> Connection 반납됨 [threaId=87]
+22/08/01 21:44:21 261 [info]:  >> Connection 임대됨 [threaId=87]
+22/08/01 21:44:21 263 [debug]: SELECT deptno, dname, loc FROM department  ORDER BY deptno DESC  LIMIT 0, 10
+22/08/01 21:44:21 269 [info]:  >> Connection 반납됨 [threaId=87]
+22/08/01 21:44:21 273 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 97ms
+22/08/01 21:44:21 273 [debug]: --------------------------------------------------
+22/08/01 21:45:10 007 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:45:10 008 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:45:10 008 [debug]: [GET] http://192.168.219.102:3001/department?page=1
+22/08/01 21:45:10 026 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 19ms
+22/08/01 21:45:10 026 [debug]: --------------------------------------------------
+22/08/01 21:45:10 031 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:45:10 032 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:45:10 032 [debug]: [GET] http://192.168.219.102:3001/department/?page=1
+22/08/01 21:45:10 034 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:45:10 034 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:45:10 035 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:45:10 035 [info]:  >> Connection 임대됨 [threaId=87]
+22/08/01 21:45:10 037 [debug]: SELECT COUNT(*) AS cnt FROM department
+22/08/01 21:45:10 043 [info]:  >> Connection 반납됨 [threaId=87]
+22/08/01 21:45:10 043 [info]:  >> Connection 임대됨 [threaId=87]
+22/08/01 21:45:10 045 [debug]: SELECT deptno, dname, loc FROM department  ORDER BY deptno DESC  LIMIT 0, 10
+22/08/01 21:45:10 048 [info]:  >> Connection 반납됨 [threaId=87]
+22/08/01 21:45:10 049 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 17ms
+22/08/01 21:45:10 050 [debug]: --------------------------------------------------
+22/08/01 21:45:16 888 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:45:16 888 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:45:16 888 [debug]: [GET] http://192.168.219.102:3001/department?page=2
+22/08/01 21:45:16 890 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 2ms
+22/08/01 21:45:16 890 [debug]: --------------------------------------------------
+22/08/01 21:45:16 891 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:45:16 892 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:45:16 892 [debug]: [GET] http://192.168.219.102:3001/department/?page=2
+22/08/01 21:45:16 893 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:45:16 894 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:45:16 894 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:45:16 894 [info]:  >> Connection 임대됨 [threaId=87]
+22/08/01 21:45:16 895 [debug]: SELECT COUNT(*) AS cnt FROM department
+22/08/01 21:45:16 898 [info]:  >> Connection 반납됨 [threaId=87]
+22/08/01 21:45:16 898 [info]:  >> Connection 임대됨 [threaId=87]
+22/08/01 21:45:16 900 [debug]: SELECT deptno, dname, loc FROM department  ORDER BY deptno DESC  LIMIT 10, 10
+22/08/01 21:45:16 901 [info]:  >> Connection 반납됨 [threaId=87]
+22/08/01 21:45:16 902 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 10ms
+22/08/01 21:45:16 902 [debug]: --------------------------------------------------
+22/08/01 21:45:32 873 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:45:32 874 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:45:32 874 [debug]: [GET] http://192.168.219.102:3001/department?page=1&rows=5
+22/08/01 21:45:32 876 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 2ms
+22/08/01 21:45:32 876 [debug]: --------------------------------------------------
+22/08/01 21:45:32 877 [debug]: 클라이언트가 접속했습니다.
+22/08/01 21:45:32 877 [debug]: [client] ::ffff:192.168.219.102 / unknown / insomnia (2022.4.2) / unknown
+22/08/01 21:45:32 877 [debug]: [GET] http://192.168.219.102:3001/department/?page=1&rows=5
+22/08/01 21:45:32 878 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:45:32 879 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:45:32 879 [debug]: [HTTP %s Params] %s=%s
+22/08/01 21:45:32 879 [info]:  >> Connection 임대됨 [threaId=87]
+22/08/01 21:45:32 880 [debug]: SELECT COUNT(*) AS cnt FROM department
+22/08/01 21:45:32 882 [info]:  >> Connection 반납됨 [threaId=87]
+22/08/01 21:45:32 882 [info]:  >> Connection 임대됨 [threaId=87]
+22/08/01 21:45:32 883 [debug]: SELECT deptno, dname, loc FROM department  ORDER BY deptno DESC  LIMIT 0, 5
+22/08/01 21:45:32 884 [info]:  >> Connection 반납됨 [threaId=87]
+22/08/01 21:45:32 885 [debug]: 클라이언트의 접속이 종료되었습니다. ::: [runtime] 8ms
+22/08/01 21:45:32 885 [debug]: --------------------------------------------------
+22/08/01 21:46:29 592 [info]: Database Pool is closed

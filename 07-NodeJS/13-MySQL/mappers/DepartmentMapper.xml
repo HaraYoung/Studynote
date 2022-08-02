@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace= "DepartmentMapper">
+<mapper namespace="DepartmentMapper">
     <!--단일행 조회를 위한 기능 정의-->
     <select id="selectItem">
         select deptno, dname, loc from department where deptno=#{deptno};

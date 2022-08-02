@@ -1,0 +1,26 @@
+2022-07-29 12:05:17 194 [info] :  >> DATABASE 접속됨 [threaId= %d]
+2022-07-29 12:05:17 198 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:05:17 201 [debug] : select deptno, dname, loc from department where deptno='201';
+2022-07-29 12:05:17 255 [debug] : select deptno, dname, loc from department  WHERE     dname like concat('%', '풀스택', '%')    order by deptno desc    LIMIT 0, 3
+2022-07-29 12:05:17 261 [debug] : insert into department (dname, loc) values ('풀스택', '1401호');
+2022-07-29 12:05:17 289 [debug] : delete from department where deptno= '300';
+2022-07-29 12:05:17 307 [debug] : update department set dname= '수정된학과', loc= '수정된위치' where deptno= '300';
+2022-07-29 12:05:17 309 [debug] : select count(*) as cnt from department
+2022-07-29 12:05:27 368 [info] :  >> DATABASE 접속됨 [threaId= %d]
+2022-07-29 12:05:27 371 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:05:27 375 [debug] : select deptno, dname, loc from department where deptno='201';
+2022-07-29 12:05:27 395 [debug] : select deptno, dname, loc from department  WHERE     dname like concat('%', '풀스택', '%')    order by deptno desc    LIMIT 0, 3
+2022-07-29 12:05:27 399 [debug] : insert into department (dname, loc) values ('풀스택', '1401호');
+2022-07-29 12:05:27 411 [debug] : delete from department where deptno= '300';
+2022-07-29 12:05:27 413 [debug] : update department set dname= '수정된학과', loc= '수정된위치' where deptno= '300';
+2022-07-29 12:05:27 416 [debug] : select count(*) as cnt from department
+2022-07-29 12:06:56 185 [info] :  >> DATABASE 접속됨 [threaId= %d]
+2022-07-29 12:06:56 189 [info] :  >> Connection 임대됨 [threaId= %d]
+2022-07-29 12:06:56 193 [debug] : select deptno, dname, loc from department where deptno='201';
+2022-07-29 12:06:56 204 [debug] : select deptno, dname, loc from department  WHERE     dname like concat('%', '풀스택', '%')    order by deptno desc    LIMIT 0, 3
+2022-07-29 12:06:56 207 [debug] : insert into department (dname, loc) values ('풀스택', '1401호');
+2022-07-29 12:06:56 213 [debug] : delete from department where deptno= '300';
+2022-07-29 12:06:56 216 [debug] : update department set dname= '수정된학과', loc= '수정된위치' where deptno= '300';
+2022-07-29 12:06:56 219 [debug] : select count(*) as cnt from department
+2022-07-29 12:06:56 224 [debug] : select profno, name, userid, position, sal,  date_format(hiredate, '%Y-%m-%d') as h_date,  comm,p.deptno, dname, loc  From professor as p inner join department as d  on p.deptno = d.deptno
+2022-07-29 12:06:56 252 [info] :  >> Connection이 반납됨 [threaId= %d]

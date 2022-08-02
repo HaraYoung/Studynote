@@ -1,0 +1,118 @@
+2022-07-31 17:46:28 464 [debug] : -------------------------------
+2022-07-31 17:46:28 466 [debug] :     Start Express Server       
+2022-07-31 17:46:28 466 [debug] : -------------------------------
+2022-07-31 17:46:28 467 [debug] : server address => http://192.168.219.100: 3001
+2022-07-31 17:46:28 467 [debug] : -------------------------------
+2022-07-31 17:48:12 921 [debug] : 클라이언트가 접속했습니다.
+2022-07-31 17:48:12 922 [debug] : [client] ::ffff:192.168.219.100 / unknown / insomnia (2022.4.2) / unknown
+2022-07-31 17:48:12 924 [debug] : [GET] http://192.168.219.100:3001/department
+2022-07-31 17:48:13 046 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 124ms
+2022-07-31 17:48:13 047 [debug] : --------------------------------
+2022-07-31 18:09:08 134 [debug] : 클라이언트가 접속했습니다.
+2022-07-31 18:09:08 140 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-31 18:09:08 145 [debug] : [GET] http://localhost:3001/department
+2022-07-31 18:09:08 202 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 63ms
+2022-07-31 18:09:08 202 [debug] : --------------------------------
+2022-07-31 18:11:54 718 [info] : ("----------- Server is close -----------");
+2022-07-31 19:42:27 225 [debug] : -------------------------------
+2022-07-31 19:42:27 227 [debug] :     Start Express Server       
+2022-07-31 19:42:27 228 [debug] : -------------------------------
+2022-07-31 19:42:27 228 [debug] : server address => http://192.168.219.100: 3001
+2022-07-31 19:42:27 229 [debug] : -------------------------------
+2022-07-31 19:42:35 800 [debug] : 클라이언트가 접속했습니다.
+2022-07-31 19:42:35 801 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-31 19:42:35 803 [debug] : [GET] http://localhost:3001/department/202
+2022-07-31 19:42:35 812 [error] : [Error] 페이지를 찾을 수 없습니다.
+2022-07-31 19:42:35 814 [error] : Error: 페이지를 찾을 수 없습니다.
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/14-RestfulAPI/app.js:141:47
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:286:9
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:365:14)
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:421:3)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:280:10)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\layer.js:91:12)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+2022-07-31 19:42:35 822 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 21ms
+2022-07-31 19:42:35 823 [debug] : --------------------------------
+2022-07-31 20:14:28 000 [info] : ("----------- Server is close -----------");
+2022-07-31 20:14:30 300 [debug] : -------------------------------
+2022-07-31 20:14:30 302 [debug] :     Start Express Server       
+2022-07-31 20:14:30 303 [debug] : -------------------------------
+2022-07-31 20:14:30 303 [debug] : server address => http://192.168.219.100: 3001
+2022-07-31 20:14:30 304 [debug] : -------------------------------
+2022-07-31 20:14:36 940 [debug] : 클라이언트가 접속했습니다.
+2022-07-31 20:14:36 941 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-31 20:14:36 942 [debug] : [GET] http://localhost:3001/department
+2022-07-31 20:14:37 012 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 71ms
+2022-07-31 20:14:37 013 [debug] : --------------------------------
+2022-07-31 20:14:41 149 [debug] : 클라이언트가 접속했습니다.
+2022-07-31 20:14:41 150 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-31 20:14:41 150 [debug] : [GET] http://localhost:3001/department/202
+2022-07-31 20:14:41 154 [error] : [Error] 페이지를 찾을 수 없습니다.
+2022-07-31 20:14:41 155 [error] : Error: 페이지를 찾을 수 없습니다.
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/14-RestfulAPI/app.js:141:47
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:286:9
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:365:14)
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:421:3)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:280:10)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\layer.js:91:12)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+2022-07-31 20:14:41 158 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 8ms
+2022-07-31 20:14:41 159 [debug] : --------------------------------
+2022-07-31 20:17:38 274 [info] : ("----------- Server is close -----------");
+2022-07-31 20:17:42 210 [debug] : -------------------------------
+2022-07-31 20:17:42 212 [debug] :     Start Express Server       
+2022-07-31 20:17:42 212 [debug] : -------------------------------
+2022-07-31 20:17:42 212 [debug] : server address => http://192.168.219.100: 3001
+2022-07-31 20:17:42 213 [debug] : -------------------------------
+2022-07-31 20:17:47 392 [debug] : 클라이언트가 접속했습니다.
+2022-07-31 20:17:47 393 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-31 20:17:47 394 [debug] : [GET] http://localhost:3001/department/202
+2022-07-31 20:17:47 399 [error] : [Error] 페이지를 찾을 수 없습니다.
+2022-07-31 20:17:47 400 [error] : Error: 페이지를 찾을 수 없습니다.
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/14-RestfulAPI/app.js:141:47
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:286:9
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:365:14)
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:421:3)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:280:10)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\layer.js:91:12)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+2022-07-31 20:17:47 405 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 12ms
+2022-07-31 20:17:47 406 [debug] : --------------------------------
+2022-07-31 21:34:19 282 [info] : ("----------- Server is close -----------");
+2022-07-31 21:37:55 736 [debug] : -------------------------------
+2022-07-31 21:37:55 737 [debug] :     Start Express Server       
+2022-07-31 21:37:55 738 [debug] : -------------------------------
+2022-07-31 21:37:55 739 [debug] : server address => http://192.168.219.100: 3001
+2022-07-31 21:37:55 739 [debug] : -------------------------------
+2022-07-31 21:37:58 545 [debug] : 클라이언트가 접속했습니다.
+2022-07-31 21:37:58 546 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-31 21:37:58 547 [debug] : [GET] http://localhost:3001/department/205
+2022-07-31 21:37:58 555 [error] : [Error] 페이지를 찾을 수 없습니다.
+2022-07-31 21:37:58 557 [error] : Error: 페이지를 찾을 수 없습니다.
+    at file:///c:/Users/qkrtp/Desktop/Studynote/07-NodeJS/14-RestfulAPI/app.js:141:47
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+    at c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:286:9
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:365:14)
+    at param (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:421:3)
+    at next (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:280:10)
+    at Layer.handle [as handle_request] (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\layer.js:91:12)
+    at trim_prefix (c:\Users\qkrtp\Desktop\Studynote\07-NodeJS\14-RestfulAPI\node_modules\express\lib\router\index.js:328:13)
+2022-07-31 21:37:58 566 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 21ms
+2022-07-31 21:37:58 567 [debug] : --------------------------------
+2022-07-31 21:38:04 819 [debug] : 클라이언트가 접속했습니다.
+2022-07-31 21:38:04 820 [debug] : [client] ::ffff:127.0.0.1 / unknown / insomnia (2022.4.2) / unknown
+2022-07-31 21:38:04 821 [debug] : [GET] http://localhost:3001/department
+2022-07-31 21:38:04 910 [debug] : 클라이언트의 접속이 종료되었습니다. ::: [runtime] 90ms
+2022-07-31 21:38:04 910 [debug] : --------------------------------
+2022-07-31 21:40:55 747 [info] : ("----------- Server is close -----------");
